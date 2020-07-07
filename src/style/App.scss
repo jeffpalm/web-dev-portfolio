@@ -1,0 +1,29 @@
+$bodybg: grey;
+$text: hsla(0, 0, 0, .5);
+$fontFam: 'Consolas';
+
+@mixin flex($fd: row, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+
+
+body {
+  @include flex();
+  height: 100vh;
+  width: 100vw;
+  background-color: $bodybg;
+  color: $text;
+}
+
+.UnderConstruction {
+  @include flex(column);
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: $fontFam;
+  }
+}
