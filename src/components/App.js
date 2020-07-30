@@ -1,14 +1,10 @@
 import React from 'react'
-import UnderConstruction from './UnderConstruction/UnderConstruction'
+import routes from '../routes'
 import '../style/reset.css'
 import '../style/App.scss'
 
 const App = () => {
-	return (
-		<div className='App'>
-			<UnderConstruction />
-		</div>
-	)
+	return <div className='App'>{routes}</div>
 }
 
 export default App

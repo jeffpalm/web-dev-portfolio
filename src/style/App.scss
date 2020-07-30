@@ -9,14 +9,30 @@ $fontFam: 'Consolas';
   align-items: $ai;
 }
 
+@keyframes arrow-blink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(10px)
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(10px)
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
 
-
-body {
-  @include flex();
-  height: 100vh;
-  width: 100vw;
-  background-color: $bodybg;
-  color: $text;
+* {
+  box-sizing: border-box;
+  
 }
 
 .UnderConstruction {
@@ -24,6 +40,23 @@ body {
   h1 {
     text-align: center;
     font-size: 3rem;
-    font-family: $fontFam;
+    // font-family: $fontFam;
   }
+}
+
+.down-arrow-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 2vh;
+  width: 100px;
+  left: calc(50vw - 50px);
+  animation-name: arrow-blink;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.down-arrow-container:hover {
+  cursor: pointer;
+  animation: none;
 }
