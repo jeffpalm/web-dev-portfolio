@@ -10,7 +10,7 @@ const SizedBox = ({
 }) => {
 	const style = {
 		width,
-		height,
+		minHeight: height,
 		backgroundColor: bgColor,
 		...styleProp
 	}

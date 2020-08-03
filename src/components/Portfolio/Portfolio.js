@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import Intro from './Intro/Intro'
 import AnimationTest from './AnimationTest'
-import Fade from '../Fade/Fade'
 import { makeStyles } from '@material-ui/core/styles'
+import Fade from '@material-ui/core/Fade'
 import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
+import Loading from './Intro/Loading'
+import useWindowSize from '../../hooks/useWindowSize'
 import './Portfolio.scss'
 
 const useStyles = makeStyles(theme => ({
@@ -13,12 +17,21 @@ const useStyles = makeStyles(theme => ({
 		backgroundColor: theme.palette.background.default,
 		padding: theme.spacing(2)
 	},
-	fullPageSubContainer: {
+	fullPageSubContainerBordered: {
 		height: '100%',
 		width: '100%',
 		border: '2px solid white',
 		borderRadius: 5,
 		padding: theme.spacing(2)
+	},
+	fullPageSubContainer: {
+		height: '100%',
+		width: '100%',
+		overflow: 'hidden'
+	},
+	animationContainer: {
+		width: '100%',
+		height: 200
 	}
 }))
 
@@ -27,8 +40,12 @@ const NewPortfolio = () => {
 
 	const [transitions, setTransitions] = useState([true])
 
+	const advanceTransitions = () => setTransitions([...transitions, true])
+
+	const wS = useWindowSize()
+
 	const afterIntro = advanceTiming => {
-		advanceTiming()
+		advanceTiming && advanceTiming()
 		setTransitions([false])
 	}
 
@@ -41,16 +58,42 @@ const NewPortfolio = () => {
 			alignItems='center'
 		>
 			<Grid
-				className={classes.fullPageSubContainer}
+				className={classes.fullPageSubContainerBordered}
 				item
 				container
 				direction='column'
-				justify='flex-end'
+				justify='center'
+				alignItems='center'
 			>
-				<Fade enter={transitions[0]} delay={500}>
-					{/* <Intro /> */}
-					<AnimationTest />
-					{/* <Intro onFinished={afterIntro} /> */}
+				<Fade
+					in={transitions[0]}
+					appear
+					mountOnEnter
+					unmountOnExit
+					onExited={advanceTransitions}
+				>
+					<Grid
+						className={classes.fullPageSubContainer}
+						container
+						item
+						direction='column'
+						justify='flex-end'
+						wrap='nowrap'
+					>
+						<Intro onFinished={afterIntro} />
+						{/* <Loading
+							maxWidth={wS.width ? wS.width - 68 : 1600}
+							// start={timing[7] || false}
+							start={true}
+							duration={1000}
+							count={30}
+						/> */}
+					</Grid>
+				</Fade>
+				<Fade in={transitions[1]} appear mountOnEnter unmountOnExit>
+					<Button variant='outlined' size='large'>
+						Enter
+					</Button>
 				</Fade>
 			</Grid>
 		</Grid>

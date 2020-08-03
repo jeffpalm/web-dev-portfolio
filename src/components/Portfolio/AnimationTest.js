@@ -1,23 +1,8 @@
 // import ReactDOM from 'react-dom'
-import React, { useRef, useState, useEffect } from 'react'
-import useWindowSize from '../../hooks/useWindowSize'
+import React, { useRef, useMemo, Suspense } from 'react'
 import * as THREE from 'three'
-import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
-import { extend, Canvas, useFrame, useThree } from 'react-three-fiber'
-extend({ AsciiEffect, OrbitControls })
-
-const renderer = new THREE.WebGLRenderer()
-renderer.setSize(window.innerWidth, window.innerHeight)
-
-const effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true })
-
-effect.setSize(window.innerWidth, window.innerHeight)
-effect.domElement.style.color = 'white'
-effect.domElement.style.backgroundColor = 'black'
-
-document.body.appendChild(effect.domElement)
+import { Canvas, useFrame, useLoader, useUpdate } from 'react-three-fiber'
+import { MeshNormalMaterial } from 'three'
 
 const Box = props => {
 	const mesh = useRef()
@@ -25,30 +10,83 @@ const Box = props => {
 	useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))
 
 	return (
-		<mesh {...props} ref={mesh} scale={[1, 1, 1]}>
+		<mesh {...props} ref={mesh} scale={[3, 3, 3]}>
+			<textBufferGeometry attach='geometry'>Jeff Palmer</textBufferGeometry>
 			<boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
 			<meshStandardMaterial attach='material' color='orange' />
 		</mesh>
 	)
 }
 
-React.createElement('div', )
+const Text = ({
+	children,
+	vAlign = 'center',
+	hAlign = 'center',
+	size = 1,
+	color = '#fff',
+	...props
+}) => {
+	const font = useLoader(THREE.FontLoader, './Poppins_Thin_Regular.json')
+	const config = useMemo(
+		() => ({
+			font,
+			size: 40,
+			height: 1,
+			curveSegments: 26,
+			bevelEnabled: false
+		}),
+		[font]
+	)
 
-const AnimationTest = () => {
-	const { gl, raycaster } = useThree()
-	const wS = useWindowSize()
+	const mesh = useUpdate(
+		self => {
+			const size = new THREE.Vector3()
+			self.geometry.computeBoundingBox()
+			self.geometry.boundingBox.getSize(size)
 
-  
+			self.position.x =
+				hAlign === 'center' ? -size.x / 2 : hAlign === 'right' ? 0 : -size.x
+			self.position.y =
+				vAlign === 'center' ? -size.y / 2 : vAlign === 'top' ? 0 : -size.y
+		},
+		[children]
+	)
 
 	return (
+		<group {...props} scale={[0.1 * size, 0.1 * size, 0.1]}>
+			<mesh ref={mesh}>
+				<textGeometry attach='geometry' args={[children, config]} />
+				<meshNormalMaterial attach='material' />
+			</mesh>
+		</group>
+	)
+}
 
-      <Canvas>
-      			<ambientLight />
-      			<pointLight position={[10, 10, 10]} />
-            <lightShadow />
-      			<Box />
-      		</Canvas>
+const JeffPalmer = () => {
+	const ref = useRef()
+	useFrame(
+		({ clock }) =>
+			(ref.current.rotation.x = 
+				Math.sin(clock.getElapsedTime()) * 0.3)
+	)
+	return (
+		<group ref={ref}>
+			<Text position={[0, 0, 0]} children='Jeff Palmer' size={.5} />
+		</group>
+	)
+}
 
+const AnimationTest = () => {
+	return (
+		<Canvas>
+			<ambientLight />
+			<pointLight position={[10, 10, 10]} />
+			<lightShadow />
+			<Suspense fallback={null}>
+				<JeffPalmer />
+			</Suspense>
+			{/* <Box position={[0, 0, 0]} /> */}
+		</Canvas>
 	)
 }
 

@@ -1,0 +1,3 @@
+.fade-enter {
+  transition: opacity 500ms ease-in-out 0;
+}

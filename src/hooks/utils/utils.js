@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function codeColor(string) {
+export function codeSyntaxColor(string) {
 	const regEx = /(\s|=|\(|\)|\.|Initializing\sPortfolio\.\.\.)/i
 
 	return string.split(regEx).map((word, index, array) => {
@@ -10,11 +10,11 @@ export function codeColor(string) {
 			lineStart = array[0]
 
 		if (prev === '.' && next === '(') {
-			return <span className='code-color-method'>{word}</span>
+			return <span key={word + index} className='code-color-method'>{word}</span>
 		}
 
 		if (prev === ' ' && next === '.' && lineStart === '>') {
-			return <span className='code-color-object'>{word}</span>
+			return <span key={word + index} className='code-color-object'>{word}</span>
 		}
 
 		switch (prev) {
@@ -25,14 +25,14 @@ export function codeColor(string) {
 		// * Checking element 2 back
 		switch (twoPrev) {
 			case 'const':
-				return <span className='code-color-variable'>{word}</span>
+				return <span key={word + index} className='code-color-variable'>{word}</span>
 			default:
 				break
 		}
 
 		switch (next) {
 			case '(':
-				return <span className='code-color-function'>{word}</span>
+				return <span key={word + index} className='code-color-function'>{word}</span>
 			default:
 				break
 		}
@@ -41,14 +41,14 @@ export function codeColor(string) {
 			case 'var':
 			case 'let':
 			case 'const':
-				return <span className='code-color-keyword'>{word}</span>
+				return <span key={word + index} className='code-color-keyword'>{word}</span>
 			case 'new':
 			case 'this':
-				return <span className='code-color-reserved'>{word}</span>
+				return <span key={word + index} className='code-color-reserved'>{word}</span>
       case 'undefined':
-        return <span className="code-color-undefined">{word}</span>
+        return <span key={word + index} className="code-color-undefined">{word}</span>
       case 'Initializing Portfolio...':
-        return <span className="code-color-initialize-portfolio">{word}</span>
+        return <span key={word + index} className="code-color-initialize-portfolio">{word}</span>
 			default:
 				return word
 		}

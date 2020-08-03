@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { codeColor } from './utils/utils'
+import { codeSyntaxColor } from './utils/utils'
 
-const useTypingAnimation = (text, speed, enter = true, onEntered = null) => {
+const useTypingAnimation = (text, speed, enter = true, codeHighlight = false, onEntered = null) => {
 	const [output, setOutput] = useState('')
 	const [index, setIndex] = useState(0)
 
@@ -24,7 +24,7 @@ const useTypingAnimation = (text, speed, enter = true, onEntered = null) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [index, output, speed, text, enter])
 
-	return codeColor(output)
+	return codeHighlight ? codeSyntaxColor(output) : output
 }
 
 export default useTypingAnimation

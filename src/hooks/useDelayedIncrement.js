@@ -4,6 +4,7 @@ const useDelayedIncrement = (
 	start = 0,
 	end = 50,
 	delay = 50,
+	incrementBy = 1,
 	begin = true,
 	onEnded = null
 ) => {
@@ -15,9 +16,15 @@ const useDelayedIncrement = (
 		const timeout = setTimeout(() => {
 			if (begin) {
 				if (increment < end && !finished) {
-					setOutput(output + 1)
-					setIncrement(increment + 1)
+					if (increment + incrementBy > end) {
+						setOutput(end)
+						setIncrement(end)
+					} else {
+						setOutput(output + incrementBy)
+						setIncrement(increment + incrementBy)
+					}
 				} else {
+					setOutput(end)
 					setFinished(true)
 					if (onEnded) onEnded()
 				}
