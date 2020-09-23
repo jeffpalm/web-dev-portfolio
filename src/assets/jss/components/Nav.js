@@ -1,0 +1,34 @@
+import { makeStyles } from '@material-ui/core/styles'
+
+export default makeStyles(theme => ({
+    navContainer: {
+        width: '100%',
+        height: '100%',
+    },
+    logoContainer: {},
+    logoTitle: {
+        width: '100%',
+        padding: 0,
+        margin: 0,
+    },
+    logoSubTitle: {
+        width: '100%',
+    },
+    navLinksContainer: {
+        height: '100%',
+    },
+    navBtn: {
+        margin: theme.spacing(1),
+    },
+    activeNavBtn: {
+        margin: theme.spacing(1),
+        color: theme.palette.primary.main,
+        borderColor: theme.palette.primary.main,
+    },
+    AppBar: {
+        top: 0,
+        left: 0,
+        zIndex: theme.zIndex.appBar + 1,
+        backgroundColor: theme.palette.background.paper
+    },
+}))

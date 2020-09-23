@@ -1,131 +1,137 @@
-import React, { useRef, useState, useEffect } from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import { motion, useAnimation } from 'framer-motion'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
-import useVisibility from '../../hooks/useVisibility'
+import React, { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { useAnimation } from 'framer-motion'
+import {
+    MotionAppBar,
+    MotionToolbar,
+    MotionButton,
+    MotionGrid,
+    MotionTypo,
+} from '../MuiMotion/MuiMotion'
+import useWindowSize from '../../hooks/useWindowSize'
+import useStyles from '../../assets/jss/components/Nav'
+import variants from 'assets/animation/components/Nav'
 
-const useStyles = makeStyles(theme => ({
-	navContainer: {
-		width: '100%',
-		height: '100%',
-	},
-	logoContainer: {},
-	logoTitle: {
-		width: '100%',
-		padding: 0,
-		margin: 0,
-	},
-	logoSubTitle: {
-		width: '100%',
-	},
-	navLinksContainer: {
-		height: '100%',
-	},
-	navBtn: {
-		margin: theme.spacing(1),
-	},
-}))
-
-const variants = {
-	hidden: {
-		opacity: 0,
-	},
-	visible: {
-		opacity: 1,
-		x: 0,
-	},
-}
+const links = [
+    { text: 'Home', to: '/' },
+    { text: 'About', to: '/about' },
+    { text: 'Skills', to: '/skills' },
+    { text: 'Projects', to: '/projects' },
+    { text: 'Contact', to: '/contact' },
+]
 
 const Nav = () => {
-	const classes = useStyles()
-	const ref = useRef()
-	const visible = useVisibility(ref)
-	const controls = useAnimation()
+    const classes = useStyles()
+    const linkControls = useAnimation()
+    const appBarControls = useAnimation()
+    const location = useLocation()
+    const wS = useWindowSize()
 
-	useEffect(() => {
-		if (visible) {
-			controls.start('visible')
-		} else {
-			controls.start('hidden')
-		}
-	}, [visible])
+    useEffect(() => {
+        // if (window.scrollY > 0) {
+            linkControls.start('enter')
+            appBarControls.start('enter')
+        //     return
+        // }
+        // window.addEventListener(
+        //     'scroll',
+        //     () => {
+        //         if (window.scrollY > 0) {
+        //             linkControls.start('enter')
+        //             appBarControls.start('enter')
+        //         }
+        //     },
+        //     { once: true }
+        // )
+    }, [appBarControls, linkControls])
 
-	return (
-		<AppBar ref={ref} position='sticky' color='inherit' variant='outlined'>
-			<Toolbar>
-				<Grid
-					className={classes.navContainer}
-					container
-					justify='space-between'
-				>
-					<motion.div
-						initial={{ x: -100, opacity: 0 }}
-						animate={controls}
-						variants={variants}
-					>
-						<Grid
-							className={classes.navLinksContainer}
-							item
-							container
-							justify='flex-start'
-							alignItems='center'
-						>
-							<Button className={classes.navBtn} variant='outlined'>
-								Home
-							</Button>
-							<Button className={classes.navBtn} variant='outlined'>
-								About
-							</Button>
-							<Button className={classes.navBtn} variant='outlined'>
-								Skills
-							</Button>
-							<Button className={classes.navBtn} variant='outlined'>
-								Projects
-							</Button>
-							<Button className={classes.navBtn} variant='outlined'>
-								Contact
-							</Button>
-						</Grid>
-					</motion.div>
-					<motion.div
-						initial={{ x: -100, opacity: 0 }}
-						animate={controls}
-						variants={variants}
-					>
-						<Grid
-							className={classes.logoContainer}
-							container
-							item
-							direction='column'
-							justify='flex-start'
-							alignItems='flex-start'
-						>
-							<Typography
-								className={classes.logoTitle}
-								variant='h6'
-								color='textPrimary'
-								align='right'
-							>
-								Jeff Palmer
-							</Typography>
-							<Typography
-								className={classes.logoSubTitle}
-								variant='body1'
-								color='textPrimary'
-								align='right'
-							>
-								Full-Stack Web Developer
-							</Typography>
-						</Grid>
-					</motion.div>
-				</Grid>
-			</Toolbar>
-		</AppBar>
-	)
+    return (
+        <MotionAppBar
+            className={classes.AppBar}
+            key='nav-app-bar'
+            position='absolute'
+            color='inherit'
+            variant='outlined'
+            variants={variants.appBar(wS)}
+            initial='initial'
+            animate={appBarControls}
+            exit='initial'
+        >
+            <MotionToolbar key='nav-toolbar'>
+                <MotionGrid
+                    key='nav-link-container'
+                    className={classes.navLinksContainer}
+                    item
+                    container
+                    justify='flex-start'
+                    alignItems='center'
+                >
+                    {links.map((link, i) => (
+                        <Link
+                            key={`${link.text}-${i}`}
+                            className={
+                                location.pathname === link.to
+                                    ? classes.activeNavBtn
+                                    : classes.navBtn
+                            }
+                            component={MotionButton}
+                            to={link.to}
+                            variant='outlined'
+                            variants={variants.linkBtn}
+                            initial='initial'
+                            animate={linkControls}
+                            exit='initial'
+                            custom={i + 1}
+                        >
+                            {link.text}
+                        </Link>
+                    ))}
+                    <MotionButton
+                        className={classes.navBtn}
+                        onClick={() => {
+                            appBarControls.start('mobile')
+                        }}
+                    >
+                        Rotate
+                    </MotionButton>
+                </MotionGrid>
+                <MotionGrid
+                    container
+                    item
+                    direction='column'
+                    justify='flex-start'
+                    alignItems='flex-start'
+                >
+                    <MotionTypo
+                        className={classes.logoTitle}
+                        variant='h6'
+                        color='textPrimary'
+                        align='right'
+                        variants={variants.logo}
+                        initial='initial'
+                        animate={linkControls}
+                        exit='initial'
+                        custom={0}
+                    >
+                        Jeff Palmer
+                    </MotionTypo>
+                    <MotionTypo
+                        className={classes.logoSubTitle}
+                        variant='body1'
+                        color='textPrimary'
+                        align='right'
+                        variants={variants.logo}
+                        initial='initial'
+                        animate={linkControls}
+                        exit='initial'
+                        custom={1}
+                    >
+                        Full-Stack Web Developer
+                    </MotionTypo>
+                </MotionGrid>
+            </MotionToolbar>
+        </MotionAppBar>
+    )
 }
 
 export default Nav
