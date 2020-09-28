@@ -6,6 +6,7 @@ import SkillsPage from 'views/SkillsPage/SkillsPage'
 import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
 import ContactPage from 'views/ContactPage/ContactPage'
 import HomePage from 'views/HomePage/HomePage'
+import HomePageVideo from 'views/HomePage/HomePageVideo'
 // import LandingPage from 'views/LandingPage/LandingPage'
 // import Nav from 'components/Nav/Nav'
 import ScrollNav from 'components/Nav/ScrollNav'
@@ -17,7 +18,7 @@ function App() {
 
     return (
         <div className={classes.root}>
-            <HomePage id='home'/>
+            <HomePageVideo id='home'/>
             <ScrollNav key='nav-bar' />
             <AboutPage id='about' />
             <SkillsPage id='skills' />

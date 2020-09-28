@@ -11,8 +11,7 @@ import { ScrollLink } from 'react-scroll'
 // import useTypingAnimation from '../../hooks/useTypingAnimation'
 import TypingAnimation from '../../components/TypingAnimation/TypingAnimation'
 import { SCROLL_SPEED } from '../../assets/constants'
-
-const MotionLink = ScrollLink(motion.a)
+import DownArrow from "../../components/DownArrow/DownArrow"
 
 const HomePage = () => {
     const classes = useStyles()
@@ -80,48 +79,7 @@ const HomePage = () => {
                     />
                 </MotionTypo>
             </MotionTypo>
-            <MotionLink
-                className={classes.downArrow}
-                initial={{
-                    y: 200,
-                    opacity: 0,
-                }}
-                animate={{
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                    rotate: 0,
-                    borderRadius: '20%',
-                    backgroundColor: theme.palette.primary.main,
-                    transition: {
-                        delay: 4,
-                    },
-                }}
-                transition={{
-                    duration: 0.25,
-                    ease: 'easeInOut',
-                    // times: [0, 0.2, 0.5, 0.8, 1],
-                    // loop: Infinity,
-                    // repeatDelay: 2,
-                }}
-                whileHover={{
-                    scale: [1, 1.2, 1.2, 1],
-                    rotate: [0, 0, 360, 360],
-                    borderRadius: ['20%', '20%', '50%', '50%'],
-                    backgroundColor: [
-                        theme.palette.primary.main,
-                        theme.palette.primary.main,
-                        theme.palette.secondary.main,
-                        theme.palette.secondary.main,
-                    ],
-                }}
-                to='about'
-                smooth
-                spy
-                duration={SCROLL_SPEED}
-            >
-                <ArrowDownwardIcon fontSize='large' />
-            </MotionLink>
+
         </FullPage>
     )
 }

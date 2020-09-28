@@ -2,21 +2,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
     root: {
-        backgroundColor: theme.palette.background.default,
-    },
-    downArrow: {
-        backgroundColor: theme.palette.primary.main,
-        width: 100,
-        height: 100,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: '16px',
-        left: 'calc(50vw - 50px)',
-        '&:hover': {
-            cursor: 'pointer'
-        }
+        // backgroundColor: theme.palette.background.default,
+        backgroundColor: '#000'
     },
     text: {
         width: '100%',
@@ -30,5 +17,10 @@ export default makeStyles(theme => ({
         [theme.breakpoints.only('xs')]: {
             fontSize: '1.1rem'
         }
+    },
+    palmyContainer: {
+        height: '100%',
+        width: 400,
+        padding: theme.spacing(1)
     }
 }))
