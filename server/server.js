@@ -18,14 +18,11 @@ app.use(express.static(__dirname + '/../build'))
 
 app.use(express.json())
 
-<<<<<<< HEAD
+
 app.get('/resume', (req, res) => {
 	res.redirect('https://docs.google.com/document/d/1sbfqaDbpB-eU6_msyee5EG3dvjhqumk0ahWBhAdxKmc/edit?usp=sharing')
 })
 
-app.listen(SERVER_PORT, () => {
-  console.log(`Servin and observin port: ${SERVER_PORT}`)
-=======
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build/index.html'))
 })
@@ -48,5 +45,5 @@ app.post('/api/contact', async (req, res) => {
 
 app.listen(SERVER_PORT, () => {
     console.log(`Servin and observin port: ${SERVER_PORT}`)
->>>>>>> bd51d89f6c5753e7fed8cb0e6b64d1ec9a687b20
+
 })
