@@ -17,13 +17,19 @@ const SkillLegend = ({ controls }) => {
     const classes = useStyles()
     const stars = new Array(5).fill(null)
     return (
-        <motion.div className={classes.root} variants={variants.gridListTile} animate={controls} custom={0}>
+        <motion.div
+            className={classes.root}
+            variants={variants.gridListTile}
+            animate={controls}
+            custom={0}
+        >
             {stars.map((star, i) => (
                 <motion.div
                     className={classes.starContainer}
                     key={`star-legend-${i}`}
                     style={{
-                        borderBottom: i === stars.length - 1 ? 'none' : '1px solid grey'
+                        borderBottom:
+                            i === stars.length - 1 ? 'none' : '1px solid grey',
                     }}
                     variants={variants.gridListTile}
                     animate={controls}

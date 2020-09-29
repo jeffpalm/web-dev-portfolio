@@ -33,5 +33,20 @@ export default makeStyles(theme => ({
         left: 0,
         zIndex: theme.zIndex.appBar + 1,
         backgroundColor: theme.palette.background.paper,
+        transition: 'height 100ms linear'
     },
+    MobileLink: {
+        color: theme.palette.text.primary,
+        fontFamily: theme.typography.body1.fontFamily,
+        padding: theme.spacing(2),
+        '&:hover': {
+            cursor: 'pointer'
+        }
+    },
+    activeMobileLink: {
+        color: theme.palette.primary.main
+    },
+    mobileLinkContainer: {
+        width: '100%',
+    }
 }))

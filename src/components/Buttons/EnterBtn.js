@@ -40,7 +40,7 @@ const EnterBtn = ({ to }) => {
             '&:hover': {
                 cursor: 'pointer',
                 background: `linear-gradient(90deg, ${colorOne},${colorTwo})`,
-                color: 'black',
+                color: theme.palette.primary.main,
                 border: 'none',
             },
             '&:focus': {
