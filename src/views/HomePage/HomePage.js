@@ -3,15 +3,15 @@ import FullPage from 'components/FullPage/FullPage'
 import { MotionTypo } from 'components/MuiMotion/MuiMotion'
 import useStyles from 'assets/jss/pages/HomePage/root'
 import variants from 'assets/animation/pages/HomePage/root'
-import theme from 'assets/jss/theme'
+// import theme from 'assets/jss/theme'
 // import BackgroundVideo from 'components/BackgroundVideo/BackgroundVideo'
-import { motion } from 'framer-motion'
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
-import { ScrollLink } from 'react-scroll'
+// import { motion } from 'framer-motion'
+// import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
+// import { ScrollLink } from 'react-scroll'
 // import useTypingAnimation from '../../hooks/useTypingAnimation'
 import TypingAnimation from '../../components/TypingAnimation/TypingAnimation'
-import { SCROLL_SPEED } from '../../assets/constants'
-import DownArrow from "../../components/DownArrow/DownArrow"
+// import { SCROLL_SPEED } from '../../assets/constants'
+// import DownArrow from "../../components/DownArrow/DownArrow"
 
 const HomePage = () => {
     const classes = useStyles()
@@ -79,7 +79,6 @@ const HomePage = () => {
                     />
                 </MotionTypo>
             </MotionTypo>
-
         </FullPage>
     )
 }

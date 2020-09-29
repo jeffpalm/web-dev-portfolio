@@ -2,14 +2,18 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
     root: {
-        backgroundColor: theme.palette.secondary.main
+        backgroundColor: theme.palette.secondary.dark,
     },
-    column: {
-        height: '100%',
-        width: '50%'
+    mainContainer: {
+        maxWidth: 600,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
     },
-    columnContainer: {
-        width: '100%',
-        height: '100%'
-    }
+    about: {
+        marginTop: theme.spacing(2),
+    },
+    tagLine: {
+        fontStyle: 'italic',
+    },
 }))
