@@ -3,6 +3,7 @@ import StarIcon from '@material-ui/icons/Star'
 import useStyles from 'assets/jss/components/SkillLegend'
 import { motion } from 'framer-motion'
 import { MotionTypo } from '../MuiMotion/MuiMotion'
+import variants from 'assets/animation/pages/SkillsPage/root'
 
 const legend = [
     'Familiar',
@@ -12,15 +13,21 @@ const legend = [
     'Highly Proficient',
 ]
 
-const SkillLegend = () => {
+const SkillLegend = ({ controls }) => {
     const classes = useStyles()
     const stars = new Array(5).fill(null)
     return (
-        <motion.div className={classes.root}>
+        <motion.div className={classes.root} variants={variants.gridListTile} animate={controls} custom={0}>
             {stars.map((star, i) => (
                 <motion.div
                     className={classes.starContainer}
                     key={`star-legend-${i}`}
+                    style={{
+                        borderBottom: i === stars.length - 1 ? 'none' : '1px solid grey'
+                    }}
+                    variants={variants.gridListTile}
+                    animate={controls}
+                    custom={i * 0.05}
                 >
                     <motion.div>
                         {stars.map(

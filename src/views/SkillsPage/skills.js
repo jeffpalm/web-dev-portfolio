@@ -28,7 +28,7 @@ export default [
     {
         title: 'Sass',
         image: 'https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png',
-        level: 3,
+        level: 4,
         category: 'Styling',
     },
     {
@@ -42,14 +42,14 @@ export default [
         title: 'Material-UI',
         image: 'https://material-ui.com/static/logo_raw.svg',
         level: 5,
-        category: 'Libraries',
+        category: 'Styling',
     },
     {
         title: 'NodejS',
         image:
             'https://www.brandeps.com/logo-download/N/Node-JS-logo-vector-01.svg',
         level: 5,
-        category: 'framework',
+        category: 'Frameworks',
     },
     {
         title: 'Lodash',

@@ -13,6 +13,6 @@ export default makeStyles(theme => ({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        borderBottom: '1px solid grey',
+        // borderBottom: '1px solid grey',
     },
 }))

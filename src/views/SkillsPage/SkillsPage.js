@@ -20,7 +20,7 @@ const SkillsPage = () => {
 
     return (
         <FullPage name='skills'>
-            <SkillLegend />
+            <SkillLegend controls={controls} />
 
             {categories.map(category => (
                 <React.Fragment key={category}>
