@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/palmy_wave.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jss/components/EnterBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jss/components/SideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jss/components/SkillLegend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillLegend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/zen-chess/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/components/FullPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/components/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/AboutPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/AboutPage/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/HomePage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/HomePage/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/ProjectsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/ProjectsPage/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/SkillsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/SkillsPage/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/Enter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/ScrollNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/ScrollNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePageVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePageVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NewApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1hxna8fBisictw73noFEAOAVp2y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/projects/zen-chess" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="" />
+      <created>1600961674245</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600961674245</updated>
+      <workItem from="1600961676043" duration="969000" />
+      <workItem from="1600962654584" duration="3408000" />
+      <workItem from="1601317822912" duration="3134000" />
+      <workItem from="1601322696543" duration="24647000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601319459569">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319459569" />
+    <state x="1094" y="895" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601336693980">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="1094" y="895" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601336693980" />
+    <state x="1585" y="751" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1601343626964">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="1585" y="751" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601343626964" />
+    <state x="1635" y="726" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601319255282">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="1635" y="726" width="424" height="491" key="FileChooserDialogImpl/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319255282" />
+    <state x="543" y="258" width="824" height="533" key="IDE.errors.dialog" timestamp="1600965020934">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="543" y="258" width="824" height="533" key="IDE.errors.dialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600965020934" />
+    <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor" timestamp="1601348951209">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="393" y="131" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600963789511" />
+    <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601348951209" />
+    <state x="1187" y="1008" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601325357267">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="1187" y="1008" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601325357267" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1601319134012">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319134012" />
+    <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup" timestamp="1601337026213">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600965349210" />
+    <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601337026213" />
+  </component>
+</project>
