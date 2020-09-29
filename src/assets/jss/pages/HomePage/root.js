@@ -19,8 +19,9 @@ export default makeStyles(theme => ({
         },
     },
     palmyContainer: {
-        height: '100%',
-        width: 400,
+        height: 'auto',
+        width: '100%',
+        maxWidth: 400,
         padding: theme.spacing(1),
         display: 'flex',
         flexDirection: 'column',

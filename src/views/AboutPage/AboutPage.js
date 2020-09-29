@@ -13,13 +13,11 @@ const AboutPage = () => {
         <FullPage name='about' className={classes.root}>
             <MotionGrid className={classes.mainContainer}>
                 <motion.img
+                    className={classes.aboutImg}
                     variants={variants.text}
                     custom={0}
                     src='/assets/palmy_wave.gif'
-                    style={{
-                        width: 'auto',
-                        height: 300,
-                    }}
+                    alt='Jeff Waving'
                 />
 
                 <MotionTypo

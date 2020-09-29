@@ -16,4 +16,9 @@ export default makeStyles(theme => ({
     tagLine: {
         fontStyle: 'italic',
     },
+    aboutImg: {
+        width: '100%',
+        maxWidth: 400,
+        height: 'auto'
+    }
 }))

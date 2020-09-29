@@ -7,7 +7,7 @@ export default makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        minWidth: 340,
+        minWidth: 300,
         height: '100%',
     },
     field: {

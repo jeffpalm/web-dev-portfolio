@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 export default makeStyles(theme => ({
     header: {
         width: '50%',
-        minWidth: 400,
+        minWidth: 300,
     },
     hotline: {
         position: 'fixed',
