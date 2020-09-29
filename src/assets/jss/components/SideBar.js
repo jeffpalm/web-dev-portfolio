@@ -4,7 +4,7 @@ export default makeStyles(theme => ({
     root: {
         position: 'fixed',
         width: 60,
-        height: 180,
+        height: 240,
         left: 0,
         top: 300,
         zIndex: theme.zIndex.modal,
