@@ -8,6 +8,7 @@ const UnderConstruction = () => {
 	return (
 		<div className='UnderConstruction'>
 			<h1>Jeff Palmer Development</h1>
+			<h6>Portfolio Coming Soon</h6>
 			<div>
 				<IconButton
 					href='https://www.linkedin.com/in/jeffpalmdev/'
