@@ -1,18 +1,53 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import useStyles from 'assets/jss/pages/SkillsPage/root'
 import variants from 'assets/animation/pages/SkillsPage/root'
 import FullPage from '../../components/FullPage/FullPage'
-import { MotionTypo } from '../../components/MuiMotion/MuiMotion'
+import { MotionTypo, MotionGrid } from '../../components/MuiMotion/MuiMotion'
 import skills from './skills'
 import { motion, useAnimation } from 'framer-motion'
 import SkillStars from '../../components/SkillStars/SkillStars'
 import SkillLegend from '../../components/SkillStars/SkillLegend'
+import axios from 'axios'
+import MaterialTable from 'material-table'
+import tableIcons from './tableIcons'
+import { useTheme } from '@material-ui/core/styles'
 
-const categories = ['Languages', 'Libraries', 'Styling']
+const categories = skills.reduce(
+    (acc, cur) => (acc.includes(cur.category) ? acc : [...acc, cur.category]),
+    []
+)
 
 const SkillsPage = () => {
     const classes = useStyles()
     const controls = useAnimation()
+    const theme = useTheme()
+
+    const [gitHubStats, setGitHubStats] = useState({ lang: {}, pkgs: [] })
+
+    useEffect(() => {
+        const source = axios.CancelToken.source()
+
+        const pullGitHubStats = async () => {
+            try {
+                await axios
+                    .get('/api/githubstats', { cancelToken: source.token })
+                    .then(res => {
+                        setGitHubStats(res.data)
+                    })
+            } catch (err) {
+                if (axios.isCancel(err)) {
+                    console.log('cancelled')
+                } else {
+                    throw err
+                }
+            }
+        }
+        pullGitHubStats()
+
+        return () => {
+            source.cancel()
+        }
+    }, [])
 
     useEffect(() => {
         controls.start('enter')
@@ -20,38 +55,152 @@ const SkillsPage = () => {
 
     return (
         <FullPage name='skills'>
-            <SkillLegend controls={controls} />
+            <MotionGrid container spacing={2}>
+                <MotionGrid
+                    item
+                    container
+                    direction='column'
+                    alignItems='center'
+                    xs
+                >
+                    <SkillLegend controls={controls} />
 
-            {categories.map(category => (
-                <React.Fragment key={category}>
-                    <MotionTypo variant='h4' color='textPrimary'>
-                        {category}
-                    </MotionTypo>
-                    {skills
-                        .filter(s => s.category === category)
-                        .sort((a, b) => b.level - a.level)
-                        .map((skill, i) => (
-                            <motion.div
-                                className={classes.skillCard}
-                                key={skill.title}
-                                variants={variants.gridListTile}
-                                custom={i * 0.05}
+                    {categories.map(category => (
+                        <React.Fragment key={category}>
+                            <MotionTypo
+                                variant='h4'
+                                color='textPrimary'
+                                align='center'
                             >
-                                <MotionTypo
-                                    variant='h6'
-                                    align='right'
-                                    color='textPrimary'
-                                >
-                                    {skill.title}
-                                </MotionTypo>
-                                <SkillStars
-                                    starCount={skill.level}
-                                    name={skill.title}
-                                />
-                            </motion.div>
-                        ))}
-                </React.Fragment>
-            ))}
+                                {category}
+                            </MotionTypo>
+                            {skills
+                                .filter(s => s.category === category)
+                                .sort((a, b) => b.level - a.level)
+                                .map((skill, i) => (
+                                    <motion.div
+                                        className={classes.skillCard}
+                                        key={skill.title}
+                                        variants={variants.gridListTile}
+                                        custom={i * 0.05}
+                                    >
+                                        <div className={classes.skillContainer}>
+                                            <MotionTypo
+                                                variant='h6'
+                                                align='right'
+                                                color='textPrimary'
+                                            >
+                                                {skill.title}
+                                            </MotionTypo>
+                                            <SkillStars
+                                                starCount={skill.level}
+                                                name={skill.title}
+                                            />
+                                        </div>
+                                        {skill.gitHubName &&
+                                            gitHubStats.lang[
+                                                skill.gitHubName
+                                            ] && (
+                                                <motion.div
+                                                    className={
+                                                        classes.gitHubBar
+                                                    }
+                                                >
+                                                    <MotionTypo
+                                                        variant='body1'
+                                                        color='textSecondary'
+                                                        display='inline'
+                                                    >
+                                                        GitHub Additions:{' '}
+                                                        {
+                                                            gitHubStats.lang[
+                                                                skill.gitHubName
+                                                            ]
+                                                        }
+                                                    </MotionTypo>
+                                                </motion.div>
+                                            )}
+                                    </motion.div>
+                                ))}
+                        </React.Fragment>
+                    ))}
+                </MotionGrid>
+                <MotionGrid item container direction='column' xs={12} sm={6}>
+                    {gitHubStats.pkgs.length !== 0 && (
+                        <MotionGrid
+                            initial={{
+                                x: '100%',
+                                opacity: 0,
+                            }}
+                            animate={{
+                                x: 0,
+                                opacity: 1,
+                            }}
+                        >
+                            <MaterialTable
+                                icons={tableIcons}
+                                columns={[
+                                    { title: 'NPM Package', field: 'name' },
+                                    {
+                                        title: 'Total GitHub Repo Count',
+                                        field: 'count',
+                                        filtering: false,
+                                    },
+                                ]}
+                                data={gitHubStats.pkgs.sort(
+                                    (a, b) => b.count - a.count
+                                )}
+                                options={{
+                                    search: false,
+                                    showTitle: false,
+                                    draggable: false,
+                                    padding: 'dense',
+                                    rowStyle: {
+                                        fontFamily: theme.typography.fontFamily,
+                                    },
+                                    pageSize: 25,
+                                    paginationType: 'stepped',
+                                    pageSizeOptions: [],
+                                    toolbar: false,
+                                    filtering: true,
+                                }}
+                                detailPanel={rowData => (
+                                    <>
+                                        <MotionTypo variant='h6' align='center'>
+                                            Recently Updated Examples
+                                        </MotionTypo>
+                                        <ul className={classes.repoList}>
+                                            {rowData.repos
+                                                .sort(
+                                                    (a, b) =>
+                                                        a.updated - b.updated
+                                                )
+                                                .map((repo, i) =>
+                                                    i > 5 ? null : (
+                                                        <li
+                                                            key={`${rowData.name}-${repo.name}`}
+                                                        >
+                                                            <a
+                                                                href={repo.url}
+                                                                target='_blank'
+                                                                rel='noopener noreferrer'
+                                                            >
+                                                                {repo.name}
+                                                            </a>
+                                                        </li>
+                                                    )
+                                                )}
+                                        </ul>
+                                    </>
+                                )}
+                                onRowClick={(e, r, togglePanel) =>
+                                    togglePanel()
+                                }
+                            />
+                        </MotionGrid>
+                    )}
+                </MotionGrid>
+            </MotionGrid>
         </FullPage>
     )
 }

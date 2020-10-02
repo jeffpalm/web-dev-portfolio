@@ -117,6 +117,7 @@ const Nav = () => {
                                         animate={linkControls}
                                         exit='initial'
                                         custom={i + 1}
+                                        isDynamic
                                     >
                                         {link.text}
                                     </Link>
@@ -170,6 +171,7 @@ const Nav = () => {
                                                 ? 'none'
                                                 : '1px solid grey',
                                     }}
+                                    isDynamic
                                 >
                                     {link.text}
                                 </MobileLink>

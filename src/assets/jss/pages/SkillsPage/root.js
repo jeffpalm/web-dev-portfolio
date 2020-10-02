@@ -16,15 +16,29 @@ export default makeStyles(theme => ({
         width: 'auto',
     },
     skillCard: {
-        height: 30,
+        minHeight: 30,
         width: 300,
         backgroundColor: theme.palette.background.paper,
         borderRadius: theme.shape.borderRadius,
         marginBottom: theme.spacing(1),
-        padding: theme.spacing(1),
+        padding: theme.spacing(0, 1),
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    skillContainer: {
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'center'
     },
+    gitHubBar: {
+        
+    },
+    repoList: {
+        padding: theme.spacing(1),
+        textAlign: 'center'
+    }
 }))
