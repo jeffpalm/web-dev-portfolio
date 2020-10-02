@@ -3,7 +3,7 @@ import React from 'react'
 // import { AnimatePresence } from 'framer-motion'
 import AboutPage from 'views/AboutPage/AboutPage'
 import SkillsPage from 'views/SkillsPage/SkillsPage'
-import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
+// import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
 import ContactPage from 'views/ContactPage/ContactPage'
 // import HomePage from 'views/HomePage/HomePage'
 import HomePageVideo from 'views/HomePage/HomePageVideo'
@@ -11,6 +11,7 @@ import HomePageVideo from 'views/HomePage/HomePageVideo'
 // import Nav from 'components/Nav/Nav'
 import ScrollNav from 'components/Nav/ScrollNav'
 // import SwitchWrapper from 'components/SwitchWrapper/SwitchWrapper'
+import NewProjectsPage from './ProjectsPage/NewProjectsPage'
 import useStyles from 'assets/jss/root'
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
             <ScrollNav key='nav-bar' />
             <AboutPage id='about' />
             <SkillsPage id='skills' />
-            <ProjectsPage id='projects' />
+            {/* <ProjectsPage id='projects' /> */}
+            <NewProjectsPage id='projects' />
             <ContactPage id='contact' />
         </div>
     )

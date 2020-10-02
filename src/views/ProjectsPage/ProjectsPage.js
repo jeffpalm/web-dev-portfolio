@@ -1,26 +1,20 @@
 import React, { useState } from 'react'
 import FullPage from '../../components/FullPage/FullPage'
-// import { Typography } from '@material-ui/core'
 import {
     MotionGrid,
     MotionGridList,
     MotionGridListTile,
     MotionTypo,
     MotionButton,
+    MotionBox
 } from 'components/MuiMotion/MuiMotion'
 import useStyles from 'assets/jss/pages/ProjectsPage/root'
-// import variants from 'assets/animation/pages/ProjectsPage/root'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Box from '@material-ui/core/Box'
 import { motion, AnimatePresence } from 'framer-motion'
 import projects from './projects'
-// import { SCROLL_SPEED } from '../../assets/constants'
-// import { motion } from 'framer-motion'
-// import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-// import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
-// import IconButton from '@material-ui/core/IconButton'
+
 
 
 
@@ -40,7 +34,7 @@ const Project = ({ project, index, curProject, children, ...props }) => {
             {...props}
         >
             {curProject === index && (
-                <Box p={3} className={classes.projectContainer}>
+                <MotionBox p={3} className={classes.projectContainer}>
                     <MotionGrid container direction='row' alignItems='stretch'>
                         <MotionGrid
                             item
@@ -134,7 +128,7 @@ const Project = ({ project, index, curProject, children, ...props }) => {
                             </MotionGridList>
                         </MotionGrid>
                     </MotionGrid>
-                </Box>
+                </MotionBox>
             )}
             {fullImg !== '' && (
                 <AnimatePresence>
