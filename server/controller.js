@@ -29,13 +29,21 @@ module.exports = {
             'https://docs.google.com/document/d/1sbfqaDbpB-eU6_msyee5EG3dvjhqumk0ahWBhAdxKmc/edit?usp=sharing'
         )
     },
-    getGitHubStats: async (req, res) => {
+    getGitHubStats: (req, res) => {
+        const db = req.app.get('db')
+
+        db.collection('gitHubStats').findOne({title: 'current'}, (err, result) => {
+            res.status(200).send(result)
+        })
+
+    },
+    updateGitHubStats: async (req, res) => {
         // TODO: Figure out retrieving stats for stories-with-data repo
-        // TODO: Figure out retrieving stats for the-hub repo
 
-        const dataAssembly = { lang: {}, pkgs: {} }
+        const dataAssembly = { lang: {}, pkgs: {} },
+            db = req.app.get('db')
 
-        const { data } = await axios
+        const { data: repos } = await axios
             .get(
                 'https://api.github.com/users/jeffpalm/repos?type=owner&per_page=100&sort=updated&direction=desc'
             )
@@ -44,8 +52,6 @@ module.exports = {
                     .status(500)
                     .send('GitHub Repo List API Call Failed. Details: ' + err)
             )
-
-        const repos = data
 
         const langStatsPromises = repos.map(
             repo =>
@@ -59,7 +65,8 @@ module.exports = {
 
                             for (let lang in langData) {
                                 dataAssembly.lang[lang]
-                                    ? (dataAssembly.lang[lang] += langData[lang])
+                                    ? (dataAssembly.lang[lang] +=
+                                          langData[lang])
                                     : (dataAssembly.lang[lang] = langData[lang])
                             }
                             resolve()
@@ -75,11 +82,11 @@ module.exports = {
         const pkgStatsPromises = repos.map(
             repo =>
                 new Promise(resolve => {
-                  const repoDetails = {
-                    name: repo.name,
-                    url: repo.html_url,
-                    updated: repo.updated_at
-                  }
+                    const repoDetails = {
+                        name: repo.name,
+                        url: repo.html_url,
+                        updated: repo.updated_at,
+                    }
 
                     axios
                         .get(
@@ -102,16 +109,15 @@ module.exports = {
                                 ).titleize()
 
                                 if (dataAssembly.pkgs[normalizedName]) {
-                                    dataAssembly.pkgs[normalizedName]['repos'].push(
-                                        repoDetails
-                                    )
+                                    dataAssembly.pkgs[normalizedName][
+                                        'repos'
+                                    ].push(repoDetails)
                                     dataAssembly.pkgs[normalizedName].count++
                                 } else if (!packageExclusions.includes(dep)) {
                                     dataAssembly.pkgs[normalizedName] = {
-                                      repos: [repoDetails],
-                                      count: 1
+                                        repos: [repoDetails],
+                                        count: 1,
                                     }
-                                    
                                 }
                             }
                             resolve()
@@ -125,19 +131,31 @@ module.exports = {
 
         await Promise.all([...langStatsPromises, ...pkgStatsPromises])
 
-       const output = {
-         lang: dataAssembly.lang,
-         pkgs: []
-       }
+        const toUpsert = {
+            title: 'current',
+            lang: dataAssembly.lang,
+            pkgs: [],
+        }
 
-       for (let pkg in dataAssembly.pkgs) {
-         output.pkgs.push({
-           name: pkg,
-           repos: dataAssembly.pkgs[pkg].repos.sort((a, b) => a.updated - b.updated),
-           count: dataAssembly.pkgs[pkg].count
-         })
-       }
+        for (let pkg in dataAssembly.pkgs) {
+            toUpsert.pkgs.push({
+                name: pkg,
+                repos: dataAssembly.pkgs[pkg].repos.sort(
+                    (a, b) => a.updated - b.updated
+                ),
+                count: dataAssembly.pkgs[pkg].count,
+            })
+        }
 
-        res.status(200).send(output)
+        db.collection('gitHubStats')
+            .findOneAndReplace({ title: 'current' }, toUpsert, { upsert: true })
+            .then(() => {
+                res.sendStatus(200)
+            })
+            .catch(err => {
+                res.status(500).send(
+                    `Error upserting document 'current' into collection gitHubStats. Details: ${err}`
+                )
+            })
     },
 }
