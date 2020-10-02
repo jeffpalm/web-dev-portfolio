@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import App from 'views/App'
-import NewApp from 'views/NewApp'
+import App from 'views/App'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { HashRouter, BrowserRouter } from 'react-router-dom'
 import theme from "./assets/jss/theme";
@@ -14,7 +13,7 @@ ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
             <Router>
-                <NewApp />
+                <App />
             </Router>
         </ThemeProvider>
     </React.StrictMode>,

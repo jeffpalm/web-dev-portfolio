@@ -5,7 +5,7 @@ export default makeStyles(theme => ({
         backgroundColor: theme.palette.primary.main,
     },
     projectContainer: {
-        height: '100%',
+        height: 'calc(100vh - 200px)',
         width: `100%`,
         display: 'flex',
         flexDirection: 'column',
@@ -13,10 +13,11 @@ export default makeStyles(theme => ({
         alignItems: 'center',
         padding: theme.spacing(2),
         // margin: theme.spacing(1),
-        borderRadius: theme.shape.borderRadius,
+        borderBottomLeftRadius: theme.shape.borderRadius,
+        borderBottomRightRadius: theme.shape.borderRadius,
+        backgroundColor: theme.palette.background.default
     },
     cardsContainer: {
-        display: 'inline-block',
         borderRadius: theme.shape.borderRadius,
         width: '100%',
         height: '100%',
