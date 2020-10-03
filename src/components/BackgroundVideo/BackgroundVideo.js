@@ -4,7 +4,6 @@ import useStyles from './BackgroundVideoStyle'
 import variants from './BackgroundVideoAnimation'
 import { Element } from 'react-scroll'
 
-
 const BackgroundVideo = ({ name, children, wrapperProps }) => {
     const classes = useStyles()
     const videoSource = './assets/palmtree.mp4'

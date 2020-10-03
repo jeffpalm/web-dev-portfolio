@@ -1,8 +1,10 @@
 import React from 'react'
+// STYLE/ANIMATION
+import useStyles from 'views/HomePage/HomePageStyle'
+// COMPONENTS
 import FullPage from 'components/FullPage/FullPage'
 import Palmytree from 'components/Palmytree/Palmytree'
-import useStyles from 'assets/jss/pages/HomePage/root'
-import EnterBtn from 'components/Buttons/EnterBtn'
+import EnterBtn from 'components/Buttons/EnterBtn/EnterBtn'
 
 const HomePageVideo = () => {
     const classes = useStyles()

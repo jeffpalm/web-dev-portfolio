@@ -1,10 +1,13 @@
 import React from 'react'
-import FullPage from '../../components/FullPage/FullPage'
-import { MotionGrid, MotionTypo } from '../../components/MuiMotion/MuiMotion'
+// STYLE/ANIMATION
+import variants from './AboutPageAnimation'
+import useStyles from './AboutPageStyle'
+// COMPONENTS
+import FullPage from 'components/FullPage/FullPage'
+import { MotionGrid, MotionTypo } from 'components/MuiMotion/MuiMotion'
+import TypingAnimation from 'components/TypingAnimation/TypingAnimation'
+// THIRD PARTY
 import { motion } from 'framer-motion'
-import variants from 'assets/animation/pages/AboutPage/root'
-import useStyles from 'assets/jss/pages/AboutPage/root'
-import TypingAnimation from '../../components/TypingAnimation/TypingAnimation'
 
 const AboutPage = () => {
     const classes = useStyles()

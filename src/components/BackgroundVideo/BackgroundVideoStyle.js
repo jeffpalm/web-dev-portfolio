@@ -1,4 +1,4 @@
-import {makeStyles} from "@material-ui/core/styles"
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
     Container: {
@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         height: '100vh',
     },
     Video: {
-        filter: 'grayscale(100%)'
+        filter: 'grayscale(100%)',
     },
     Content: {
         position: 'absolute',
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 0
+        padding: 0,
     },
     SubContent: {
         textAlign: 'center',

@@ -1,24 +1,21 @@
+import { SCROLL_SPEED } from '../../assets/data/constants'
+
 const variants = {
-    container: {
+    card: {
         initial: {
+            y: '50%',
             opacity: 0,
         },
         enter: {
+            y: '0%',
             opacity: 1,
             transition: {
-                duration: 3,
+                delay: SCROLL_SPEED / 1000,
             },
         },
-    },
-    video: {
-        initial: {
+        exit: {
+            y: '50%',
             opacity: 0,
-        },
-        animate: {
-            opacity: 1,
-            transition: {
-                duration: 5,
-            },
         },
     },
 }

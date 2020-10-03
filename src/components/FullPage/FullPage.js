@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react'
+// STYLE/ANIMATION
+import useStyles from './FullPageStyle'
+import variants from './FullPageAnimation'
+// HOOKS
 import { MotionBox } from '../MuiMotion/MuiMotion'
-import useStyles from 'assets/jss/components/FullPage'
 import useCls from 'hooks/useCls'
-// import variants from 'assets/animation/components/FullPage'
 import { Element } from 'react-scroll'
-import {
-    useAnimation,
-    AnimatePresence,
-} from 'framer-motion'
+import { useAnimation, AnimatePresence } from 'framer-motion'
 import useVisibility from '../../hooks/useVisibility'
 
 const FullPage = ({
@@ -46,7 +45,7 @@ const FullPage = ({
                     alignItems={alignItems}
                     p={2}
                     m={0}
-                    variants={{}}
+                    variants={variants}
                     initial='initial'
                     animate={controls}
                     exit='exit'

@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+// STYLE/ANIMATION
+import useStyles from 'views/ContactPage/ContactPageStyle'
+// COMPONENTS
 import FullPage from 'components/FullPage/FullPage'
 import { MotionTypo } from 'components/MuiMotion/MuiMotion'
-import { AnimatePresence, motion, useAnimation } from 'framer-motion'
-import ContactForm from './sections/ContactForm'
+import ContactForm from 'components/ContactForm/ContactForm'
+// HOOKS
 import useWindowSize from 'hooks/useWindowSize'
-import useStyles from 'assets/jss/pages/ContactPage/root'
+// THIRD PARTY
+import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 
 const ContactPage = () => {
     const classes = useStyles()
