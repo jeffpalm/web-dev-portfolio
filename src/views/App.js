@@ -1,19 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense, lazy } from 'react'
 // STYLE/ANIMATION
 import useStyles from './AppStyle'
 // VIEWS
-import AboutPage from 'views/AboutPage/AboutPage'
-import SkillsPage from 'views/SkillsPage/SkillsPage'
-import ContactPage from 'views/ContactPage/ContactPage'
 import HomePage from 'views/HomePage/HomePage'
-import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
+// import AboutPage from 'views/AboutPage/AboutPage'
+// import SkillsPage from 'views/SkillsPage/SkillsPage'
+// import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
+// import ContactPage from 'views/ContactPage/ContactPage'
 // COMPONENTS
-import Nav from 'components/Nav/Nav'
+// import Nav from 'components/Nav/Nav'
+import NavFallback from '../components/Nav/NavFallback'
+import FullPageFallback from 'components/FullPage/FullPageFallback'
 // HOOKS
 import useScrollPosition from 'hooks/useScrollPosition'
 import useDocumentSize from 'hooks/useDocumentSize'
 import useHueConversion from 'hooks/useHueConversion'
 import useWindowSize from 'hooks/useWindowSize'
+
+// CODE SPLITTING
+const Nav = lazy(() => import('components/Nav/Nav'))
+const AboutPage = lazy(() => import('views/AboutPage/AboutPage'))
+const SkillsPage = lazy(() => import('views/SkillsPage/SkillsPage'))
+const ContactPage = lazy(() => import('views/ContactPage/ContactPage'))
+const ProjectsPage = lazy(() => import('views/ProjectsPage/ProjectsPage'))
 
 const randomHue = Math.random() * 360
 
@@ -35,11 +44,21 @@ const App = () => {
     return (
         <div className={classes.root}>
             <HomePage id='home' />
-            <Nav key='nav-bar' wS={wS} dynamicHue={hue} newHue={newHue} />
-            <AboutPage id='about' dynamicHue={hue} />
-            <SkillsPage id='skills' />
-            <ProjectsPage id='projects' />
-            <ContactPage id='contact' />
+            <Suspense fallback={<NavFallback />}>
+                <Nav key='nav-bar' wS={wS} dynamicHue={hue} newHue={newHue} />
+            </Suspense>
+            <Suspense fallback={<FullPageFallback />}>
+                <AboutPage id='about' dynamicHue={hue} />
+            </Suspense>
+            <Suspense fallback={<FullPageFallback />}>
+                <SkillsPage id='skills' />
+            </Suspense>
+            <Suspense fallback={<FullPageFallback />}>
+                <ProjectsPage id='projects' />
+            </Suspense>
+            <Suspense fallback={<FullPageFallback />}>
+                <ContactPage id='contact' />
+            </Suspense>
         </div>
     )
 }

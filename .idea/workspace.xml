@@ -33,8 +33,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/FullPage/FullPageFallback.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/NavFallback.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +61,9 @@
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1hxna8fBisictw73noFEAOAVp2y" />
   <component name="ProjectLevelVcsManager">
@@ -85,11 +93,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\FullPage" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\jss" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\SkillsTableIcons" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\data" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\ProjectToolbar" />
-      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -180,10 +188,10 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state width="600" height="428" key="javadoc.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319134012" />
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1601844822680">
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1601847732523">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601844822680" />
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601847732523" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600965349210" />
     <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601337026213" />
   </component>
