@@ -18,7 +18,9 @@ export default makeStyles(theme => ({
     skillCard: {
         minHeight: 30,
         width: 300,
-        backgroundColor: theme.palette.background.paper,
+        borderColor: theme.palette.background.paper,
+        borderStyle: 'solid',
+        borderWidth: 1,
         borderRadius: theme.shape.borderRadius,
         marginBottom: theme.spacing(1),
         padding: theme.spacing(0, 1),
@@ -32,13 +34,28 @@ export default makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
-    gitHubBar: {
-        
-    },
+    gitHubBar: {},
     repoList: {
         padding: theme.spacing(1),
-        textAlign: 'center'
-    }
+        textAlign: 'center',
+    },
+    tableContainer: {
+        padding: theme.spacing(0, 2),
+        paddingBottom: theme.spacing(2),
+    },
+    table: {
+        padding: theme.spacing(1),
+    },
+    repoLink: {
+        color: theme.palette.text.primary,
+        transition: 'color 200ms ease-in-out',
+        '&:visited': {
+            color: theme.palette.text.primary,
+        },
+        '&:hover': {
+            color: theme.palette.primary.main,
+        },
+    },
 }))

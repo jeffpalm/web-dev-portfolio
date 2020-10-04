@@ -12,7 +12,7 @@ const EnterBtn = ({ to }) => {
     const colorOne = useHslCycle(1, 0, 'forward')
     const colorTwo = useHslCycle(1, 0, 'backward')
 
-    const classes = useStyles(colorOne, colorTwo)()
+    const classes = useStyles()
 
     return (
         <MotionButton
@@ -25,6 +25,12 @@ const EnterBtn = ({ to }) => {
             initial='initial'
             enter='enter'
             exit='initial'
+            style={{
+                color: colorTwo,
+                border: `1px solid ${colorOne}`,
+                // background: `linear-gradient(90deg, ${colorOne},${colorTwo})`,
+                // TODO: Figure out how to apply dynamic linear-gradient onHover
+            }}
             whileHover={{
                 scale: 1.1,
             }}

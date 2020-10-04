@@ -35,7 +35,7 @@ export default makeStyles(theme => ({
         top: 0,
         left: 0,
         zIndex: theme.zIndex.appBar + 1,
-        backgroundColor: theme.palette.background.paper + '80',
+        // backgroundColor: theme.palette.background.paper + '80',
         transition: 'height 100ms linear',
     },
     MobileLink: {

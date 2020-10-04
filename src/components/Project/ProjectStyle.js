@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
     projectContainer: {
-        height: 'calc(100vh - 200px)',
+        height: 'calc(100% - 48px)',
         width: `100%`,
         display: 'flex',
         flexDirection: 'column',
@@ -12,7 +12,7 @@ export default makeStyles(theme => ({
         // margin: theme.spacing(1),
         borderBottomLeftRadius: theme.shape.borderRadius,
         borderBottomRightRadius: theme.shape.borderRadius,
-        backgroundColor: theme.palette.background.default + '80',
+        backgroundColor: theme.palette.background.default,
     },
     cardsContainer: {
         borderRadius: theme.shape.borderRadius,

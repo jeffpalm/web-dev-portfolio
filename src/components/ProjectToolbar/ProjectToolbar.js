@@ -1,8 +1,8 @@
 import React from 'react'
+import useStyles from './ProjectToolbarStyle'
 import projects from 'assets/data/projects'
 import { MotionGrid, MotionTypo } from 'components/MuiMotion/MuiMotion'
 import useCls from 'hooks/useCls'
-import useStyles from './ProjectToolbarStyle'
 
 const Tab = ({
     name,

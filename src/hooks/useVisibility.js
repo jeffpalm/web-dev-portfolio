@@ -5,7 +5,21 @@ const useVisibility = ref => {
 
     useEffect(() => {
         const determineVisibility = () => {
-            const { bottom, top, height } = ref.current.getBoundingClientRect()
+            const { bottom, top } = ref.current.getBoundingClientRect()
+
+            // console.log(ref.current)
+            // if (ref.current.id === 'skills-page') {
+            //     console.log(
+            //         'top:',
+            //         top,
+            //         'btm:',
+            //         bottom,
+            //         'height:',
+            //         height,
+            //         'wH:',
+            //         window.innerHeight
+            //     )
+            // }
             // console.log('window: ', window)
             // console.log('innerHeight: ', window.innerHeight)
             // console.log(ref)
@@ -13,7 +27,7 @@ const useVisibility = ref => {
             // console.log('Scroll down to: ', window.innerHeight - (window.scrollY % window.innerHeight))
             // console.log('elementY: ', elementY)
 
-            if (top < height && bottom >= 0) {
+            if (top < window.innerHeight && bottom >= 0) {
                 setVisible(true)
             } else {
                 setVisible(false)

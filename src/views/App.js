@@ -11,30 +11,32 @@ import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
 import Nav from 'components/Nav/Nav'
 // HOOKS
 import useScrollPosition from 'hooks/useScrollPosition'
+import useDocumentSize from 'hooks/useDocumentSize'
 import useHueConversion from 'hooks/useHueConversion'
-import useDocumentSize from '../hooks/useDocumentSize'
+import useWindowSize from 'hooks/useWindowSize'
 
 const randomHue = Math.random() * 360
 
 const App = () => {
     const classes = useStyles()
+    const wS = useWindowSize()
     const { y } = useScrollPosition()
     const doc = useDocumentSize()
 
     const [startHue, setStartHue] = useState(randomHue)
 
     const hue = useHueConversion(y, 0, doc.height, startHue)
-    const backgroundColor = `hsl(${hue}, 40%, 30%)`
+    // const dynamicHue = `hsla(${hue}, 50%, 30%, 0.8)`
 
     const newHue = () => {
         setStartHue(Math.floor(Math.random() * 360))
     }
 
     return (
-        <div className={classes.root} style={{ backgroundColor }}>
+        <div className={classes.root}>
             <HomePage id='home' />
-            <Nav key='nav-bar' newHue={newHue} />
-            <AboutPage id='about' />
+            <Nav key='nav-bar' wS={wS} dynamicHue={hue} newHue={newHue} />
+            <AboutPage id='about' dynamicHue={hue} />
             <SkillsPage id='skills' />
             <ProjectsPage id='projects' />
             <ContactPage id='contact' />

@@ -9,12 +9,24 @@ import TypingAnimation from 'components/TypingAnimation/TypingAnimation'
 // THIRD PARTY
 import { motion } from 'framer-motion'
 
-const AboutPage = () => {
+const AboutPage = ({ dynamicHue }) => {
     const classes = useStyles()
+
+    const color = `hsl(${dynamicHue}, 50%, 50%)`
 
     return (
         <FullPage name='about' className={classes.root}>
             <MotionGrid className={classes.mainContainer}>
+                <MotionTypo
+                    variants={variants.text}
+                    exit='initial'
+                    variant='h1'
+                    color='textPrimary'
+                    custom={1}
+                    align='center'
+                >
+                    Hiiiiii!
+                </MotionTypo>
                 <motion.img
                     className={classes.aboutImg}
                     variants={variants.text}
@@ -24,20 +36,11 @@ const AboutPage = () => {
                 />
 
                 <MotionTypo
-                    variants={variants.text}
-                    exit='initial'
-                    variant='h1'
-                    color='textPrimary'
-                    custom={1}
-                    align='center'
-                >
-                    Hiiiiiii!
-                </MotionTypo>
-                <MotionTypo
+                    className={classes.myNameIs}
                     variants={variants.text}
                     exit='initial'
                     variant='h4'
-                    color='textSecondary'
+                    color='textPrimary'
                     align='center'
                     custom={3}
                     display='inline'
@@ -47,7 +50,7 @@ const AboutPage = () => {
                         variants={variants.text}
                         exit='initial'
                         variant='h4'
-                        color='textSecondary'
+                        style={{ color }}
                         align='center'
                         custom={3}
                         display='inline'
@@ -75,8 +78,8 @@ const AboutPage = () => {
                     className={classes.tagLine}
                     variants={variants.text}
                     exit='initial'
-                    variant='h4'
-                    color='secondary'
+                    variant='h5'
+                    color='textSecondary'
                     align='center'
                     custom={3}
                     display='inline'
