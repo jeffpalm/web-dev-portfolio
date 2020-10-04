@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
     root: {
-        backgroundColor: theme.palette.secondary.dark,
+        // backgroundColor: theme.palette.secondary.dark,
     },
     mainContainer: {
         maxWidth: 600,
@@ -19,6 +19,6 @@ export default makeStyles(theme => ({
     aboutImg: {
         width: '100%',
         maxWidth: 400,
-        height: 'auto'
-    }
+        height: 'auto',
+    },
 }))

@@ -16,7 +16,7 @@ export default makeStyles(theme => ({
     },
     inputField: {
         width: `calc(100% - ${theme.spacing(2)}px)`,
-        backgroundColor: theme.palette.background.default,
+        // backgroundColor: theme.palette.background.default,
         zIndex: theme.zIndex.modal,
         transition: theme.transitions.create('border-color'),
         padding: theme.spacing(1, 0),

@@ -12,7 +12,7 @@ export default makeStyles(theme => ({
         // margin: theme.spacing(1),
         borderBottomLeftRadius: theme.shape.borderRadius,
         borderBottomRightRadius: theme.shape.borderRadius,
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: theme.palette.background.default + '80',
     },
     cardsContainer: {
         borderRadius: theme.shape.borderRadius,
