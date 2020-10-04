@@ -11,7 +11,7 @@ const variants = {
         transition: {
             when: 'beforeChildren',
             // delay: 0.5,
-            duration: 1,
+            duration: 0.5,
             staggerChildren: 0.1,
             ease: 'linear',
         },

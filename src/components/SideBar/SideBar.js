@@ -8,7 +8,7 @@ import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined'
 import useStyles from './SideBarStyle'
 import variants from './SideBarAnimation'
 
-const SideBar = ({ controls }) => {
+const SideBar = ({ controls, backgroundColor }) => {
     const classes = useStyles()
     return (
         <motion.div
@@ -16,6 +16,7 @@ const SideBar = ({ controls }) => {
             variants={variants}
             animate={controls}
             initial='initial'
+            style={{ backgroundColor }}
         >
             <IconButton
                 href='https://www.linkedin.com/in/jeffpalmdev/'

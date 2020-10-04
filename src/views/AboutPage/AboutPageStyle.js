@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
     root: {
-        // backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.background.alt,
     },
     mainContainer: {
         maxWidth: 600,
@@ -14,11 +14,15 @@ export default makeStyles(theme => ({
         marginTop: theme.spacing(2),
     },
     tagLine: {
-        fontStyle: 'italic',
+        // fontStyle: 'italic',
+        padding: theme.spacing(2),
     },
     aboutImg: {
         width: '100%',
         maxWidth: 400,
         height: 'auto',
+    },
+    myNameIs: {
+        paddingTop: theme.spacing(2),
     },
 }))

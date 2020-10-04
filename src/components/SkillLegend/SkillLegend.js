@@ -1,9 +1,13 @@
 import React from 'react'
-import StarIcon from '@material-ui/icons/Star'
-import useStyles from 'components/SkillLegend/SkillLegendStyle'
+// STYLE/ANIMATION
+import useStyles from './SkillLegendStyle'
+import variants from './SkillLegendAnimation'
+// THIRD PARTY
+// import StarIcon from '@material-ui/icons/Star'
+import { Icon } from '@iconify/react'
+import palmTree from '@iconify/icons-twemoji/palm-tree'
 import { motion } from 'framer-motion'
 import { MotionTypo } from '../MuiMotion/MuiMotion'
-import variants from 'views/SkillsPage/SkillsPageAnimation'
 
 const legend = [
     'Familiar',
@@ -13,14 +17,14 @@ const legend = [
     'Highly Proficient',
 ]
 
-const SkillLegend = ({ controls }) => {
+const SkillLegend = () => {
     const classes = useStyles()
     const stars = new Array(5).fill(null)
     return (
         <motion.div
             className={classes.root}
-            variants={variants.gridListTile}
-            animate={controls}
+            variants={variants.root}
+            exit='initial'
             custom={0}
         >
             {stars.map((star, i) => (
@@ -31,17 +35,22 @@ const SkillLegend = ({ controls }) => {
                         borderBottom:
                             i === stars.length - 1 ? 'none' : '1px solid grey',
                     }}
-                    variants={variants.gridListTile}
-                    animate={controls}
+                    variants={variants.core}
+                    exit='initial'
                     custom={i * 0.05}
                 >
                     <motion.div>
                         {stars.map(
                             (e, j) =>
                                 j > i || (
-                                    <StarIcon
+                                    // <StarIcon
+                                    //     key={`star-legend-${i}-${j}`}
+                                    //     color='primary'
+                                    // />
+                                    <Icon
                                         key={`star-legend-${i}-${j}`}
-                                        color='primary'
+                                        icon={palmTree}
+                                        height={24}
                                     />
                                 )
                         )}

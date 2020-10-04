@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import useStyles from './ProjectStyle'
 import {
     MotionGrid,
     MotionGridList,
@@ -8,7 +9,6 @@ import {
     MotionBox,
 } from 'components/MuiMotion/MuiMotion'
 import { AnimatePresence, useAnimation } from 'framer-motion'
-import useStyles from './ProjectStyle'
 import projects from 'assets/data/projects'
 
 const Project = ({ activeProject }) => {
@@ -40,7 +40,7 @@ const Project = ({ activeProject }) => {
     }, [activeProject, controls])
 
     return (
-        <MotionBox p={3} className={classes.projectContainer}>
+        <MotionGrid className={classes.projectContainer}>
             <MotionGrid
                 container
                 direction='row'
@@ -154,7 +154,7 @@ const Project = ({ activeProject }) => {
                     </MotionBox>
                 </AnimatePresence>
             )}
-        </MotionBox>
+        </MotionGrid>
     )
 }
 

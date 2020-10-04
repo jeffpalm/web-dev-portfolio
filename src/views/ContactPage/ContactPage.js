@@ -166,7 +166,7 @@ const ContactPage = () => {
     }
 
     return (
-        <FullPage name='contact'>
+        <FullPage name='contact' justify='flex-start'>
             <motion.div className={classes.header} animate={headerControls}>
                 <MotionTypo variant='h2' color='textPrimary' align='center'>
                     The Palmy Hotline

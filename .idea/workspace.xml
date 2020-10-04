@@ -33,8 +33,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FullPage/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FullPage/FullPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/Project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBar/SideBarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/SideBarStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useVisibility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AppStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AppStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +101,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -84,11 +120,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\jss" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\SkillsTableIcons" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\data" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\ProjectToolbar" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src" />
-      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -105,7 +141,8 @@
       <workItem from="1601322696543" duration="24647000" />
       <workItem from="1601764510496" duration="21000" />
       <workItem from="1601764552747" duration="1786000" />
-      <workItem from="1601766493607" duration="11192000" />
+      <workItem from="1601766493607" duration="13173000" />
+      <workItem from="1601835103767" duration="10206000" />
     </task>
     <servers />
   </component>
@@ -146,6 +183,10 @@
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
     <state x="-1617" y="520" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601792465254" />
+    <state x="-1642" y="574" width="662" height="678" key="EditFileWatcherDialog" timestamp="1601836699879">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
+    </state>
+    <state x="-1642" y="574" width="662" height="678" key="EditFileWatcherDialog/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601836699879" />
     <state x="-2247" y="408" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601764636405">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
@@ -165,17 +206,19 @@
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
     <state x="-1739" y="387" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601797506344" />
-    <state x="1187" y="1008" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601325357267">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="-2704" y="688" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601836601764">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
+    <state x="-2704" y="688" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601836601764" />
     <state x="1187" y="1008" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601325357267" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1601319134012">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state width="600" height="428" key="javadoc.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319134012" />
-    <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup" timestamp="1601337026213">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1601844822680">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601844822680" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600965349210" />
     <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601337026213" />
   </component>

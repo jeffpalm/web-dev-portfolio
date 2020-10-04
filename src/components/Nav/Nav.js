@@ -7,7 +7,6 @@ import {
     MotionButton,
     MotionGrid,
 } from '../MuiMotion/MuiMotion'
-import useWindowSize from '../../hooks/useWindowSize'
 import useStyles from './NavStyle'
 import variants from 'components/Nav/NavAnimation'
 import { SCROLL_SPEED } from '../../assets/data/constants'
@@ -32,16 +31,18 @@ const Link = ScrollLink(MotionButton)
 
 const MobileLink = ScrollLink(motion.a)
 
-const Nav = ({ newHue }) => {
+const Nav = ({ wS, dynamicHue, newHue }) => {
     const classes = useStyles()
     const linkControls = useAnimation()
     const treeControls = useAnimation()
     const appBarControls = useAnimation()
     const mobileLinkControls = useAnimation()
-    const wS = useWindowSize()
+
     const isDesktop = useMediaQuery('(min-width:620px)')
 
     const [mobileMenu, setMobileMenu] = useState(false)
+
+    const backgroundColor = `hsla(${dynamicHue}, 50%, 30%, 0.8)`
 
     useEffect(() => {
         const checkPosition = () => {
@@ -93,6 +94,7 @@ const Nav = ({ newHue }) => {
                     initial='initial'
                     animate={appBarControls}
                     exit='initial'
+                    style={{ backgroundColor }}
                 >
                     <MotionToolbar key='nav-toolbar'>
                         <MotionGrid
@@ -191,7 +193,10 @@ const Nav = ({ newHue }) => {
                     )}
                 </MotionAppBar>
             </ClickAwayListener>
-            <SideBar controls={appBarControls} />
+            <SideBar
+                controls={appBarControls}
+                backgroundColor={backgroundColor}
+            />
         </>
     )
 }
