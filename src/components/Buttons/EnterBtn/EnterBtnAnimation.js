@@ -7,7 +7,7 @@ const variants = {
         opacity: 1,
         translateY: 0,
         transition: {
-            delay: 1,
+            delay: 0.1,
         },
     },
 }

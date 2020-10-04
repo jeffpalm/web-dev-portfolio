@@ -34,7 +34,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <workItem from="1601322696543" duration="24647000" />
       <workItem from="1601764510496" duration="21000" />
       <workItem from="1601764552747" duration="1786000" />
-      <workItem from="1601766493607" duration="10635000" />
+      <workItem from="1601766493607" duration="11192000" />
     </task>
     <servers />
   </component>
