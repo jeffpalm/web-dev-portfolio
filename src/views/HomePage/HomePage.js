@@ -6,7 +6,7 @@ import FullPage from 'components/FullPage/FullPage'
 import Palmytree from 'components/Palmytree/Palmytree'
 import EnterBtn from 'components/Buttons/EnterBtn/EnterBtn'
 
-const HomePageVideo = () => {
+const HomePage = () => {
     const classes = useStyles()
 
     return (
@@ -19,4 +19,4 @@ const HomePageVideo = () => {
     )
 }
 
-export default HomePageVideo
+export default HomePage
