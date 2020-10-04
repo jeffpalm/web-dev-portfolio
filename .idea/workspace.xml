@@ -33,23 +33,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hooks/useDocumentSize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useHueConversion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useRangeConverter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FullPage/FullPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPageStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideBar/SideBarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/SideBarStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useScroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPageStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AppStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AppStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePageStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPageStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +104,7 @@
       <workItem from="1601322696543" duration="24647000" />
       <workItem from="1601764510496" duration="21000" />
       <workItem from="1601764552747" duration="1786000" />
-      <workItem from="1601766493607" duration="10234000" />
+      <workItem from="1601766493607" duration="10329000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,3 @@
-import { SCROLL_SPEED } from '../../assets/data/constants'
-
 const variants = {
     gridListTile: {
         initial: {
