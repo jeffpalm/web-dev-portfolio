@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, lazy, Suspense } from 'react'
 // STYLE/ANIMATION
 import useStyles from './SkillsPageStyle'
 import variants from './SkillsPageAnimation'
@@ -13,8 +13,10 @@ import tableIcons from 'components/SkillsTableIcons/SkillsTableIcons'
 // THIRD PARTY
 import { motion } from 'framer-motion'
 import axios from 'axios'
-import MaterialTable from 'material-table'
+// import MaterialTable from 'material-table'
 import { useTheme } from '@material-ui/core/styles'
+
+const MaterialTable = lazy(() => import('material-table'))
 
 const categories = skills.reduce(
     (acc, cur) => (acc.includes(cur.category) ? acc : [...acc, cur.category]),
@@ -144,86 +146,91 @@ const SkillsPage = () => {
                     // sm={6}
                 >
                     {gitHubStats.pkgs.length !== 0 && (
-                        <MaterialTable
-                            className={classes.table}
-                            icons={tableIcons}
-                            columns={[
-                                {
-                                    title: 'NPM Package',
-                                    field: 'name',
-                                    cellStyle: columnStyle,
-                                },
-                                {
-                                    title: 'Total GitHub Repo Count',
-                                    field: 'count',
-                                    filtering: false,
-                                    cellStyle: columnStyle,
-                                },
-                            ]}
-                            data={gitHubStats.pkgs.sort(
-                                (a, b) => b.count - a.count
-                            )}
-                            options={{
-                                search: false,
-                                showTitle: false,
-                                draggable: false,
-                                padding: 'dense',
-                                rowStyle: {
-                                    fontFamily: theme.typography.fontFamily,
-                                },
-                                headerStyle: {
-                                    background: 'none',
-                                    borderTopLeftRadius:
-                                        theme.shape.borderRadius,
-                                    borderTopRightRadius:
-                                        theme.shape.borderRadius,
-                                },
-                                pageSize: 25,
-                                paginationType: 'stepped',
-                                pageSizeOptions: [],
-                                toolbar: false,
-                                filtering: true,
-                            }}
-                            detailPanel={rowData => (
-                                <>
-                                    <MotionTypo variant='h6' align='center'>
-                                        Recently Updated Examples
-                                    </MotionTypo>
-                                    <ul className={classes.repoList}>
-                                        {rowData.repos
-                                            .sort(
-                                                (a, b) => a.updated - b.updated
-                                            )
-                                            .map((repo, i) =>
-                                                i > 5 ? null : (
-                                                    <li
-                                                        key={`${rowData.name}-${repo.name}`}
-                                                    >
-                                                        <a
-                                                            className={
-                                                                classes.repoLink
-                                                            }
-                                                            href={repo.url}
-                                                            target='_blank'
-                                                            rel='noopener noreferrer'
-                                                        >
-                                                            {repo.name}
-                                                        </a>
-                                                    </li>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <MaterialTable
+                                className={classes.table}
+                                icons={tableIcons}
+                                columns={[
+                                    {
+                                        title: 'NPM Package',
+                                        field: 'name',
+                                        cellStyle: columnStyle,
+                                    },
+                                    {
+                                        title: 'Total GitHub Repo Count',
+                                        field: 'count',
+                                        filtering: false,
+                                        cellStyle: columnStyle,
+                                    },
+                                ]}
+                                data={gitHubStats.pkgs.sort(
+                                    (a, b) => b.count - a.count
+                                )}
+                                options={{
+                                    search: false,
+                                    showTitle: false,
+                                    draggable: false,
+                                    padding: 'dense',
+                                    rowStyle: {
+                                        fontFamily: theme.typography.fontFamily,
+                                    },
+                                    headerStyle: {
+                                        background: 'none',
+                                        borderTopLeftRadius:
+                                            theme.shape.borderRadius,
+                                        borderTopRightRadius:
+                                            theme.shape.borderRadius,
+                                    },
+                                    pageSize: 25,
+                                    paginationType: 'stepped',
+                                    pageSizeOptions: [],
+                                    toolbar: false,
+                                    filtering: true,
+                                }}
+                                detailPanel={rowData => (
+                                    <>
+                                        <MotionTypo variant='h6' align='center'>
+                                            Recently Updated Examples
+                                        </MotionTypo>
+                                        <ul className={classes.repoList}>
+                                            {rowData.repos
+                                                .sort(
+                                                    (a, b) =>
+                                                        a.updated - b.updated
                                                 )
-                                            )}
-                                    </ul>
-                                </>
-                            )}
-                            onRowClick={(e, r, togglePanel) => togglePanel()}
-                            style={{
-                                borderRadius: theme.shape.borderRadius,
-                                background: 'none',
-                                borderColor: theme.palette.background.paper,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                            }}
-                        />
+                                                .map((repo, i) =>
+                                                    i > 5 ? null : (
+                                                        <li
+                                                            key={`${rowData.name}-${repo.name}`}
+                                                        >
+                                                            <a
+                                                                className={
+                                                                    classes.repoLink
+                                                                }
+                                                                href={repo.url}
+                                                                target='_blank'
+                                                                rel='noopener noreferrer'
+                                                            >
+                                                                {repo.name}
+                                                            </a>
+                                                        </li>
+                                                    )
+                                                )}
+                                        </ul>
+                                    </>
+                                )}
+                                onRowClick={(e, r, togglePanel) =>
+                                    togglePanel()
+                                }
+                                style={{
+                                    borderRadius: theme.shape.borderRadius,
+                                    background: 'none',
+                                    borderColor: theme.palette.background.paper,
+                                    borderWidth: 1,
+                                    borderStyle: 'solid',
+                                }}
+                            />
+                        </Suspense>
                     )}
                 </MotionGrid>
             </MotionGrid>
