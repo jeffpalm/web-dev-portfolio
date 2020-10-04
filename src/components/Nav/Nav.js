@@ -65,7 +65,7 @@ const Nav = ({ newHue }) => {
         return () => {
             window.removeEventListener('scroll', checkPosition)
         }
-    }, [appBarControls, linkControls, mobileLinkControls])
+    }, [appBarControls, linkControls, mobileLinkControls, treeControls])
 
     useEffect(() => {
         if (mobileMenu) {
@@ -145,6 +145,12 @@ const Nav = ({ newHue }) => {
                             custom={0}
                             onClick={() => {
                                 newHue()
+                                treeControls.start({
+                                    rotate: [0, 360],
+                                    transition: {
+                                        duration: 0.3,
+                                    },
+                                })
                             }}
                         >
                             <Palmytree variant='logo' />
