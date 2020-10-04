@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import useStyles from 'assets/jss/components/BackgroundVideo'
-import variants from 'assets/animation/components/BackgroundVideo'
+import useStyles from './BackgroundVideoStyle'
+import variants from './BackgroundVideoAnimation'
 import { Element } from 'react-scroll'
 
 const BackgroundVideo = ({ name, children, wrapperProps }) => {

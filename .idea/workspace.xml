@@ -33,35 +33,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/palmy_wave.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/jss/components/EnterBtn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/jss/components/SideBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/jss/components/SkillLegend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillLegend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Palmytree/PalmytreeAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SideBar/SideBarAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/zen-chess/main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/components/FullPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/components/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/AboutPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/AboutPage/root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/HomePage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/HomePage/root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/ProjectsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/ProjectsPage/root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/SkillsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/pages/SkillsPage/root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Buttons/Enter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/ScrollNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/ScrollNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/components/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/components/MotionTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/pages/AboutPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/pages/ContactPage/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactFormAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/pages/HomePage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/pages/ProjectsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animation/pages/SkillsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/data/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/DownArrow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/EnterBtn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/Envelope.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Envelope/EnvelopeStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/FullStack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/MotionTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/SideBarStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/components/SkillLegend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/AboutPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/ContactPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/ContactPage/sections/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactFormStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/HomePage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/ProjectsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/pages/SkillsPage/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AppStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/App.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BackgroundVideo/BackgroundVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackgroundVideo/BackgroundVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BackgroundVideo/BackgroundVideoAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackgroundVideo/BackgroundVideoAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BackgroundVideo/BackgroundVideoStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackgroundVideo/BackgroundVideoStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DownArrow/DownArrow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Envelope/Envelope.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Envelope/Envelope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FullPage/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FullStack/FullStack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MuiMotion/MotionTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/MobileNav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/ScrollNav.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/Project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/ProjectToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/data/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SkillStars/SkillLegend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SwitchWrapper/SwitchWrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/sections/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePageVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePageVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NewApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/projects.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/data/skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/tableIcons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillsTableIcons/SkillsTableIcons.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,12 +143,16 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/projects/zen-chess" />
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\SkillsTableIcons" />
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\data" />
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\ProjectToolbar" />
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src" />
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -125,6 +167,9 @@
       <workItem from="1600962654584" duration="3408000" />
       <workItem from="1601317822912" duration="3134000" />
       <workItem from="1601322696543" duration="24647000" />
+      <workItem from="1601764510496" duration="21000" />
+      <workItem from="1601764552747" duration="1786000" />
+      <workItem from="1601766493607" duration="2735000" />
     </task>
     <servers />
   </component>
@@ -148,25 +193,36 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319459569" />
-    <state x="1094" y="895" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601336693980">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="-2798" y="576" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601768000797">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
+    <state x="-2798" y="576" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601768000797" />
     <state x="1094" y="895" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601336693980" />
     <state x="1585" y="751" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1601343626964">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="1585" y="751" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601343626964" />
-    <state x="1635" y="726" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601319255282">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="-1561" y="512" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601764524367">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
+    <state x="-1561" y="512" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601764524367" />
+    <state x="-1617" y="520" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601767704092">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
+    </state>
+    <state x="-1617" y="520" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601767704092" />
+    <state x="-2247" y="408" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601764636405">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
+    </state>
+    <state x="-2247" y="408" key="FileChooserDialogImpl/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601764636405" />
     <state x="1635" y="726" width="424" height="491" key="FileChooserDialogImpl/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319255282" />
     <state x="543" y="258" width="824" height="533" key="IDE.errors.dialog" timestamp="1600965020934">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="543" y="258" width="824" height="533" key="IDE.errors.dialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600965020934" />
-    <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor" timestamp="1601348951209">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="-2881" y="-7" width="1679" height="1319" key="SettingsEditor" timestamp="1601764638008">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
+    <state x="-2881" y="-7" key="SettingsEditor/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601764638008" />
     <state x="393" y="131" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600963789511" />
     <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601348951209" />
     <state x="1187" y="1008" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601325357267">

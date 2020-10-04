@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import App from 'views/App'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { HashRouter, BrowserRouter } from 'react-router-dom'
-import theme from "./assets/jss/theme";
+import theme from './theme'
 import './assets/css/reset.css'
 
 const Router =

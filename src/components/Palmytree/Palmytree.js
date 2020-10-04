@@ -1,23 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import useHslCycle from 'hooks/useHslCycle'
-
-const variants = {
-    initial: {
-        strokeDasharray: '1000%',
-        strokeDashoffset: '1000%',
-    },
-    animate: {
-        strokeDashoffset: 0,
-        transition: {
-            duration: 1,
-        },
-    },
-}
+import variants from './PalmytreeAnimation'
 
 const Palmytree = ({ height = 580, variant }) => {
-    // const strokeColorOne = useRgbCycle(4)
-    // const strokeColorTwo = useRgbCycle(4, 0, 255, 1)
     const strokeColorOne = useHslCycle(1, 0, 'forward')
     const strokeColorTwo = useHslCycle(1, 0, 'backward')
 

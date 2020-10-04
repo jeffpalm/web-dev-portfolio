@@ -1,18 +1,18 @@
 import React from 'react'
-import projects from 'components/Project/projects'
+// STYLE/ANIMATION
+import useStyles from 'views/ProjectsPage/ProjectsPageStyle'
+// ASSETS
+import projects from 'assets/data/projects'
+// COMPONENTS
 import Project from 'components/Project/Project'
-import ProjectToolbar from 'components/Project/ProjectToolbar'
+import ProjectToolbar from 'components/ProjectToolbar/ProjectToolbar'
 import FullPage from 'components/FullPage/FullPage'
-import useStyles from 'assets/jss/pages/ProjectsPage/root'
+// HOOKS
 import useRangeCycle from 'hooks/useRangeCycle'
 
 const ProjectsPage = () => {
     const classes = useStyles()
-    const {cur, jumpTo} = useRangeCycle(
-        0,
-        projects.length - 1,
-        0
-    )
+    const { cur, jumpTo } = useRangeCycle(0, projects.length - 1, 0)
 
     return (
         <FullPage name='projects' className={classes.root}>

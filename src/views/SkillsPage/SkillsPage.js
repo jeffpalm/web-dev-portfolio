@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import useStyles from 'assets/jss/pages/SkillsPage/root'
-import variants from 'assets/animation/pages/SkillsPage/root'
-import FullPage from '../../components/FullPage/FullPage'
-import { MotionTypo, MotionGrid } from '../../components/MuiMotion/MuiMotion'
-import skills from './skills'
+// STYLE/ANIMATION
+import useStyles from './SkillsPageStyle'
+import variants from './SkillsPageAnimation'
+// ASSETS
+import skills from 'assets/data/skills'
+// COMPONENTS
+import FullPage from 'components/FullPage/FullPage'
+import { MotionGrid, MotionTypo } from 'components/MuiMotion/MuiMotion'
+import SkillStars from 'components/SkillStars/SkillStars'
+import SkillLegend from 'components/SkillLegend/SkillLegend'
+import tableIcons from 'components/SkillsTableIcons/SkillsTableIcons'
+// THIRD PARTY
 import { motion, useAnimation } from 'framer-motion'
-import SkillStars from '../../components/SkillStars/SkillStars'
-import SkillLegend from '../../components/SkillStars/SkillLegend'
 import axios from 'axios'
 import MaterialTable from 'material-table'
-import tableIcons from './tableIcons'
 import { useTheme } from '@material-ui/core/styles'
 
 const categories = skills.reduce(

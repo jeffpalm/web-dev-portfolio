@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import useStyles from 'assets/jss/pages/ProjectsPage/root'
 import {
     MotionGrid,
     MotionGridList,
@@ -9,7 +8,8 @@ import {
     MotionBox,
 } from 'components/MuiMotion/MuiMotion'
 import { AnimatePresence, useAnimation } from 'framer-motion'
-import projects from './projects'
+import useStyles from './ProjectStyle'
+import projects from 'assets/data/projects'
 
 const Project = ({ activeProject }) => {
     const classes = useStyles()
@@ -34,8 +34,8 @@ const Project = ({ activeProject }) => {
         }, 250)
 
         return () => {
-          clearTimeout(changeProj)
-          clearTimeout(reanimate)
+            clearTimeout(changeProj)
+            clearTimeout(reanimate)
         }
     }, [activeProject, controls])
 
@@ -47,7 +47,6 @@ const Project = ({ activeProject }) => {
                 alignItems='stretch'
                 initial={{ opacity: 0 }}
                 animate={controls}
-                
             >
                 <MotionGrid item container direction='column' xs={12} sm={6}>
                     <MotionTypo color='textPrimary' variant='h3' align='center'>
