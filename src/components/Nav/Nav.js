@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { Link, useLocation } from 'react-router-dom'
 import { ScrollLink } from 'react-scroll'
 import { useAnimation } from 'framer-motion'
 import {
@@ -33,9 +32,10 @@ const Link = ScrollLink(MotionButton)
 
 const MobileLink = ScrollLink(motion.a)
 
-const Nav = () => {
+const Nav = ({ newHue }) => {
     const classes = useStyles()
     const linkControls = useAnimation()
+    const treeControls = useAnimation()
     const appBarControls = useAnimation()
     const mobileLinkControls = useAnimation()
     const wS = useWindowSize()
@@ -47,10 +47,12 @@ const Nav = () => {
         const checkPosition = () => {
             if (window.scrollY > 0) {
                 linkControls.start('enter')
+                treeControls.start('enter')
                 appBarControls.start('enter')
                 return
             } else {
                 linkControls.start('initial')
+                treeControls.start('enter')
                 appBarControls.start('initial')
                 setMobileMenu(false)
                 mobileLinkControls.start('initial')
@@ -138,9 +140,12 @@ const Nav = () => {
                             item
                             variants={variants.logo}
                             initial='initial'
-                            animate={linkControls}
+                            animate={treeControls}
                             exit='initial'
                             custom={0}
+                            onClick={() => {
+                                newHue()
+                            }}
                         >
                             <Palmytree variant='logo' />
                         </MotionGrid>

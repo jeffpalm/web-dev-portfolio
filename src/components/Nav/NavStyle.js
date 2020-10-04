@@ -8,6 +8,9 @@ export default makeStyles(theme => ({
     logoContainer: {
         height: '100%',
         width: 60,
+        '&:hover': {
+            cursor: 'pointer',
+        },
     },
     logoTitle: {
         width: '100%',
@@ -32,7 +35,7 @@ export default makeStyles(theme => ({
         top: 0,
         left: 0,
         zIndex: theme.zIndex.appBar + 1,
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.background.paper + '80',
         transition: 'height 100ms linear',
     },
     MobileLink: {
