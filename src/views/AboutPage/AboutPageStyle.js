@@ -12,6 +12,7 @@ export default makeStyles(theme => ({
     },
     about: {
         marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2)
     },
     tagLine: {
         // fontStyle: 'italic',
