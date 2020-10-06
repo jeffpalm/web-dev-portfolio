@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             cursor: 'pointer',
         },
+        userSelect: 'none'
     },
     activeTab: {
         color: theme.palette.primary.main,

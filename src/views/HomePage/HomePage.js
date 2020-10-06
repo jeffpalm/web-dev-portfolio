@@ -10,7 +10,7 @@ const HomePage = () => {
     const classes = useStyles()
 
     return (
-        <FullPage name='home' className={classes.root}>
+        <FullPage name='home' className={classes.root} style={{padding: 8}}>
             <div className={classes.palmyContainer}>
                 <Palmytree variant='home' />
                 <EnterBtn to='about' />

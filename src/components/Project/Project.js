@@ -17,21 +17,22 @@ const Project = ({ activeProject }) => {
     const [fullImg, setFullImg] = useState('')
     const [fullImgAlt, setFullImgAlt] = useState('')
     const [project, setProject] = useState(projects[activeProject])
+    
 
     useEffect(() => {
         controls.start({
             opacity: 0,
             transition: {
-                duration: 0.2,
+                duration: 0.1,
             },
         })
         const changeProj = setTimeout(() => {
             setProject(projects[activeProject])
-        }, 200)
+        }, 100)
 
         const reanimate = setTimeout(() => {
-            controls.start({ opacity: 1, transition: { duration: 0.2 } })
-        }, 250)
+            controls.start({ opacity: 1, transition: { duration: 0.1 } })
+        }, 100)
 
         return () => {
             clearTimeout(changeProj)
@@ -40,7 +41,10 @@ const Project = ({ activeProject }) => {
     }, [activeProject, controls])
 
     return (
-        <MotionGrid className={classes.projectContainer}>
+        <MotionGrid
+            className={classes.projectContainer}
+            
+        >
             <MotionGrid
                 container
                 direction='row'
@@ -105,6 +109,7 @@ const Project = ({ activeProject }) => {
                 <MotionGrid item container direction='column' xs={12} sm={6}>
                     <MotionGridList
                         cellHeight={140}
+                        cellWidth={140}
                         className={classes.imgGrid}
                         cols={3}
                     >
@@ -118,7 +123,11 @@ const Project = ({ activeProject }) => {
                                     setFullImgAlt(img.desc)
                                 }}
                             >
-                                <img src={img.src} alt={img.desc} />
+                                <img
+                                    src={img.src}
+                                    alt={img.desc}
+                                    className={classes.imgThumb}
+                                />
                             </MotionGridListTile>
                         ))}
                     </MotionGridList>
