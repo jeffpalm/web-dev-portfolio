@@ -29,7 +29,7 @@ const useHslCycle = (
                 default:
                     break
             }
-        }, 17)
+        }, 34)
         return () => {
             clearInterval(interval)
         }

@@ -88,8 +88,13 @@ export default makeStyles(theme => ({
         '&:hover': {
             cursor: 'zoom-in',
         },
+
     },
     projectDescription: {
         marginTop: theme.spacing(1),
     },
+    imgThumb: {
+        width: 140,
+        height: 'auto'
+    }
 }))
