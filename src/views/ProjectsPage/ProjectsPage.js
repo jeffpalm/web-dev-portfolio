@@ -34,7 +34,7 @@ const ProjectsPage = () => {
                     const touchEndX = e.changedTouches[0].screenX
                     const HORIZONTAL_DEADZONE = 50
 
-                    console.log(Math.abs(touchEndX - touchStartX))
+                    // console.log(Math.abs(touchEndX - touchStartX))
                     if (
                         Math.abs(touchEndX - touchStartX) < HORIZONTAL_DEADZONE
                     ) {
