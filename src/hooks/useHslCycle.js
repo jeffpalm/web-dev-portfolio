@@ -34,6 +34,7 @@ const useHslCycle = (
             clearInterval(interval)
         }
     }, [direction, hue, speed])
+    // }, [])
 
     return `hsl(${hue},${sat}%,${lum}%)`
 }
