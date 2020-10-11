@@ -17,13 +17,15 @@ const TypingAnimation = ({
   useEffect(() => {
     if (!spanElement) return;
 
+    // eslint-disable-next-line
     const typed = new Typed(spanElement, options);
 
     // eslint-disable-next-line consistent-return
     return () => {
       typed.destroy();
     };
-  }, [spanElement, options]);
+    // eslint-disable-next-line
+  }, [spanElement]);
 
   return (
     <>

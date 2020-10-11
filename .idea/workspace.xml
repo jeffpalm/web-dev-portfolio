@@ -33,17 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jdpal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/Project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectToolbar/ProjectToolbarStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillLegend/SkillLegendStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillStars/SkillStars.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TypingAnimation/TypingAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TypingAnimation/TypingAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProjectsPage/ProjectsPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +113,7 @@
       <workItem from="1601835103767" duration="11841000" />
       <workItem from="1602368658937" duration="15355000" />
       <workItem from="1602390262772" duration="375000" />
-      <workItem from="1602390649116" duration="2723000" />
+      <workItem from="1602390649116" duration="3502000" />
     </task>
     <servers />
   </component>
