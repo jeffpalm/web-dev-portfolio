@@ -33,8 +33,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TypingAnimation/TypingAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TypingAnimation/TypingAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/Project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/utils/codeColor.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/utils/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +117,7 @@
       <workItem from="1601835103767" duration="11841000" />
       <workItem from="1602368658937" duration="15355000" />
       <workItem from="1602390262772" duration="375000" />
-      <workItem from="1602390649116" duration="3502000" />
+      <workItem from="1602390649116" duration="5245000" />
     </task>
     <servers />
   </component>
@@ -133,10 +137,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1743" y="665" key="#ESLint" timestamp="1602380127921">
+    <state x="-1743" y="665" key="#ESLint" timestamp="1602394283410">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-1743" y="665" key="#ESLint/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602380127921" />
+    <state x="-1743" y="665" key="#ESLint/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602394283410" />
     <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601319459569">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>

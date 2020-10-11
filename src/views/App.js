@@ -35,7 +35,8 @@ const App = () => {
   const [startHue, setStartHue] = useState(randomHue);
 
   const hue = useHueConversion(y, 0, doc.height, startHue);
-  // const dynamicHue = `hsla(${hue}, 50%, 30%, 0.8)`
+
+  const dynamicHue = y > wS.height ? hue : startHue;
 
   const newHue = () => {
     setStartHue(Math.floor(Math.random() * 360));
@@ -45,10 +46,10 @@ const App = () => {
     <div className={classes.root}>
       <HomePage id='home' />
       <Suspense fallback={<NavFallback />}>
-        <Nav key='nav-bar' wS={wS} dynamicHue={hue} newHue={newHue} />
+        <Nav key='nav-bar' wS={wS} dynamicHue={dynamicHue} newHue={newHue} />
       </Suspense>
       <Suspense fallback={<FullPageFallback />}>
-        <AboutPage id='about' dynamicHue={hue} />
+        <AboutPage id='about' dynamicHue={dynamicHue} />
       </Suspense>
       <Suspense fallback={<FullPageFallback />}>
         <SkillsPage id='skills' />

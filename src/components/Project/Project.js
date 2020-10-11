@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+// STYLE/ANIMATION
 import useStyles from './ProjectStyle';
+// ASSETS
+import { tOP } from '../../assets/utils';
+import projects from 'assets/data/projects';
+// COMPONENTS
 import {
   MotionGrid,
   MotionGridList,
@@ -9,8 +14,8 @@ import {
   MotionButton,
   MotionBox
 } from 'components/MuiMotion/MuiMotion';
+// THIRD PARTY
 import { AnimatePresence, useAnimation } from 'framer-motion';
-import projects from 'assets/data/projects';
 
 const Project = ({ activeProject }) => {
   const classes = useStyles();
@@ -20,24 +25,33 @@ const Project = ({ activeProject }) => {
   const [project, setProject] = useState(projects[activeProject]);
 
   useEffect(() => {
-    controls.start({
-      opacity: 0,
-      transition: {
-        duration: 0.1
-      }
-    });
+    const fadeOutAnimation = async () =>
+      await controls.start({
+        opacity: 0,
+        transition: {
+          duration: 0.1
+        }
+      });
 
-    const changeProj = setTimeout(() => {
-      setProject(projects[activeProject]);
-    }, 100);
+    const changeProject = async () =>
+      await tOP(() => setProject(projects[activeProject]), 100);
 
-    const reanimate = setTimeout(() => {
-      controls.start({ opacity: 1, transition: { duration: 0.1 } });
-    }, 100);
+    const fadeInAnimation = async () =>
+      await controls.start({
+        opacity: 1,
+        transition: { duration: 0.1 }
+      });
+
+    const animateAndChangeProject = async () => {
+      await fadeOutAnimation();
+      await changeProject();
+      await fadeInAnimation();
+    };
+
+    animateAndChangeProject();
 
     return () => {
-      clearTimeout(changeProj);
-      clearTimeout(reanimate);
+      clearTimeout(changeProject());
     };
   }, [activeProject, controls]);
 
