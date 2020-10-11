@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import useStyles from './ProjectToolbarStyle';
 import projects from 'assets/data/projects';
 import { MotionGrid, MotionTypo } from 'components/MuiMotion/MuiMotion';
@@ -33,6 +34,15 @@ const Tab = ({
   );
 };
 
+Tab.propTypes = {
+  name: PropTypes.string,
+  isActive: PropTypes.bool,
+  activeClass: PropTypes.string,
+  inactiveClass: PropTypes.string,
+  defaultClass: PropTypes.string,
+  onClick: PropTypes.func
+};
+
 const ProjectToolbar = ({ setActiveProject, activeProject }) => {
   const classes = useStyles();
   return (
@@ -46,7 +56,7 @@ const ProjectToolbar = ({ setActiveProject, activeProject }) => {
       {projects.map((project, index) => {
         return (
           <Tab
-            key={project.title + '-tab'}
+            key={`${project.title}-tab`}
             name={project.title}
             onClick={() => {
               setActiveProject(index);
@@ -60,6 +70,11 @@ const ProjectToolbar = ({ setActiveProject, activeProject }) => {
       })}
     </MotionGrid>
   );
+};
+
+ProjectToolbar.propTypes = {
+  setActiveProject: PropTypes.func,
+  activeProject: PropTypes.number
 };
 
 export default ProjectToolbar;

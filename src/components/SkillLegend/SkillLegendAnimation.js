@@ -7,9 +7,7 @@ const variants = {
     enter: (delay) => ({
       opacity: 1,
       scale: 1,
-      transition: {
-        delay: delay
-      }
+      transition: { delay }
     })
   }
 };

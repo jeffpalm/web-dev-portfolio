@@ -3,7 +3,6 @@ import React from 'react';
 import useStyles from './SkillLegendStyle';
 import variants from './SkillLegendAnimation';
 // THIRD PARTY
-// import StarIcon from '@material-ui/icons/Star'
 import { Icon } from '@iconify/react';
 import palmTree from '@iconify/icons-twemoji/palm-tree';
 import { motion } from 'framer-motion';
@@ -42,10 +41,6 @@ const SkillLegend = () => {
             {stars.map(
               (e, j) =>
                 j > i || (
-                  // <StarIcon
-                  //     key={`star-legend-${i}-${j}`}
-                  //     color='primary'
-                  // />
                   <Icon
                     key={`star-legend-${i}-${j}`}
                     icon={palmTree}

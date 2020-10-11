@@ -16,6 +16,5 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 2
-    // borderBottom: '1px solid grey',
   }
 }));

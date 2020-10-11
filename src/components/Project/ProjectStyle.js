@@ -6,10 +6,8 @@ export default makeStyles((theme) => ({
     width: `100%`,
     display: 'flex',
     flexDirection: 'column',
-    // justifyContent: 'center',
     alignItems: 'center',
     padding: theme.spacing(2),
-    // margin: theme.spacing(1),
     borderBottomLeftRadius: theme.shape.borderRadius,
     borderBottomRightRadius: theme.shape.borderRadius,
     backgroundColor: theme.palette.background.default
@@ -18,7 +16,6 @@ export default makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     width: '100%',
     height: '100%',
-    // display: 'flex',
     backgroundColor: theme.palette.background.default
   },
   prevBtn: {
@@ -82,7 +79,6 @@ export default makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden'
-    // backgroundColor: theme.palette.background.paper,
   },
   imgTile: {
     '&:hover': {

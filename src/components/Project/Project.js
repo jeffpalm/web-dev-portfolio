@@ -26,6 +26,7 @@ const Project = ({ activeProject }) => {
         duration: 0.1
       }
     });
+
     const changeProj = setTimeout(() => {
       setProject(projects[activeProject]);
     }, 100);

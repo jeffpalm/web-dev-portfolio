@@ -3,7 +3,6 @@ import projects from '../../assets/data/projects';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // backgroundColor: theme.palette.background.paper,
     width: '100%',
     minHeight: 48,
     borderTopLeftRadius: theme.shape.borderRadius,

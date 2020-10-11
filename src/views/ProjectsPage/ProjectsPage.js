@@ -16,6 +16,25 @@ const ProjectsPage = () => {
   const { cur, jumpTo, next, prev } = useRangeCycle(0, projects.length - 1, 0);
   const [touchStartX, setTouchStartX] = useState(null);
 
+  const updateTouchStartX = (e) => setTouchStartX(e.touches[0].screenX);
+
+  const determineTouchAction = (startX, endX, deadZone = 50) => {
+    const touchDelta = endX - startX;
+
+    if (touchDelta < -deadZone) {
+      return next;
+    } else if (touchDelta > deadZone) {
+      return prev;
+    }
+    return () => null;
+  };
+
+  const takeActionAfterSwipe = (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    const action = determineTouchAction(touchStartX, touchEndX);
+    action();
+  };
+
   return (
     <FullPage
       name='projects'
@@ -27,22 +46,8 @@ const ProjectsPage = () => {
         container
         direction='column'
         wrap='nowrap'
-        onTouchStart={(e) => {
-          setTouchStartX(e.touches[0].screenX);
-        }}
-        onTouchEnd={(e) => {
-          const touchEndX = e.changedTouches[0].screenX;
-          const HORIZONTAL_DEADZONE = 50;
-
-          // console.log(Math.abs(touchEndX - touchStartX))
-          if (Math.abs(touchEndX - touchStartX) < HORIZONTAL_DEADZONE) {
-            return;
-          } else if (touchEndX - touchStartX < 0) {
-            next();
-          } else if (touchEndX - touchStartX > 0) {
-            prev();
-          }
-        }}
+        onTouchStart={updateTouchStartX}
+        onTouchEnd={takeActionAfterSwipe}
       >
         <ProjectToolbar setActiveProject={jumpTo} activeProject={cur} />
         <Project activeProject={cur} />
