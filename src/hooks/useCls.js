@@ -1,13 +1,13 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react';
 
-const useCls = arr => {
-    const [output, setOutput] = useState('')
+const useCls = (arr) => {
+  const [output, setOutput] = useState('');
 
-    useEffect(() => {
-        setOutput(arr.join(' '))
-    }, [arr])
+  useEffect(() => {
+    setOutput(arr.join(' '));
+  }, [arr]);
 
-    return output
-}
+  return output;
+};
 
-export default useCls
+export default useCls;

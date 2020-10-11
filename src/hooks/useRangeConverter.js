@@ -1,28 +1,28 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 const useRangeConverter = (minOutput, maxOutput, minInput, maxInput, input) => {
-    const [output, setOutput] = useState(input)
+  const [output, setOutput] = useState(input);
 
-    useEffect(() => {
-        // Handle input being out of range
-        const adjustOutput = () => {
-            if (input >= maxInput) return maxOutput
+  useEffect(() => {
+    // Handle input being out of range
+    const adjustOutput = () => {
+      if (input >= maxInput) return maxOutput;
 
-            if (input <= minInput) return minOutput
+      if (input <= minInput) return minOutput;
 
-            const outputRange = maxOutput - minOutput
-            const inputRange = maxInput - minInput
-            const inputProgress = input - minInput
-            const inputPercentile = inputProgress / inputRange
-            const output = outputRange * inputPercentile + minOutput
+      const outputRange = maxOutput - minOutput;
+      const inputRange = maxInput - minInput;
+      const inputProgress = input - minInput;
+      const inputPercentile = inputProgress / inputRange;
+      const output = outputRange * inputPercentile + minOutput;
 
-            return output
-        }
+      return output;
+    };
 
-        setOutput(adjustOutput())
-    }, [minOutput, maxOutput, minInput, maxInput, input])
+    setOutput(adjustOutput());
+  }, [minOutput, maxOutput, minInput, maxInput, input]);
 
-    return output
-}
+  return output;
+};
 
-export default useRangeConverter
+export default useRangeConverter;

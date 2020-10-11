@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 const NavFallback = () => {
-    return (
-        <div
-            style={{
-                height: 64,
-                width: '100%',
-            }}
-        >
-            Loading...
-        </div>
-    )
-}
+  return (
+    <div
+      style={{
+        height: 64,
+        width: '100%'
+      }}
+    >
+      Loading...
+    </div>
+  );
+};
 
-export default NavFallback
+export default NavFallback;
