@@ -25,8 +25,10 @@ const FullPage = ({
   const viewportVisibility = useVisibility(ref);
 
   useEffect(() => {
-    const startEnterAnimation = () => animationControls.start('enter');
-    const startExitAnimation = () => animationControls.start('initial');
+    const startEnterAnimation = async () =>
+      await animationControls.start('enter');
+    const startExitAnimation = async () =>
+      await animationControls.start('initial');
 
     if (viewportVisibility) {
       startEnterAnimation();

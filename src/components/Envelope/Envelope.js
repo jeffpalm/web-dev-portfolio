@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+import { AnimationControls, motion } from 'framer-motion';
 import useStyles from 'components/Envelope/EnvelopeStyle';
 
 const Envelope = ({
   envelopeContainerControls,
   envelopeControls,
-  palmtreeControls,
-  ...props
+  palmtreeControls
 }) => {
   const classes = useStyles();
   return (
@@ -125,6 +125,12 @@ const Envelope = ({
       </motion.svg>
     </>
   );
+};
+
+Envelope.propTypes = {
+  envelopeContainerControls: PropTypes.instanceOf(AnimationControls),
+  envelopeControls: PropTypes.instanceOf(AnimationControls),
+  palmtreeControls: PropTypes.instanceOf(AnimationControls)
 };
 
 export default Envelope;

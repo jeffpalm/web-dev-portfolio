@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable react/display-name */
+import React, { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import {
   Box,
@@ -17,43 +19,43 @@ import {
 } from '@material-ui/core';
 import { Icon } from '@iconify/react';
 
-export const MotionPaper = React.forwardRef((props, ref) => (
+export const MotionPaper = forwardRef((props, ref) => (
   <Paper ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionBox = React.forwardRef((props, ref) => (
+export const MotionBox = forwardRef((props, ref) => (
   <Box ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionGrid = React.forwardRef((props, ref) => (
+export const MotionGrid = forwardRef((props, ref) => (
   <Grid ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionTypo = React.forwardRef((props, ref) => (
+export const MotionTypo = forwardRef((props, ref) => (
   <Typography ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionAppBar = React.forwardRef((props, ref) => (
+export const MotionAppBar = forwardRef((props, ref) => (
   <AppBar ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionToolbar = React.forwardRef((props, ref) => (
+export const MotionToolbar = forwardRef((props, ref) => (
   <Toolbar ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionButton = React.forwardRef((props, ref) => (
+export const MotionButton = forwardRef((props, ref) => (
   <Button ref={ref} component={motion.a} {...props} />
 ));
 
-export const MotionFormControl = React.forwardRef((props, ref) => (
+export const MotionFormControl = forwardRef((props, ref) => (
   <FormControl ref={ref} component={motion.div} {...props} />
 ));
 
-export const MotionOutlinedInput = React.forwardRef((props, ref) => (
+export const MotionOutlinedInput = forwardRef((props, ref) => (
   <OutlinedInput ref={ref} inputComponent={motion.input} {...props} />
 ));
 
-export const MotionOutlinedTextArea = React.forwardRef((props, ref) => (
+export const MotionOutlinedTextArea = forwardRef((props, ref) => (
   <OutlinedInput
     ref={ref}
     multiline
@@ -63,11 +65,11 @@ export const MotionOutlinedTextArea = React.forwardRef((props, ref) => (
   />
 ));
 
-export const MotionInputLabel = React.forwardRef((props, ref) => (
+export const MotionInputLabel = forwardRef((props, ref) => (
   <InputLabel ref={ref} component={motion.label} {...props} />
 ));
 
-export const MotionHelperText = React.forwardRef((props, ref) => (
+export const MotionHelperText = forwardRef((props, ref) => (
   <FormHelperText ref={ref} component={motion.p} {...props} />
 ));
 
@@ -77,10 +79,15 @@ export const MotionIcon = ({ icon, iconWidth, ...props }) => (
   </MotionGrid>
 );
 
-export const MotionGridList = React.forwardRef((props, ref) => (
+MotionIcon.propTypes = {
+  icon: PropTypes.element,
+  iconWidth: PropTypes.number
+};
+
+export const MotionGridList = forwardRef((props, ref) => (
   <GridList ref={ref} component={motion.ul} {...props} />
 ));
 
-export const MotionGridListTile = React.forwardRef((props, ref) => (
+export const MotionGridListTile = forwardRef((props, ref) => (
   <GridListTile ref={ref} component={motion.li} {...props} />
 ));

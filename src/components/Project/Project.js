@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import useStyles from './ProjectStyle';
 import {
   MotionGrid,
@@ -155,6 +156,10 @@ const Project = ({ activeProject }) => {
       )}
     </MotionGrid>
   );
+};
+
+Project.propTypes = {
+  activeProject: PropTypes.number
 };
 
 export default Project;

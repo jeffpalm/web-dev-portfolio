@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   MotionFormControl,
   MotionHelperText,
@@ -18,6 +19,7 @@ const MuiMotionTextField = ({
   helperText,
   isEmpty,
   multiline,
+  error,
   ...props
 }) => {
   const classes = useStyles();
@@ -25,9 +27,7 @@ const MuiMotionTextField = ({
   return (
     <MotionFormControl
       key={`form-control-${label}`}
-      className={`${classes.root} ${
-        isEmpty || props.error ? '' : classes.notEmpty
-      }`}
+      className={`${classes.root} ${isEmpty || error ? '' : classes.notEmpty}`}
       variant='outlined'
       {...props}
     >
@@ -60,7 +60,7 @@ const MuiMotionTextField = ({
         />
       )}
       <AnimatePresence exitBeforeEnter>
-        {props.error && (
+        {error && (
           <MotionHelperText
             key={`helper-text-${label}`}
             variants={variants.errorMsg}
@@ -80,6 +80,16 @@ const MuiMotionTextField = ({
       </AnimatePresence>
     </MotionFormControl>
   );
+};
+
+MuiMotionTextField.propTypes = {
+  label: PropTypes.string,
+  inputProps: PropTypes.objectOf(PropTypes.any),
+  labelProps: PropTypes.objectOf(PropTypes.any),
+  helperText: PropTypes.string,
+  isEmpty: PropTypes.bool,
+  multiline: PropTypes.bool,
+  error: PropTypes.bool
 };
 
 export default MuiMotionTextField;

@@ -1,10 +1,15 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ScrollLink } from 'react-scroll';
-import { SCROLL_SPEED } from '../../../assets/data/constants';
-import useHslCycle from '../../../hooks/useHslCycle';
+import PropTypes from 'prop-types';
+// STYLE/ANIMATION
 import useStyles from './EnterBtnStyle';
 import variants from './EnterBtnAnimation';
+// HOOKS
+import useHslCycle from '../../../hooks/useHslCycle';
+// ASSETS
+import { SCROLL_SPEED } from '../../../assets/data/constants';
+// THIRD PARTY
+import { motion } from 'framer-motion';
+import { ScrollLink } from 'react-scroll';
 
 const MotionButton = ScrollLink(motion.button);
 
@@ -38,6 +43,10 @@ const EnterBtn = ({ to }) => {
       Enter
     </MotionButton>
   );
+};
+
+EnterBtn.propTypes = {
+  to: PropTypes.string.isRequired
 };
 
 export default EnterBtn;

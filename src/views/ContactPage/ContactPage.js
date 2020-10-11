@@ -21,17 +21,17 @@ const ContactPage = () => {
   const btnControls = useAnimation();
   const envelopeControls = useAnimation();
   const palmtreeControls = useAnimation();
-  const masterEnvelopeCtrls = useAnimation();
+  const masterEnvelopeControls = useAnimation();
   const headerControls = useAnimation();
 
   const hotlineControls = useAnimation();
-  const hotlineHookCtrls = useAnimation();
+  const hotlineHookControls = useAnimation();
 
   const [animating, setAnimating] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const sendAnimation = async () => {
-    // Collapsing top fields and submit button into message field
+    // Collapsing the top fields and the submit button into message field
     setAnimating(true);
 
     await headerControls.start({
@@ -78,9 +78,8 @@ const ContactPage = () => {
         return {
           opacity: [0, 0, 0]
         };
-      } else {
-        return {};
       }
+      return {};
     });
 
     // Animating Palmtree seal
@@ -108,13 +107,13 @@ const ContactPage = () => {
         opacity: [1, 1, 1],
         y: [wS.height * -1, 0, -50]
       }),
-      hotlineHookCtrls.start({
+      hotlineHookControls.start({
         pathLength: [0, 0, 1]
       })
     ]);
 
     await Promise.all([
-      masterEnvelopeCtrls.start({
+      masterEnvelopeControls.start({
         y: [-100, -200, -5000],
         rotateZ: [0, -30, -30],
         originX: [1, 1, 1],
@@ -147,8 +146,8 @@ const ContactPage = () => {
   //         envelopeContainerControls.start('initial'),
   //         envelopeControls.start('initial'),
   //         hotlineControls.start('initial'),
-  //         hotlineHookCtrls.start('initial'),
-  //         masterEnvelopeCtrls.start('initial'),
+  //         hotlineHookControls.start('initial'),
+  //         masterEnvelopeControls.start('initial'),
   //     ])
   // }
 
@@ -172,12 +171,12 @@ const ContactPage = () => {
           The Palmy Hotline
         </MotionTypo>
         <MotionTypo variant='subtitle1' color='textPrimary' align='center'>
-          Whether you're interested in reaching out for a job opportunity,
+          Whether you are interested in reaching out for a job opportunity,
           project collaboration, or you just want to connect, shoot me a message
           below
         </MotionTypo>
         <MotionTypo variant='subtitle2' color='textSecondary' align='center'>
-          All messages are responded to directly within 1 business day
+          All messages responded to directly within 1 business day
         </MotionTypo>
       </motion.div>
       {animating && (
@@ -215,7 +214,7 @@ const ContactPage = () => {
             }}
           >
             <motion.path
-              animate={hotlineHookCtrls}
+              animate={hotlineHookControls}
               initial={{
                 pathLength: 0
               }}
@@ -235,7 +234,7 @@ const ContactPage = () => {
         btnControls={btnControls}
         envelopeControls={envelopeControls}
         palmtreeControls={palmtreeControls}
-        masterEnvelopeCtrls={masterEnvelopeCtrls}
+        masterEnvelopeControls={masterEnvelopeControls}
         sendAnimation={sendAnimation}
       />
       {success && (
@@ -250,9 +249,9 @@ const ContactPage = () => {
             <MotionTypo variant='h2' color='textPrimary' align='center'>
               Successful Hotline Transmission
             </MotionTypo>
-            {/*<MotionButton onClick={resetForm}>*/}
+            {/* <MotionButton onClick={resetForm}>*/}
             {/*    Send Another*/}
-            {/*</MotionButton>*/}
+            {/* </MotionButton>*/}
           </motion.div>
         </AnimatePresence>
       )}

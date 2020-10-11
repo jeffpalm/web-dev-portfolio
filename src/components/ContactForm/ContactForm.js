@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import MuiMotionTextField from 'components/MuiMotion/MuiMotionTextField/MuiMotionTextField';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, AnimationControls } from 'framer-motion';
 import { MotionButton } from 'components/MuiMotion/MuiMotion';
 import * as Yup from 'yup';
 import Envelope from 'components/Envelope/Envelope';
@@ -15,7 +16,7 @@ const ContactForm = ({
   btnControls,
   envelopeControls,
   palmtreeControls,
-  masterEnvelopeCtrls,
+  masterEnvelopeControls,
   sendAnimation
 }) => {
   const classes = useStyles();
@@ -85,7 +86,7 @@ const ContactForm = ({
 
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     // Submitting bool mounts envelope SVG
     setSubmitting(true);
     sendAnimation();
@@ -93,7 +94,7 @@ const ContactForm = ({
     try {
       await axios.post('/api/contact', validation);
     } catch (err) {
-      console.error(err);
+      throw new Error(err);
     }
   };
 
@@ -102,9 +103,9 @@ const ContactForm = ({
   useEffect(() => {
     if (state.subject) {
       msgControls.start('enter');
-      masterEnvelopeCtrls.start('enter');
+      masterEnvelopeControls.start('enter');
     }
-  }, [state.subject, masterEnvelopeCtrls, msgControls]);
+  }, [state.subject, masterEnvelopeControls, msgControls]);
 
   return (
     <motion.form
@@ -189,7 +190,7 @@ const ContactForm = ({
               animate='enter'
               exit='initial'
               onChange={handleChange}
-              isEmpty={!state.subject ? true : false}
+              isEmpty={!state.subject}
             />
           </motion.div>
         )}
@@ -199,7 +200,7 @@ const ContactForm = ({
             className={classes.msgContainer}
             variants={variants.field}
             initial='initial'
-            animate={masterEnvelopeCtrls}
+            animate={masterEnvelopeControls}
             exit='initial'
           >
             {submitting && (
@@ -223,7 +224,7 @@ const ContactForm = ({
               animate={msgControls}
               exit='initial'
               onChange={handleChange}
-              isEmpty={!state.message ? true : false}
+              isEmpty={!state.message}
               helperText={errors.message || ''}
               error={!!errors.message}
               multiline
@@ -254,6 +255,17 @@ const ContactForm = ({
       </AnimatePresence>
     </motion.form>
   );
+};
+
+ContactForm.propTypes = {
+  topControls: PropTypes.instanceOf(AnimationControls),
+  msgControls: PropTypes.instanceOf(AnimationControls),
+  envelopeContainerControls: PropTypes.instanceOf(AnimationControls),
+  btnControls: PropTypes.instanceOf(AnimationControls),
+  envelopeControls: PropTypes.instanceOf(AnimationControls),
+  palmtreeControls: PropTypes.instanceOf(AnimationControls),
+  masterEnvelopeControls: PropTypes.instanceOf(AnimationControls),
+  sendAnimation: PropTypes.func
 };
 
 export default ContactForm;
