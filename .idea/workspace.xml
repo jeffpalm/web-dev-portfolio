@@ -33,7 +33,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHookStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SendSuccess/SendSuccess.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SendSuccess/SendSuccessAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SendSuccess/SendSuccessStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPageAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPageStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,17 +91,17 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\Nav" />
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\MobileNav" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\FullPage" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\jss" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\SkillsTableIcons" />
-      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\assets\data" />
-      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\ProjectToolbar" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -110,6 +120,11 @@
       <workItem from="1601764552747" duration="1786000" />
       <workItem from="1601766493607" duration="13173000" />
       <workItem from="1601835103767" duration="11841000" />
+      <workItem from="1602368658937" duration="15355000" />
+      <workItem from="1602390262772" duration="375000" />
+      <workItem from="1602390649116" duration="5245000" />
+      <workItem from="1602525625520" duration="197000" />
+      <workItem from="1602525829340" duration="7322000" />
     </task>
     <servers />
   </component>
@@ -129,6 +144,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1743" y="665" key="#ESLint" timestamp="1602394283410">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
+    </state>
+    <state x="-1743" y="665" key="#ESLint/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602394283410" />
     <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601319459569">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
@@ -138,9 +157,10 @@
     </state>
     <state x="-2798" y="576" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601768000797" />
     <state x="1094" y="895" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601336693980" />
-    <state x="1585" y="751" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1601343626964">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="-2298" y="433" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1602390699870">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
+    <state x="-2298" y="433" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602390699870" />
     <state x="1585" y="751" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601343626964" />
     <state x="-1561" y="512" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601764524367">
       <screen x="-3840" y="-287" width="3840" height="2120" />
@@ -163,12 +183,17 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="543" y="258" width="824" height="533" key="IDE.errors.dialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600965020934" />
-    <state x="-2881" y="-7" width="1679" height="1319" key="SettingsEditor" timestamp="1601764638008">
+    <state x="1273" y="871" width="1551" height="821" key="SettingsEditor" timestamp="1602525822358">
+      <screen x="0" y="213" width="3840" height="1947" />
+    </state>
+    <state x="-2051" y="233" width="998" height="893" key="SettingsEditor/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602390896830" />
+    <state x="393" y="131" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600963789511" />
+    <state x="1273" y="871" width="1551" height="821" key="SettingsEditor/3840.186.1920.1080/0.213.3840.1947@0.213.3840.1947" timestamp="1602525822358" />
+    <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601348951209" />
+    <state width="649" height="446" key="SwitcherDM" timestamp="1602372282824">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-2881" y="-7" key="SettingsEditor/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601764638008" />
-    <state x="393" y="131" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600963789511" />
-    <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601348951209" />
+    <state width="649" height="446" key="SwitcherDM/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602372282824" />
     <state x="-1739" y="387" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601797506344">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
@@ -182,11 +207,12 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state width="600" height="428" key="javadoc.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319134012" />
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1601847732523">
-      <screen x="-3840" y="-287" width="3840" height="2120" />
+    <state x="1246" y="642" width="1345" height="1255" key="search.everywhere.popup" timestamp="1602534623263">
+      <screen x="0" y="213" width="3840" height="1947" />
     </state>
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601847732523" />
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602390845002" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600965349210" />
+    <state x="1246" y="642" width="1345" height="1255" key="search.everywhere.popup/3840.186.1920.1080/0.213.3840.1947@0.213.3840.1947" timestamp="1602534623263" />
     <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601337026213" />
   </component>
 </project>

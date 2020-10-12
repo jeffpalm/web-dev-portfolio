@@ -1,1 +1,1 @@
-export const SCROLL_SPEED = 500
+export const SCROLL_SPEED = 500;

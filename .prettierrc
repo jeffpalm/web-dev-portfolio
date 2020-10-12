@@ -1,13 +1,9 @@
 {
-  "semi": false,
-  "singleQuote": true,
-  "tabWidth": 4,
-  "trailingComma": "es5",
-  "quoteProps": "as-needed",
   "jsxSingleQuote": true,
-  "jsxBracketSameLine": false,
-  "bracketSpacing": true,
-  "arrowParens": "avoid",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "none",
   "extends": [
     "plugin:prettier/recommended",
     "prettier/flowtype",

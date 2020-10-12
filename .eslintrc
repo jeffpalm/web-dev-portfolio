@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@dialexa/eslint-config-dialexa/react",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react", "react-hooks"]
+}
