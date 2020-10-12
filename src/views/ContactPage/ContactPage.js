@@ -1,172 +1,55 @@
 import React, { useState } from 'react';
 // STYLE/ANIMATION
 import useStyles from 'views/ContactPage/ContactPageStyle';
+import _sendAnimation from './ContactPageAnimation';
 // COMPONENTS
 import FullPage from 'components/FullPage/FullPage';
 import { MotionTypo } from 'components/MuiMotion/MuiMotion';
 import ContactForm from 'components/ContactForm/ContactForm';
+import HotlineHook from '../../components/HotlineHook/HotlineHook';
+import SendSuccess from '../../components/SendSuccess/SendSuccess';
 // HOOKS
 import useWindowSize from 'hooks/useWindowSize';
 // THIRD PARTY
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import axios from 'axios';
 
 const ContactPage = () => {
   const classes = useStyles();
 
   const wS = useWindowSize();
 
-  const topControls = useAnimation();
-  const msgControls = useAnimation();
-  const envelopeContainerControls = useAnimation();
-  const btnControls = useAnimation();
-  const envelopeControls = useAnimation();
-  const palmtreeControls = useAnimation();
-  const masterEnvelopeControls = useAnimation();
-  const headerControls = useAnimation();
-
-  const hotlineControls = useAnimation();
-  const hotlineHookControls = useAnimation();
-
-  const [animating, setAnimating] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const sendAnimation = async () => {
-    // Collapsing the top fields and the submit button into message field
-    setAnimating(true);
-
-    await headerControls.start({
-      y: [0, -300],
-      opacity: [1, 0]
-    });
-
-    await topControls.start((i) => ({
-      y: 80 * i,
-      transition: {
-        delay: 0.1 * i
-      }
-    }));
-
-    await btnControls.start({
-      y: -200
-    });
-
-    // Revealing and 'stuffing' envelope
-    await Promise.all([
-      msgControls.start({
-        scale: 0.81,
-        originY: 0
-      }),
-      topControls.start({
-        scale: 0.81,
-        originY: 0
-      }),
-      envelopeContainerControls.start({
-        opacity: 1,
-        translateY: [300, 200, -100]
-      })
-    ]);
-
-    // Sealing envelope flap
-    await envelopeControls.start((custom) => {
-      if (custom === 'flap') {
-        return {
-          opacity: [1, 1, 1],
-          originY: [1, 1, 1],
-          rotateX: [0, 0, 180]
-        };
-      } else if (custom === 'back-flap') {
-        return {
-          opacity: [0, 0, 0]
-        };
-      }
-      return {};
-    });
-
-    // Animating Palmtree seal
-    await palmtreeControls.start({
-      opacity: 1,
-      scale: 8,
-      originX: 0,
-      originY: 0,
-      x: 73,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: 'easeIn'
-      }
-    });
-
-    await Promise.all([
-      topControls.start({ opacity: 0 }),
-      btnControls.start({ opacity: 0 }),
-      msgControls.start({ opacity: 0 })
-    ]);
-
-    await Promise.all([
-      hotlineControls.start({
-        opacity: [1, 1, 1],
-        y: [wS.height * -1, 0, -50]
-      }),
-      hotlineHookControls.start({
-        pathLength: [0, 0, 1]
-      })
-    ]);
-
-    await Promise.all([
-      masterEnvelopeControls.start({
-        y: [-100, -200, -5000],
-        rotateZ: [0, -30, -30],
-        originX: [1, 1, 1],
-        originY: [0.25, 0.25, 0.25],
-        transition: {
-          duration: 1
-        }
-      }),
-      hotlineControls.start({
-        y: [-50, -200, -5000],
-        transition: {
-          duration: 1
-        }
-      })
-    ]);
-
-    setSuccess(true);
+  const animationCtrls = {
+    header: useAnimation(),
+    top: useAnimation(),
+    btn: useAnimation(),
+    msg: useAnimation(),
+    envelopeContainer: useAnimation(),
+    envelope: useAnimation(),
+    palmtree: useAnimation(),
+    hotline: useAnimation(),
+    hotlineHook: useAnimation(),
+    masterEnvelope: useAnimation()
   };
 
-  // TODO: Finish writing resetForm()
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
-  // const resetForm = async () => {
-  //     setSuccess(false)
-  //     setAnimating(false)
-  //     await Promise.all([
-  //         headerControls.start('initial'),
-  //         topControls.start('initial'),
-  //         btnControls.start('initial'),
-  //         msgControls.start('initial'),
-  //         envelopeContainerControls.start('initial'),
-  //         envelopeControls.start('initial'),
-  //         hotlineControls.start('initial'),
-  //         hotlineHookControls.start('initial'),
-  //         masterEnvelopeControls.start('initial'),
-  //     ])
-  // }
-
-  const successVariants = {
-    initial: {
-      opacity: 0
-    },
-    enter: {
-      opacity: 1,
-      transition: {
-        ease: 'linear',
-        duration: 0.5
-      }
+  const submitForm = async (formData) => {
+    setSending(true);
+    await _sendAnimation(animationCtrls, wS.height);
+    setSent(true);
+    try {
+      await axios.post('/api/contact', formData);
+    } catch (err) {
+      // TODO: uncomment error catch
+      // throw new Error(err);
     }
   };
 
   return (
     <FullPage name='contact' justify='flex-start'>
-      <motion.div className={classes.header} animate={headerControls}>
+      <motion.div className={classes.header} animate={animationCtrls.header}>
         <MotionTypo variant='h2' color='textPrimary' align='center'>
           The Palmy Hotline
         </MotionTypo>
@@ -179,82 +62,25 @@ const ContactPage = () => {
           All messages responded to directly within 1 business day
         </MotionTypo>
       </motion.div>
-      {animating && (
-        <>
-          <motion.svg
-            className={classes.hotline}
-            xmlns='http://www.w3.org/2000/svg'
-            width={wS.width}
-            height={wS.height}
-            animate={hotlineControls}
-            initial={{
-              y: wS.height * -1,
-              opacity: 0
-            }}
-          >
-            <motion.path
-              d={`M${wS.width / 2 + 150} 0 
-                            V${wS.height / 2}
-                            l -30 -40
-                            `}
-              stroke='#FFF'
-              strokeWidth={5}
-              fillOpacity={0}
-            />
-          </motion.svg>
-          <motion.svg
-            className={classes.hotlineHook}
-            xmlns='http://www.w3.org/2000/svg'
-            width={wS.width}
-            height={wS.height}
-            animate={hotlineControls}
-            initial={{
-              y: wS.height * -1,
-              opacity: 0
-            }}
-          >
-            <motion.path
-              animate={hotlineHookControls}
-              initial={{
-                pathLength: 0
-              }}
-              d={`M${wS.width / 2 + 150} ${wS.height / 2} 
-                            l -30 -40
-                            `}
-              stroke='#FFF'
-              strokeWidth={5}
-            />
-          </motion.svg>
-        </>
+      {sending && (
+        <HotlineHook
+          wS={wS}
+          hotlineCtrls={animationCtrls.hotline}
+          hookCtrls={animationCtrls.hook}
+        />
       )}
       <ContactForm
-        topControls={topControls}
-        msgControls={msgControls}
-        envelopeContainerControls={envelopeContainerControls}
-        btnControls={btnControls}
-        envelopeControls={envelopeControls}
-        palmtreeControls={palmtreeControls}
-        masterEnvelopeControls={masterEnvelopeControls}
-        sendAnimation={sendAnimation}
+        topControls={animationCtrls.top}
+        msgControls={animationCtrls.msg}
+        envelopeContainerControls={animationCtrls.envelopeContainer}
+        btnControls={animationCtrls.btn}
+        envelopeControls={animationCtrls.envelope}
+        palmtreeControls={animationCtrls.palmtree}
+        masterEnvelopeControls={animationCtrls.masterEnvelope}
+        submitForm={submitForm}
+        sending={sending}
       />
-      {success && (
-        <AnimatePresence>
-          <motion.div
-            className={classes.successScreen}
-            variants={successVariants}
-            initial='initial'
-            animate='enter'
-            exit='initial'
-          >
-            <MotionTypo variant='h2' color='textPrimary' align='center'>
-              Successful Hotline Transmission
-            </MotionTypo>
-            {/* <MotionButton onClick={resetForm}>*/}
-            {/*    Send Another*/}
-            {/* </MotionButton>*/}
-          </motion.div>
-        </AnimatePresence>
-      )}
+      {sent && <SendSuccess />}
     </FullPage>
   );
 };

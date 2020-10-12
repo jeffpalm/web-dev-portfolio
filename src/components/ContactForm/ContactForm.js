@@ -7,7 +7,6 @@ import * as Yup from 'yup';
 import Envelope from 'components/Envelope/Envelope';
 import useStyles from 'components/ContactForm/ContactFormStyle';
 import variants from './ContactFormAnimation';
-import axios from 'axios';
 
 const ContactForm = ({
   topControls,
@@ -17,7 +16,8 @@ const ContactForm = ({
   envelopeControls,
   palmtreeControls,
   masterEnvelopeControls,
-  sendAnimation
+  submitForm,
+  sending
 }) => {
   const classes = useStyles();
 
@@ -82,30 +82,24 @@ const ContactForm = ({
     }
   };
 
-  // Handling submit click actions and animations
-
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubmit = async () => {
-    // Submitting bool mounts envelope SVG
-    setSubmitting(true);
-    sendAnimation();
-
-    try {
-      await axios.post('/api/contact', validation);
-    } catch (err) {
-      throw new Error(err);
-    }
-  };
-
-  // Handle imperative message text field animation
-
   useEffect(() => {
-    if (state.subject) {
-      msgControls.start('enter');
-      masterEnvelopeControls.start('enter');
+    const messageEnterAnimation = async () =>
+      await Promise.all([
+        msgControls.start('enter'),
+        masterEnvelopeControls.start('enter')
+      ]);
+
+    const messageExitAnimation = async () =>
+      await Promise.all([
+        msgControls.start('initial'),
+        masterEnvelopeControls.start('initial')
+      ]);
+    if (state.subject && state.subject.length) {
+      messageEnterAnimation().then(() => null);
+    } else {
+      messageExitAnimation().then(() => null);
     }
-  }, [state.subject, masterEnvelopeControls, msgControls]);
+  }, [masterEnvelopeControls, msgControls, state.subject]);
 
   return (
     <motion.form
@@ -194,16 +188,16 @@ const ContactForm = ({
             />
           </motion.div>
         )}
-        {state.subject && (
+        {state.subject && !errors.subject && (
           <motion.div
-            key={'form-container-4'}
+            key='form-container-4'
             className={classes.msgContainer}
             variants={variants.field}
             initial='initial'
             animate={masterEnvelopeControls}
             exit='initial'
           >
-            {submitting && (
+            {sending && (
               <Envelope
                 envelopeContainerControls={envelopeContainerControls}
                 envelopeControls={envelopeControls}
@@ -231,7 +225,7 @@ const ContactForm = ({
             />
           </motion.div>
         )}
-        {state.message && !errors.message && (
+        {state.message && state.subject.length && !errors.message && (
           <motion.div
             key='form-container-5'
             className={classes.switchContainer}
@@ -246,7 +240,8 @@ const ContactForm = ({
               variants={variants.submitBtn}
               initial='initial'
               animate='enter'
-              onClick={handleSubmit}
+              exit='initial'
+              onClick={() => submitForm(validation)}
             >
               Send it
             </MotionButton>
@@ -265,7 +260,8 @@ ContactForm.propTypes = {
   envelopeControls: PropTypes.instanceOf(AnimationControls),
   palmtreeControls: PropTypes.instanceOf(AnimationControls),
   masterEnvelopeControls: PropTypes.instanceOf(AnimationControls),
-  sendAnimation: PropTypes.func
+  submitForm: PropTypes.func,
+  sending: PropTypes.bool
 };
 
 export default ContactForm;
