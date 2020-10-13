@@ -33,17 +33,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHookStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendSuccess/SendSuccess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendSuccess/SendSuccessAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendSuccess/SendSuccessStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPageAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MuiMotion/MuiMotionTextField/MuiMotionTextFieldStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPageStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
