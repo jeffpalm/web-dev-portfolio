@@ -42,8 +42,7 @@ const ContactPage = () => {
     try {
       await axios.post('/api/contact', formData);
     } catch (err) {
-      // TODO: uncomment error catch
-      // throw new Error(err);
+      throw new Error(err);
     }
   };
 
@@ -66,7 +65,7 @@ const ContactPage = () => {
         <HotlineHook
           wS={wS}
           hotlineCtrls={animationCtrls.hotline}
-          hookCtrls={animationCtrls.hook}
+          hookCtrls={animationCtrls.hotlineHook}
         />
       )}
       <ContactForm

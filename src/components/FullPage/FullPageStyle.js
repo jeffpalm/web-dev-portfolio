@@ -7,6 +7,7 @@ export default makeStyles((theme) => ({
     margin: 0,
     paddingTop: theme.spacing(9),
     paddingLeft: theme.spacing(9),
-    position: 'relative'
+    position: 'relative',
+    overflow: 'none'
   }
 }));

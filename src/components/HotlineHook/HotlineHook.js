@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useStyles from './HotlineHookStyle';
 import { motion, AnimationControls } from 'framer-motion';
 
-function HotlineHook({ wS, hotlineCtrls, hookCtrls }) {
+const HotlineHook = ({ wS, hotlineCtrls, hookCtrls }) => {
   const classes = useStyles();
   return (
     <>
@@ -19,8 +19,8 @@ function HotlineHook({ wS, hotlineCtrls, hookCtrls }) {
         }}
       >
         <motion.path
-          d={`M${wS.width / 2 + 150} 0 
-                            V${wS.height / 2}
+          d={`M${wS.width / 2 + 175} 0 
+                            V${wS.height * (5 / 8)}
                             l -30 -40
                             `}
           stroke='#FFF'
@@ -44,7 +44,7 @@ function HotlineHook({ wS, hotlineCtrls, hookCtrls }) {
           initial={{
             pathLength: 0
           }}
-          d={`M${wS.width / 2 + 150} ${wS.height / 2} 
+          d={`M${wS.width / 2 + 150} ${wS.height * (5 / 8)} 
                             l -30 -40
                             `}
           stroke='#FFF'
@@ -53,7 +53,7 @@ function HotlineHook({ wS, hotlineCtrls, hookCtrls }) {
       </motion.svg>
     </>
   );
-}
+};
 
 HotlineHook.propTypes = {
   wS: PropTypes.shape({ width: PropTypes.number, height: PropTypes.number }),
