@@ -28,7 +28,7 @@ const NavLinks = ({
   const animationControls = useAnimation();
   const classes = useStyles();
 
-  useVisibilityAndAnimate(isVisible, animationControls);
+  useVisibilityAndAnimate(isVisible && isDesktop, animationControls);
 
   return (
     <MotionGrid

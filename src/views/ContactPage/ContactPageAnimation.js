@@ -74,7 +74,7 @@ const dropHook = (hotlineCtrls, hookCtrls, windowHeight) =>
   Promise.all([
     hotlineCtrls.start({
       opacity: [1, 1, 1],
-      y: [windowHeight * -1, 0, -50]
+      y: [windowHeight * -1, 50, 0]
     }),
     hookCtrls.start({
       pathLength: [0, 0, 1]
@@ -101,7 +101,6 @@ const reelInEnvelope = (masterEnvelopeCtrls, hotlineCtrls) =>
   ]);
 
 const sendAnimation = async (controls, windowHeight) => {
-  // Collapsing the top fields and the submit btn into message field
   const {
     header,
     top,

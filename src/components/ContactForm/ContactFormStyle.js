@@ -21,16 +21,6 @@ export default makeStyles((theme) => ({
     justifyContent: 'center',
     margin: theme.spacing(0, 1)
   },
-  optionalField: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'flex-start'
-  },
-  switch: {
-    height: 80,
-    margin: theme.spacing(0, 1),
-    color: theme.palette.text.primary
-  },
   submitBtn: {
     width: 120,
     color: theme.palette.success.main,
@@ -44,6 +34,7 @@ export default makeStyles((theme) => ({
   },
   msgContainer: {
     position: 'relative',
-    width: '100%'
+    width: '100%',
+    margin: theme.spacing(0, 1)
   }
 }));

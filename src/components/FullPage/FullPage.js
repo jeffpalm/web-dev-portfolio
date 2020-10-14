@@ -38,7 +38,7 @@ const FullPage = ({
   }, [viewportVisibility, animationControls]);
 
   return (
-    <Element name={name}>
+    <Element style={{ position: 'relative' }} name={name}>
       <AnimatePresence>
         <MotionBox
           key={name}
