@@ -18,9 +18,18 @@ const express = require('express'),
   client = new MongoClient(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-  });
+  }),
+  expressStaticGzip = require('express-static-gzip');
 
-app.use(express.static(__dirname + '/../build'));
+app.use(
+  expressStaticGzip(`${__dirname}/../build`, {
+    enableBrotli: true,
+    orderPreference: ['br', 'gz'],
+    setHeaders: (res) => {
+      res.setHeader('Cache-Control', 'public, max-age=31536000');
+    }
+  })
+);
 app.use(express.json());
 
 app.get('/resume', controller.resumeRedirect);
@@ -29,15 +38,15 @@ app.get('/api/githubstats', controller.getGitHubStats);
 app.put('/api/githubstats', controller.updateGitHubStats);
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, subject, message } = req.body,
-    msg = {
-      from: SMTP_USER,
-      to: 'jeff@jeffpalm.dev',
-      subject: `[Contact Form] - ${subject}`,
-      text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`
-    };
+  const { name, email, subject, message } = req.body;
+  const msg = {
+    from: SMTP_USER,
+    to: 'jeff@jeffpalm.dev',
+    subject: `[Contact Form] - ${subject}`,
+    text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`
+  };
 
-  await transporter.sendMail(msg, (error, info) => {
+  await transporter.sendMail(msg, (error) => {
     if (error) return res.status(500).send(error);
   });
 

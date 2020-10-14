@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // STYLE/ANIMATION
 import variants from './AboutPageAnimation';
 import useStyles from './AboutPageStyle';
@@ -27,12 +28,16 @@ const AboutPage = ({ dynamicHue }) => {
         >
           Hiiiiii!
         </MotionTypo>
-        <motion.img
+        <motion.video
           className={classes.aboutImg}
           variants={variants.text}
           custom={0}
-          src='/assets/palmy_wave.gif'
+          src='/assets/palmy_wave.webm'
           alt='Jeff Waving'
+          autoPlay
+          loop
+          muted
+          controls={false}
         />
 
         <MotionTypo
@@ -101,14 +106,18 @@ const AboutPage = ({ dynamicHue }) => {
           because I had built multiple websites at my previous job using GUI
           tools and figuring things out as I went, but I never really learned
           how to code. So, I spent all my time since March learning everything I
-          can about becoming a Developer. I started with Codecademy's
-          self-guided lessons then enrolled and completed DevMountain's Full
-          Stack Web Development Bootcamp. Now, I'm on the hunt to find more than
-          just a paycheck.
+          can about becoming a Developer. I started with Codecademy&#39;s
+          self-guided lessons then enrolled and completed DevMountain&#39;s Full
+          Stack Web Development Bootcamp. Now, I&#39;m on the hunt to find more
+          than just a paycheck.
         </MotionTypo>
       </MotionGrid>
     </FullPage>
   );
+};
+
+AboutPage.propTypes = {
+  dynamicHue: PropTypes.number
 };
 
 export default AboutPage;

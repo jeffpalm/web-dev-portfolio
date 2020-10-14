@@ -14,9 +14,7 @@ const useRangeConverter = (minOutput, maxOutput, minInput, maxInput, input) => {
       const inputRange = maxInput - minInput;
       const inputProgress = input - minInput;
       const inputPercentile = inputProgress / inputRange;
-      const output = outputRange * inputPercentile + minOutput;
-
-      return output;
+      return outputRange * inputPercentile + minOutput;
     };
 
     setOutput(adjustOutput());

@@ -152,10 +152,10 @@ const SkillsPage = () => {
                     borderTopRightRadius: theme.shape.borderRadius
                   },
                   pageSize: 25,
-                  paginationType: 'stepped',
                   pageSizeOptions: [],
                   toolbar: false,
-                  filtering: true
+                  filtering: true,
+                  showFirstLastPageButtons: false
                 }}
                 detailPanel={(rowData) => (
                   <>

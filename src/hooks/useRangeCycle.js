@@ -11,14 +11,15 @@ const useRangeCycle = (min, max, start) => {
   };
 
   const prev = () => {
-    let newCur = cur - 1 < min ? max : cur - 1;
+    const newCur = cur - 1 < min ? max : cur - 1;
     setCur(newCur);
     return newCur;
   };
 
   const jumpTo = (newCur) => {
-    if (newCur < min || newCur > max)
+    if (newCur < min || newCur > max) {
       throw new Error('Attempting to jump to cur outside of range');
+    }
 
     setCur(newCur);
     return newCur;
