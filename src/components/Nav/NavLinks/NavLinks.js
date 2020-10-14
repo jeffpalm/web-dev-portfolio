@@ -56,6 +56,7 @@ const NavLinks = ({
             exit='initial'
             custom={i + 1}
             isDynamic
+            aria-label={`Link to ${link.text}`}
           >
             {link.text}
           </Link>
@@ -64,7 +65,7 @@ const NavLinks = ({
         <IconButton
           edge='start'
           color='default'
-          aria-label='menu'
+          aria-label='Toggle menu'
           onClick={toggleMobileNavVisibility}
         >
           {mobileNavVisibility ? <CloseIcon /> : <MenuIcon />}

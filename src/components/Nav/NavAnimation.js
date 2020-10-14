@@ -9,7 +9,6 @@ const variants = {
       originX: 0,
       originY: 0,
       scaleX: 1,
-      rotate: 0,
       transition: {
         duration: 0.5
       }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useHslCycle = (
   speed = 1,
@@ -11,32 +11,21 @@ const useHslCycle = (
 
   useEffect(() => {
     const interval = setInterval(() => {
-      switch (direction) {
-        case 'forward':
-          if (hue + speed > 360) {
-            setHue(hue + speed - 360);
-          } else {
-            setHue(hue + speed);
-          }
-          break;
-        case 'backward':
-          if (hue - speed < 0) {
-            setHue(360 + (hue - speed));
-          } else {
-            setHue(hue - speed);
-          }
-          break;
-        default:
-          break;
+      if (direction === 'forward') {
+        setHue((prev) =>
+          prev + speed > 360 ? prev + speed - 360 : prev + speed
+        );
+      } else if (direction === 'backward') {
+        setHue((prev) =>
+          prev - speed < 0 ? 360 + (prev - speed) : prev - speed
+        );
       }
     }, 34);
     return () => {
       clearInterval(interval);
     };
-  }, [direction, hue, speed]);
-  // }, [])
+  }, [direction, speed]);
 
   return `hsl(${hue},${sat}%,${lum}%)`;
 };
-
 export default useHslCycle;

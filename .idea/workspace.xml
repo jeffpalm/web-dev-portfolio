@@ -33,16 +33,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/web-dev-portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-dev-portfolio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactFormStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactFormStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FullPage/FullPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FullPage/FullPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPage/FullPageStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHookStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HotlineHook/HotlineHookStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/palmtree.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/palmtrees.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/palmy_wave.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/dataspeaks/map.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/dataspeaks/map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/dataspeaks/state.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/dataspeaks/state.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/dataspeaks/title.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/dataspeaks/title.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/the-hub/add_ticket.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/the-hub/add_ticket.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/the-hub/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/the-hub/login.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/the-hub/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/the-hub/main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/the-hub/queue.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/the-hub/queue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/the-hub/queue_inactive.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/the-hub/queue_inactive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/the-hub/ticket.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/the-hub/ticket.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/zen-chess/board.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/zen-chess/board.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/projects/zen-chess/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/projects/zen-chess/main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Nav/NavLinks/NavLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavLinks/NavLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ContactPage/ContactPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ContactPage/ContactPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useHslCycle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHslCycle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRangeConverter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRangeConverter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRangeCycle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRangeCycle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useVisibility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +146,7 @@
       <workItem from="1602390649116" duration="5245000" />
       <workItem from="1602525625520" duration="197000" />
       <workItem from="1602525829340" duration="8123000" />
+      <workItem from="1602693034944" duration="13741000" />
     </task>
     <servers />
   </component>
@@ -143,18 +166,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1743" y="665" key="#ESLint" timestamp="1602394283410">
+    <state x="-1743" y="665" key="#ESLint" timestamp="1602694331870">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-1743" y="665" key="#ESLint/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602394283410" />
+    <state x="-1743" y="665" key="#ESLint/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602694331870" />
     <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601319459569">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="864" y="751" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319459569" />
-    <state x="-2798" y="576" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601768000797">
+    <state x="-2798" y="576" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602698071483">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-2798" y="576" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1601768000797" />
+    <state x="-2798" y="576" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602698071483" />
     <state x="1094" y="895" width="613" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601336693980" />
     <state x="-2298" y="433" width="524" height="441" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1602390699870">
       <screen x="-3840" y="-287" width="3840" height="2120" />
@@ -182,6 +205,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="543" y="258" width="824" height="533" key="IDE.errors.dialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600965020934" />
+    <state x="-1512" y="479" key="RollbackChangesDialog" timestamp="1602705008587">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
+    </state>
+    <state x="-1512" y="479" key="RollbackChangesDialog/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602705008587" />
     <state x="1273" y="871" width="1551" height="821" key="SettingsEditor" timestamp="1602525822358">
       <screen x="0" y="213" width="3840" height="1947" />
     </state>
@@ -206,10 +233,10 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state width="600" height="428" key="javadoc.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319134012" />
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1602630992587">
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1602694626856">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602630992587" />
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602694626856" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600965349210" />
     <state x="1246" y="642" width="1345" height="1255" key="search.everywhere.popup/3840.186.1920.1080/0.213.3840.1947@0.213.3840.1947" timestamp="1602534808626" />
     <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601337026213" />

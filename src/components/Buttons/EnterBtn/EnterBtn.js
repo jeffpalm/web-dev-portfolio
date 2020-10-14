@@ -39,6 +39,7 @@ const EnterBtn = ({ to }) => {
       whileHover={{
         scale: 1.1
       }}
+      aria-label={`Click to enter Jeff Palmer's portfolio`}
     >
       Enter
     </MotionButton>

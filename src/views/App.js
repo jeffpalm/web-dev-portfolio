@@ -3,12 +3,7 @@ import React, { useState, Suspense, lazy } from 'react';
 import useStyles from './AppStyle';
 // VIEWS
 import HomePage from 'views/HomePage/HomePage';
-// import AboutPage from 'views/AboutPage/AboutPage'
-// import SkillsPage from 'views/SkillsPage/SkillsPage'
-// import ProjectsPage from 'views/ProjectsPage/ProjectsPage'
-// import ContactPage from 'views/ContactPage/ContactPage'
 // COMPONENTS
-// import Nav from 'components/Nav/Nav'
 import NavFallback from '../components/Nav/NavFallback';
 import FullPageFallback from 'components/FullPage/FullPageFallback';
 // HOOKS
@@ -36,7 +31,7 @@ const App = () => {
 
   const hue = useHueConversion(y, 0, doc.height, startHue);
 
-  const dynamicHue = y > wS.height ? hue : startHue;
+  const dynamicHue = y > wS.height + 50 ? hue : startHue;
 
   const newHue = () => {
     setStartHue(Math.floor(Math.random() * 360));
