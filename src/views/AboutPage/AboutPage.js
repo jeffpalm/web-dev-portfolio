@@ -9,6 +9,7 @@ import { MotionGrid, MotionTypo } from 'components/MuiMotion/MuiMotion';
 import TypingAnimation from 'components/TypingAnimation/TypingAnimation';
 // THIRD PARTY
 import { motion } from 'framer-motion';
+import { isSafari, isMobileSafari } from 'react-device-detect';
 
 const AboutPage = ({ dynamicHue }) => {
   const classes = useStyles();
@@ -28,18 +29,27 @@ const AboutPage = ({ dynamicHue }) => {
         >
           Hiiiiii!
         </MotionTypo>
-        <motion.video
-          className={classes.aboutImg}
-          variants={variants.text}
-          custom={0}
-          src='/assets/palmy_wave.webm'
-          alt='Jeff Waving'
-          autoPlay
-          loop
-          muted
-          controls={false}
-        />
-
+        {isMobileSafari || isSafari ? (
+          <motion.img
+            className={classes.aboutImg}
+            variants={variants.text}
+            custom={0}
+            src='/assets/palmy_wave.gif'
+            alt='Jeff Waving'
+          />
+        ) : (
+          <motion.video
+            className={classes.aboutImg}
+            variants={variants.text}
+            custom={0}
+            src='/assets/palmy_wave.webm'
+            alt='Jeff Waving'
+            autoPlay
+            loop
+            muted
+            controls={false}
+          />
+        )}
         <MotionTypo
           className={classes.myNameIs}
           variants={variants.text}
