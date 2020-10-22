@@ -4,13 +4,12 @@ import PropTypes from 'prop-types';
 import useStyles from './SideBarStyle';
 import variants from './SideBarAnimation';
 // THIRD PARTY
-import { motion } from 'framer-motion';
+import { motion, AnimationControls } from 'framer-motion';
 import IconButton from '@material-ui/core/IconButton';
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import { AnimationControls } from 'framer-motion';
 
 const SideBar = ({ controls, backgroundColor }) => {
   const classes = useStyles();

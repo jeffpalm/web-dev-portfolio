@@ -13,9 +13,9 @@ const Palmytree = ({ height = 580, variant }) => {
       id='svg2'
       xmlns='http://www.w3.org/2000/svg'
       viewBox={`0 0 568 ${height}`}
-      initial='initial'
-      animate='animate'
-      variants={variants}
+      // initial='initial'
+      // animate='animate'
+      // variants={variants}
       // stroke={`linear-gradient(${strokeColorOne}, ${strokeColorTwo})`}
       fillOpacity={0}
     >

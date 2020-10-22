@@ -1,13 +1,11 @@
 const variants = {
   initial: {
-    opacity: 0,
-    y: -300
+    translateX: -60
   },
   enter: {
-    opacity: 1,
-    y: 0,
+    translateX: 0,
     transition: {
-      delay: 0.1
+      delay: 1
     }
   }
 };

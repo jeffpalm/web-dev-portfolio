@@ -13,7 +13,8 @@ import MobileNav from './MobileNav/MobileNav';
 import { useAnimation } from 'framer-motion';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import useVisibilityAndAnimate from '../../hooks/useVisibilityAndAnimate';
+import useVisibilityAndAnimate from 'hooks/useVisibilityAndAnimate';
+import DownArrow from '../Buttons/DownArrow/DownArrow';
 
 const links = [
   { text: 'Home', to: 'home' },
@@ -31,6 +32,7 @@ const Nav = ({ dynamicHue, newHue }) => {
 
   const [navVisibility, setNavVisibility] = useState(false);
   const [mobileNavVisibility, setMobileNavVisibility] = useState(false);
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
   const toggleMobileNavVisibility = () => {
     setMobileNavVisibility((prev) => !prev);
@@ -41,20 +43,10 @@ const Nav = ({ dynamicHue, newHue }) => {
   useVisibilityAndAnimate(navVisibility, animationControls);
 
   useEffect(() => {
-    const updateNavVisibility = () => {
-      if (window.scrollY > 0) {
-        setNavVisibility(true);
-        return true;
-      }
-      setNavVisibility(false);
-      return false;
-    };
-
-    window.addEventListener('scroll', updateNavVisibility);
-    return () => {
-      window.removeEventListener('scroll', updateNavVisibility);
-    };
-  }, []);
+    if (window.scrollY > 0 && navVisibility) return;
+    setNavVisibility(window.scrollY > 0);
+    // eslint-disable-next-line
+  }, [window.scrollY, navVisibility]);
 
   return (
     <>
@@ -82,6 +74,7 @@ const Nav = ({ dynamicHue, newHue }) => {
               links={links}
               mobileNavVisibility={mobileNavVisibility}
               toggleMobileNavVisibility={toggleMobileNavVisibility}
+              setCurrentPageIndex={setCurrentPageIndex}
             />
             <NavLogo isVisible={navVisibility} newHue={newHue} />
           </MotionToolbar>
@@ -91,10 +84,16 @@ const Nav = ({ dynamicHue, newHue }) => {
         </MotionAppBar>
       </ClickAwayListener>
       <SideBar controls={animationControls} backgroundColor={backgroundColor} />
+      <DownArrow
+        controls={animationControls}
+        to={
+          links[currentPageIndex + 1] ? links[currentPageIndex + 1].to : 'home'
+        }
+        backgroundColor={backgroundColor}
+      />
     </>
   );
 };
-
 Nav.propTypes = {
   dynamicHue: PropTypes.number,
   newHue: PropTypes.func
