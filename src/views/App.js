@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { useState, Suspense, lazy, useEffect } from 'react';
 // STYLE/ANIMATION
 import useStyles from './AppStyle';
 // VIEWS
@@ -11,6 +11,8 @@ import useScrollPosition from 'hooks/useScrollPosition';
 import useDocumentSize from 'hooks/useDocumentSize';
 import useHueConversion from 'hooks/useHueConversion';
 import useWindowSize from 'hooks/useWindowSize';
+
+import { Events } from 'react-scroll';
 
 // CODE SPLITTING
 const Nav = lazy(() => import('components/Nav/Nav'));
@@ -26,6 +28,16 @@ const App = () => {
   const wS = useWindowSize();
   const { y } = useScrollPosition();
   const doc = useDocumentSize();
+
+  useEffect(() => {
+    Events.scrollEvent.register('scroll', function (to, element) {
+      console.log('end', arguments);
+    });
+
+    return () => {
+      Events.scrollEvent.remove('scroll');
+    };
+  }, []);
 
   const [startHue, setStartHue] = useState(randomHue);
 

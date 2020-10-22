@@ -4,7 +4,7 @@ import useStyles from 'views/HomePage/HomePageStyle';
 // COMPONENTS
 import FullPage from 'components/FullPage/FullPage';
 import Palmytree from 'components/Palmytree/Palmytree';
-import EnterArrow from 'components/Buttons/EnterArrow/EnterArrow';
+import EnterBtn from 'components/Buttons/EnterBtn/EnterBtn';
 
 const HomePage = () => {
   const classes = useStyles();
@@ -13,7 +13,7 @@ const HomePage = () => {
     <FullPage name='home' className={classes.root} style={{ padding: 8 }}>
       <div className={classes.palmyContainer}>
         <Palmytree variant='home' />
-        <EnterArrow to='about' />
+        <EnterBtn to='about' />
       </div>
     </FullPage>
   );
