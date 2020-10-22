@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -33,7 +36,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/DownArrow/DownArrow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/DownArrow/DownArrowAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/DownArrow/DownArrowStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterArrow/EnterArrow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterArrow/EnterArrowAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterArrow/EnterArrowStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavLinks/NavLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavLinks/NavLinks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useHueConversion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHueConversion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +91,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Buttons/DownArrow" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,11 +102,14 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\Buttons\DownArrow" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\Nav" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\MobileNav" />
@@ -116,7 +140,12 @@
       <workItem from="1602525625520" duration="197000" />
       <workItem from="1602525829340" duration="8123000" />
       <workItem from="1602693034944" duration="14283000" />
-      <workItem from="1602877991737" duration="1781000" />
+      <workItem from="1602877991737" duration="2680000" />
+      <workItem from="1603217373875" duration="20000" />
+      <workItem from="1603217461924" duration="37000" />
+      <workItem from="1603380479764" duration="552000" />
+      <workItem from="1603381045268" duration="326000" />
+      <workItem from="1603381384173" duration="11712000" />
     </task>
     <servers />
   </component>
@@ -179,10 +208,10 @@
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
     <state x="-1512" y="479" key="RollbackChangesDialog/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602705008587" />
-    <state x="1273" y="871" width="1551" height="821" key="SettingsEditor" timestamp="1602525822358">
-      <screen x="0" y="213" width="3840" height="1947" />
+    <state x="-2051" y="233" width="1409" height="1127" key="SettingsEditor" timestamp="1603381486111">
+      <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-2051" y="233" width="998" height="893" key="SettingsEditor/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602390896830" />
+    <state x="-2051" y="233" width="1409" height="1127" key="SettingsEditor/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1603381486111" />
     <state x="393" y="131" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600963789511" />
     <state x="1273" y="871" width="1551" height="821" key="SettingsEditor/3840.186.1920.1080/0.213.3840.1947@0.213.3840.1947" timestamp="1602525822358" />
     <state x="1013" y="309" width="1679" height="1319" key="SettingsEditor/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601348951209" />
@@ -203,10 +232,10 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state width="600" height="428" key="javadoc.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601319134012" />
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1602694626856">
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup" timestamp="1603381049489">
       <screen x="-3840" y="-287" width="3840" height="2120" />
     </state>
-    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1602694626856" />
+    <state x="-2594" y="180" width="1345" height="1366" key="search.everywhere.popup/0.0.1920.1040/-3840.-287.3840.2120@-3840.-287.3840.2120" timestamp="1603381049489" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600965349210" />
     <state x="1246" y="642" width="1345" height="1255" key="search.everywhere.popup/3840.186.1920.1080/0.213.3840.1947@0.213.3840.1947" timestamp="1602534808626" />
     <state x="1295" y="497" width="1319" height="1374" key="search.everywhere.popup/72.27.3768.2133/3840.357.1920.1080@72.27.3768.2133" timestamp="1601337026213" />
