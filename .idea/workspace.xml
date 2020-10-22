@@ -36,23 +36,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/DownArrow/DownArrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/DownArrow/DownArrowAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/DownArrow/DownArrowStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterArrow/EnterArrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterArrow/EnterArrowAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/EnterArrow/EnterArrowStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/EnterBtn/EnterBtnAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/MobileNav/MobileNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/MobileNav/MobileNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/MobileNav/MobileNavStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/MobileNav/MobileNavStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Nav/NavLinks/NavLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavLinks/NavLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useHueConversion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHueConversion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +135,7 @@
       <workItem from="1603217461924" duration="37000" />
       <workItem from="1603380479764" duration="552000" />
       <workItem from="1603381045268" duration="326000" />
-      <workItem from="1603381384173" duration="11712000" />
+      <workItem from="1603381384173" duration="14350000" />
     </task>
     <servers />
   </component>

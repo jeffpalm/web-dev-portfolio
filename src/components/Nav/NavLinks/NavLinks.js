@@ -23,16 +23,10 @@ const NavLinks = ({
   isDesktop,
   isVisible,
   mobileNavVisibility,
-  toggleMobileNavVisibility,
-  setCurrentPageIndex
+  toggleMobileNavVisibility
 }) => {
   const animationControls = useAnimation();
   const classes = useStyles();
-
-  const handleSetActive = (to) => {
-    const currentPageIndex = links.findIndex((link) => link.to === to);
-    setCurrentPageIndex(currentPageIndex);
-  };
 
   useVisibilityAndAnimate(isVisible && isDesktop, animationControls);
 
@@ -63,7 +57,6 @@ const NavLinks = ({
             custom={i + 1}
             isDynamic
             aria-label={`Link to ${link.text}`}
-            onSetActive={handleSetActive}
           >
             {link.text}
           </Link>
@@ -92,8 +85,7 @@ NavLinks.propTypes = {
   isDesktop: PropTypes.bool,
   isVisible: PropTypes.bool,
   mobileNavVisibility: PropTypes.bool,
-  toggleMobileNavVisibility: PropTypes.func,
-  setCurrentPageIndex: PropTypes.func
+  toggleMobileNavVisibility: PropTypes.func
 };
 
 export default NavLinks;
