@@ -1,9 +1,9 @@
-const axios = require('axios'),
-  { GITHUB_AUTH_TOKEN } = process.env,
-  Sugar = require('sugar/string');
+const axios = require('axios');
+const { GITHUB_AUTH_TOKEN } = process.env;
+const Sugar = require('sugar/string');
 // Setting Axios Defaults for GitHub API
-axios.defaults.headers.common['Accept'] = 'application/vnd.github.v3+json';
-axios.defaults.headers.common['Authorization'] = `token ${GITHUB_AUTH_TOKEN}`;
+axios.defaults.headers.common.Accept = 'application/vnd.github.v3+json';
+axios.defaults.headers.common.Authorization = `token ${GITHUB_AUTH_TOKEN}`;
 
 const packageExclusions = [
   '@fortawesome/fontawesome-svg-core',
@@ -63,7 +63,7 @@ module.exports = {
             .then((res) => {
               const langData = res.data;
 
-              for (let lang in langData) {
+              for (const lang in langData) {
                 dataAssembly.lang[lang]
                   ? (dataAssembly.lang[lang] += langData[lang])
                   : (dataAssembly.lang[lang] = langData[lang]);

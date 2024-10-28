@@ -1,25 +1,25 @@
 require('dotenv').config();
-const express = require('express'),
-  app = express(),
-  path = require('path'),
-  nodemailer = require('nodemailer'),
-  controller = require('./controller'),
-  MongoClient = require('mongodb').MongoClient,
-  { SERVER_PORT, SMTP_HOST, SMTP_USER, SMTP_PASS, MONGO_URI } = process.env,
-  transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: 465,
-    secure: true,
-    auth: {
-      user: SMTP_USER,
-      pass: SMTP_PASS
-    }
-  }),
-  client = new MongoClient(MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }),
-  expressStaticGzip = require('express-static-gzip');
+const express = require('express');
+const app = express();
+const path = require('path');
+const nodemailer = require('nodemailer');
+const controller = require('./controller');
+const MongoClient = require('mongodb').MongoClient;
+const { SERVER_PORT, SMTP_HOST, SMTP_USER, SMTP_PASS, MONGO_URI } = process.env;
+const transporter = nodemailer.createTransport({
+  host: SMTP_HOST,
+  port: 465,
+  secure: true,
+  auth: {
+    user: SMTP_USER,
+    pass: SMTP_PASS
+  }
+});
+const client = new MongoClient(MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+const expressStaticGzip = require('express-static-gzip');
 
 app.use(
   expressStaticGzip(`${__dirname}/../build`, {
