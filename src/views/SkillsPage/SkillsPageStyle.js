@@ -55,5 +55,9 @@ export default makeStyles((theme) => ({
     '&:hover': {
       color: theme.palette.primary.main
     }
+  },
+  skillsText: {
+    padding: theme.spacing(1),
+    maxWidth: 600
   }
 }));

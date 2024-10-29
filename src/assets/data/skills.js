@@ -55,19 +55,12 @@ export default [
     level: 5,
     category: 'Back-End'
   },
-  // {
-  //     title: 'Lodash',
-  //     image:
-  //         'https://www.michaellerner.net/wp-content/uploads/2016/11/handlebars-logo.jpg',
-  //     level: 2,
-  //     category: 'Utility Libraries',
-  // },
   {
     title: 'Python',
     gitHubName: 'Python',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png',
-    level: 3,
+    level: 4,
     category: 'Core Languages'
   },
   {
@@ -78,19 +71,6 @@ export default [
     level: 5,
     category: 'Back-End'
   },
-  // {
-  //     title: 'Heroku',
-  //     image: 'https://www.fullstackpython.com/img/logos/heroku.png',
-  //     level: 5,
-  //     category: 'hosting',
-  // },
-  // {
-  //     title: 'Digital Ocean',
-  //     image:
-  //         'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1024px-DigitalOcean_logo.svg.png',
-  //     level: 5,
-  //     category: 'hosting',
-  // },
   {
     title: 'Java',
     level: 1,
@@ -117,9 +97,4 @@ export default [
     category: 'Back-End',
     gitHubName: 'Handlebars'
   }
-  // {
-  //     title: 'REST APIs',
-  //     level: 5,
-  //     category: 'Fundamentals'
-  // },
 ];

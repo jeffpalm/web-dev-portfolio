@@ -99,8 +99,8 @@ const AboutPage = ({ dynamicHue }) => {
           custom={3}
           display='inline'
         >
-          I am a Full Stack Web Developer with a passion for people, technology,
-          and discovery fueled by an endless curiosity.
+          I am an experienced Software Engineer with a passion for people, technology,
+          and building cool things fueled by a life long curiosity.
         </MotionTypo>
         <MotionTypo
           className={classes.about}

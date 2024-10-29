@@ -36,13 +36,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/db/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/handlers/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web-dev-portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-dev-portfolio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/handlers/gh.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/http/http.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/smtp/smtp.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/data/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/data/skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,13 +61,17 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file:///opt/homebrew/opt/go/libexec" />
+  <component name="GOROOT" url="file://$USER_HOME$/go/go1.23.2" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -78,28 +86,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Build.go build jeffpalm.dev/portfolio/cmd.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "configurable..is.expanded": "true",
-    "git-widget-placeholder": "master",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "javascript.nodejs.core.library.configured.version": "18.18.2",
-    "javascript.nodejs.core.library.typings.version": "18.18.14",
-    "last_opened_file_path": "/Users/jeffpalmer/Projects/web-dev-portfolio/cmd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "go.vgo",
-    "ts.external.directory.path": "/Users/jeffpalmer/Applications/GoLand.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build jeffpalm.dev/portfolio/cmd.executor&quot;: &quot;Debug&quot;,
+    &quot;Go Build.go build main.go.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/go-server&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.20.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.115&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/JeffPalmer/Projects/web-dev-portfolio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/JeffPalmer/AppData/Roaming/fnm/node-versions/v16.20.2/installation/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/jeffpalmer/Applications/GoLand.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cmd" />
@@ -113,7 +125,7 @@
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\MobileNav" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build jeffpalm.dev/portfolio/cmd">
     <configuration name="go build jeffpalm.dev/portfolio/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="web-dev-portfolio" />
       <working_directory value="$PROJECT_DIR$" />
@@ -123,9 +135,18 @@
       <filePath value="$PROJECT_DIR$/cmd/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="web-dev-portfolio" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build jeffpalm.dev/portfolio/cmd" />
+        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -184,5 +205,12 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="*(*&quot;string&quot;)(824633757448)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

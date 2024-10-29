@@ -5,6 +5,7 @@ import (
 	"github.com/joho/godotenv"
 	"jeffpalm.dev/portfolio/internal/handlers"
 	"log"
+	"os"
 )
 
 func loadEnv() {
@@ -16,11 +17,15 @@ func loadEnv() {
 
 func main() {
 	loadEnv()
+
 	app := fiber.New()
+
 	app.Get("/healthcheck", func(c *fiber.Ctx) error {
 		return c.SendString("OK")
 	})
 	app.Get("/resume", handlers.ResumeRedirect)
+	app.Post("/api/contact", handlers.Contact)
 	app.Static("/", "./build")
-	log.Fatal(app.Listen(":3000"))
+
+	log.Fatal(app.Listen(":" + os.Getenv("SERVER_PORT")))
 }
