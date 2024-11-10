@@ -9,7 +9,7 @@ const useRgbCycle = (speed = 1, r, g, b) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      let { r, g, b } = rgb;
+      const { r, g, b } = rgb;
       if (r > 0 && b === 0) {
         setRgb({
           r: r - speed < 0 ? 255 + (r - speed) : r - speed,

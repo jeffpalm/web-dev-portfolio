@@ -42,8 +42,8 @@ module.exports = {
   updateGitHubStats: async (req, res) => {
     // TODO: Figure out retrieving stats for stories-with-data repo
 
-    const dataAssembly = { lang: {}, pkgs: {} },
-      db = req.app.get('db');
+    const dataAssembly = { lang: {}, pkgs: {} };
+    const db = req.app.get('db');
 
     const { data: repos } = await axios
       .get(
@@ -52,7 +52,7 @@ module.exports = {
       .catch((err) =>
         res
           .status(500)
-          .send('GitHub Repo List API Call Failed. Details: ' + err)
+          .send(`GitHub Repo List API Call Failed. Details: ${ err}`)
       );
 
     const langStatsPromises = repos.map(
@@ -96,7 +96,7 @@ module.exports = {
 
               !pkgData.dependencies && resolve();
 
-              for (let dep in pkgData.dependencies) {
+              for (const dep in pkgData.dependencies) {
                 let normalizedName = dep;
 
                 if (dep[0] === '@') {
@@ -106,7 +106,7 @@ module.exports = {
                 normalizedName = new Sugar.String(normalizedName).titleize();
 
                 if (dataAssembly.pkgs[normalizedName]) {
-                  dataAssembly.pkgs[normalizedName]['repos'].push(repoDetails);
+                  dataAssembly.pkgs[normalizedName].repos.push(repoDetails);
                   dataAssembly.pkgs[normalizedName].count++;
                 } else if (!packageExclusions.includes(dep)) {
                   dataAssembly.pkgs[normalizedName] = {
@@ -132,7 +132,7 @@ module.exports = {
       pkgs: []
     };
 
-    for (let pkg in dataAssembly.pkgs) {
+    for (const pkg in dataAssembly.pkgs) {
       toUpsert.pkgs.push({
         name: pkg,
         repos: dataAssembly.pkgs[pkg].repos.sort(

@@ -36,17 +36,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/handlers/gh.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/http/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/smtp/smtp.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/palmy_wave.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/palmy_wave.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/dataspeaks/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/dataspeaks/state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/dataspeaks/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/the-hub/add_ticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/the-hub/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/the-hub/main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/the-hub/queue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/the-hub/queue_inactive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/the-hub/ticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/zen-chess/board.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/projects/zen-chess/main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/EnterButton.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/FullPage.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/MainButton.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/NavBar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/NavButton.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/Palmytree.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/SideBar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/icons/EmailIcon.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/icons/GitHubIcon.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/icons/LinkedInIcon.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/icons/ResumeIcon.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/pages/AboutPage.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/pages/ContactPage.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/pages/HomePage.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/pages/ProjectsPage.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/pages/SkillsPage.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/shared/convertHue.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web-dev-portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-dev-portfolio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/data/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/data/skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage/AboutPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SkillsPage/SkillsPageStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palmytree/Palmytree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project/ProjectStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useHslCycle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHslCycle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRgbCycle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRgbCycle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +93,23 @@
       <list>
         <option value="JavaScript File" />
         <option value="Go File" />
+        <option value="Palmytree" />
+        <option value="EnterButton" />
+        <option value="MainButton" />
+        <option value="FullPage" />
+        <option value="NavBar" />
+        <option value="NavButton" />
+        <option value="HomePage" />
+        <option value="AboutPage" />
+        <option value="SkillsPage" />
+        <option value="ProjectsPage" />
+        <option value="ContactPage" />
+        <option value="TypeScript File" />
+        <option value="SideBar" />
+        <option value="LinkedInIcon" />
+        <option value="GitHubIcon" />
+        <option value="ResumeIcon" />
+        <option value="EmailIcon" />
       </list>
     </option>
   </component>
@@ -86,43 +138,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go Build.go build jeffpalm.dev/portfolio/cmd.executor&quot;: &quot;Debug&quot;,
-    &quot;Go Build.go build main.go.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;configurable..is.expanded&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/go-server&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.20.2&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.115&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/JeffPalmer/Projects/web-dev-portfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/JeffPalmer/AppData/Roaming/fnm/node-versions/v16.20.2/installation/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/jeffpalmer/Applications/GoLand.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build jeffpalm.dev/portfolio/cmd.executor": "Debug",
+    "Go Build.go build main.go.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "configurable..is.expanded": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "feature/go-server",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "18.18.2",
+    "javascript.nodejs.core.library.typings.version": "18.18.14",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jeffpalmer/Projects/web-dev-portfolio/src/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/jeffpalmer/Projects/web-dev-portfolio/web/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JSPX",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/jeffpalmer/Projects/web-dev-portfolio/web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/cmd" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\Buttons\DownArrow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/public" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/internal/db" />
       <recent name="$PROJECT_DIR$/internal/handlers" />
       <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\Nav" />
-      <recent name="C:\Users\jdpal\jeffpalmdev\portfolio\src\components\MobileNav" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build jeffpalm.dev/portfolio/cmd">
@@ -143,18 +204,12 @@
       <filePath value="$PROJECT_DIR$/cmd/main.go" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build jeffpalm.dev/portfolio/cmd" />
-        <item itemvalue="Go Build.go build main.go" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-5df93f7ad4aa-df9ad98b711f-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-242.23339.24" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-GO-242.23339.24" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -186,6 +241,13 @@
       <workItem from="1603380479764" duration="552000" />
       <workItem from="1603381045268" duration="326000" />
       <workItem from="1603381384173" duration="14350000" />
+      <workItem from="1731026331401" duration="393000" />
+      <workItem from="1731026752578" duration="2847000" />
+      <workItem from="1731083775359" duration="1469000" />
+      <workItem from="1731091238593" duration="19000" />
+      <workItem from="1731091266543" duration="5016000" />
+      <workItem from="1731175231451" duration="7948000" />
+      <workItem from="1731186861227" duration="12028000" />
     </task>
     <servers />
   </component>
@@ -212,5 +274,9 @@
         <watch expression="*(*&quot;string&quot;)(824633757448)" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

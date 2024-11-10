@@ -13,11 +13,11 @@ const useHslCycle = (
     const interval = setInterval(() => {
       if (direction === 'forward') {
         setHue((prev) =>
-          prev + speed > 360 ? prev + speed - 360 : prev + speed
+          (prev + speed > 360 ? prev + speed - 360 : prev + speed)
         );
       } else if (direction === 'backward') {
         setHue((prev) =>
-          prev - speed < 0 ? 360 + (prev - speed) : prev - speed
+          (prev - speed < 0 ? 360 + (prev - speed) : prev - speed)
         );
       }
     }, 34);

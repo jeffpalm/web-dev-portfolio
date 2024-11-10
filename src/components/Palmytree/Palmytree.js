@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import useHslCycle from 'hooks/useHslCycle';
-import variants from './PalmytreeAnimation';
 
 const Palmytree = ({ height = 580, variant }) => {
   const strokeColorOne = useHslCycle(1, 0, 'forward');

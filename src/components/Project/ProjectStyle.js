@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   projectContainer: {
     height: 'calc(100% - 48px)',
-    width: `100%`,
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -57,7 +57,7 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: theme.palette.background.paper + '99'
+    backgroundColor: `${theme.palette.background.paper }99`
   },
   projectLink: {
     '&:visited': {
