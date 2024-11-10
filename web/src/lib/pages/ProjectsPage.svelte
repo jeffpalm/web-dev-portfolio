@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FullPage from '../components/FullPage.svelte';
+  import FullPage from "../components/FullPage.svelte";
 </script>
 
 <FullPage id="projects" altBg>

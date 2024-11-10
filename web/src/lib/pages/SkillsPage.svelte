@@ -1,5 +1,5 @@
 <script>
-  import FullPage from '../components/FullPage.svelte';
+  import FullPage from "../components/FullPage.svelte";
 </script>
 
 <FullPage id="skills">

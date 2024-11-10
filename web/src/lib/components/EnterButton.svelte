@@ -1,6 +1,6 @@
 <script lang="ts">
-  import MainButton from './MainButton.svelte';
-  import { onMount } from 'svelte';
+  import MainButton from "./MainButton.svelte";
+  import { onMount } from "svelte";
 
   let hueOne = 0;
   let hueTwo = 0;
@@ -18,11 +18,11 @@
   });
 
   function handleClick() {
-    const aboutPage = document.getElementById('about');
+    const aboutPage = document.getElementById("about");
 
     aboutPage?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   }
 </script>

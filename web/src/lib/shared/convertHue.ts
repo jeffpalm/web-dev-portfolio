@@ -2,7 +2,7 @@ export default (
   input: number,
   minInput: number,
   maxInput: number,
-  hueStart: number = 0
+  hueStart: number = 0,
 ) => {
   const inputRange = maxInput - minInput;
   const inputProgress = input - minInput;

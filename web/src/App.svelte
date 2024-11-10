@@ -1,11 +1,11 @@
 <script lang="ts">
-  import NavBar from './lib/components/NavBar.svelte';
-  import HomePage from './lib/pages/HomePage.svelte';
-  import AboutPage from './lib/pages/AboutPage.svelte';
-  import SkillsPage from './lib/pages/SkillsPage.svelte';
-  import ProjectsPage from './lib/pages/ProjectsPage.svelte';
-  import ContactPage from './lib/pages/ContactPage.svelte';
-  import convertHue from './lib/shared/convertHue';
+  import NavBar from "./lib/components/NavBar.svelte";
+  import HomePage from "./lib/pages/HomePage.svelte";
+  import AboutPage from "./lib/pages/AboutPage.svelte";
+  import SkillsPage from "./lib/pages/SkillsPage.svelte";
+  import ProjectsPage from "./lib/pages/ProjectsPage.svelte";
+  import ContactPage from "./lib/pages/ContactPage.svelte";
+  import convertHue from "./lib/shared/convertHue";
 
   let docHeight = $state(document.body.clientHeight);
   let scrollY = $state(window.scrollY);
@@ -31,7 +31,11 @@
 <main use:updateHeight>
   <HomePage />
   {#if isNavVisible}
-    <NavBar dynamicHue={hue} newHue={newHue} --bg-color={`hsla(${hue}, 50%, 30%, 0.8`} />
+    <NavBar
+      dynamicHue={hue}
+      {newHue}
+      --bg-color={`hsla(${hue}, 50%, 30%, 0.8`}
+    />
   {:else}
     <div style="height: 64px;"></div>
   {/if}
@@ -42,28 +46,28 @@
 </main>
 
 <style>
-    :global(:root) {
-        --primary-color: #02f2b2;
-        --secondary-color: #9bb1ff;
-        --primary-bg: #222;
-        --secondary-bg: #59656f;
-        --alt-bg: #333;
+  :global(:root) {
+    --primary-color: #02f2b2;
+    --secondary-color: #9bb1ff;
+    --primary-bg: #222;
+    --secondary-bg: #59656f;
+    --alt-bg: #333;
 
-        --spacing: 1rem;
+    --spacing: 1rem;
 
-        --type-primary: 'Poppins', sans-serif;
+    --type-primary: "Poppins", sans-serif;
 
-        color: #fff;
-        font-family: var(--type-primary), sans-serif;
-    }
+    color: #fff;
+    font-family: var(--type-primary), sans-serif;
+  }
 
-    main {
-        background-color: var(--primary-bg);
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  main {
+    background-color: var(--primary-bg);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
