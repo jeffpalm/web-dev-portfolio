@@ -31,15 +31,11 @@
 <main use:updateHeight>
   <HomePage />
   {#if isNavVisible}
-    <NavBar
-      dynamicHue={hue}
-      {newHue}
-      --bg-color={`hsla(${hue}, 50%, 30%, 0.8`}
-    />
+    <NavBar {hue} {newHue} --bg-color={`hsla(${hue}, 50%, 30%, 0.8`} />
   {:else}
     <div style="height: 64px;"></div>
   {/if}
-  <AboutPage />
+  <AboutPage {hue} />
   <SkillsPage />
   <ProjectsPage />
   <ContactPage />
@@ -56,6 +52,7 @@
     --spacing: 1rem;
 
     --type-primary: "Poppins", sans-serif;
+    --font-size-small: 1.2rem;
 
     color: #fff;
     font-family: var(--type-primary), sans-serif;

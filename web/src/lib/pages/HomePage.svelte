@@ -4,7 +4,7 @@
   import EnterButton from "../components/EnterButton.svelte";
 </script>
 
-<FullPage id="home">
+<FullPage id="home" centered noMargin>
   <div class="palmy-container">
     <Palmytree variant="home" />
     <EnterButton />

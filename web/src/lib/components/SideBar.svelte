@@ -51,7 +51,7 @@
     width: 60px;
     height: 240px;
     left: 0;
-    top: 350px;
+    top: calc(50vh - 120px + 32px);
     z-index: 100;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;

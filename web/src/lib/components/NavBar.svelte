@@ -3,9 +3,10 @@
   import Palmytree from "./Palmytree.svelte";
   import SideBar from "./SideBar.svelte";
   import { fade, fly } from "svelte/transition";
+  import { onMount } from "svelte";
 
   type Props = {
-    dynamicHue: number;
+    hue: number;
     newHue: () => void;
   };
 
@@ -24,17 +25,18 @@
 
   let activePage = $state("");
   let rotateTree = $state(false);
+  let sidebarMargin = $state(false);
 
-  const activePageListener = () => {
+  const scrollListener = () => {
     for (const { link } of navLinks) {
       const element = document.getElementById(link);
       if (!element) continue;
 
       const { y, height } = element.getBoundingClientRect();
 
-      if (y <= 0 && y + height > 0) {
+      // console.log(`${link} y: ${y}, height: ${height}`);
+      if (y <= 1 && y + height > 0) {
         activePage = link;
-        break;
       }
     }
   };
@@ -44,7 +46,7 @@
     element?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  let { dynamicHue, newHue }: Props = $props();
+  let { hue, newHue }: Props = $props();
 
   const handlePalmytreeClick = () => {
     rotateTree = true;
@@ -53,11 +55,17 @@
     }, 500);
     newHue();
   };
+
+  onMount(scrollListener);
 </script>
 
-<svelte:window on:scroll={activePageListener} />
+<svelte:window on:scroll={scrollListener} />
 
-<nav class="nav-root" aria-label="main navigation" out:fade>
+<nav
+  class="nav-root"
+  aria-label="main navigation"
+  out:fade
+>
   <div class="nav-toolbar">
     {#each navLinks as { buttonText, link }, index}
       <NavButton
@@ -79,7 +87,7 @@
     <Palmytree variant="logo" />
   </button>
 </nav>
-<SideBar --bg-color={`hsla(${dynamicHue}, 50%, 30%, 0.8)`} />
+<SideBar --bg-color={`hsla(${hue}, 50%, 30%, 0.8)`} />
 
 <style>
   @keyframes rotate {
