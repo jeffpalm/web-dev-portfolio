@@ -36,22 +36,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d28626-6f6a-45c9-9e86-30555ee3f4f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/lib/components/TypingAnimation.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/lib/components/Typography.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/lib/shared/Stack.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/lib/shared/global.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/lib/components/icons/MenuIcon.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/web/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/lib/components/FullPage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/components/FullPage.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/lib/components/NavBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/components/NavBar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/lib/components/SideBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/components/SideBar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/lib/pages/AboutPage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/pages/AboutPage.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/lib/pages/HomePage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/pages/HomePage.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/web/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/lib/components/NavBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/components/NavBar/NavBar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/lib/components/NavButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lib/components/NavBar/NavButton.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +104,7 @@
     "Go Build.go build jeffpalm.dev/portfolio/cmd.executor": "Debug",
     "Go Build.go build main.go.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
@@ -138,7 +129,7 @@
     "prettierjs.PrettierConfiguration.Package": "/Users/jeffpalmer/Projects/web-dev-portfolio/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
     "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "/Users/jeffpalmer/Projects/web-dev-portfolio/web/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/jeffpalmer/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -179,8 +170,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -219,6 +210,7 @@
       <workItem from="1731091266543" duration="5016000" />
       <workItem from="1731175231451" duration="7948000" />
       <workItem from="1731186861227" duration="23702000" />
+      <workItem from="1731779770369" duration="2193000" />
     </task>
     <servers />
   </component>

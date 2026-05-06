@@ -1,19 +1,17 @@
 <script lang="ts">
-  import NavButton from "./NavButton.svelte";
-  import Palmytree from "./Palmytree.svelte";
-  import SideBar from "./SideBar.svelte";
-  import { fade, fly } from "svelte/transition";
-  import { onMount } from "svelte";
+  import SideBar from "../SideBar.svelte"
+  import { fade, fly } from "svelte/transition"
+  import { onMount } from "svelte"
+  import type { NavLink } from "./types"
+  import Desktop from "./Desktop.svelte"
+  import Mobile from "./Mobile.svelte"
+  import MediaQuery from "../MediaQuery.svelte"
+  import Palmytree from "../Palmytree.svelte";
 
   type Props = {
-    hue: number;
-    newHue: () => void;
-  };
-
-  type NavLink = {
-    buttonText: string;
-    link: string;
-  };
+    hue: number
+    newHue: () => void
+  }
 
   const navLinks: NavLink[] = [
     { buttonText: "Home", link: "home" },
@@ -21,61 +19,62 @@
     { buttonText: "Skills", link: "skills" },
     { buttonText: "Projects", link: "projects" },
     { buttonText: "Contact", link: "contact" },
-  ];
+  ]
 
-  let activePage = $state("");
-  let rotateTree = $state(false);
-  let sidebarMargin = $state(false);
+  let activePage = $state("")
+  let rotateTree = $state(false)
+  let sidebarMargin = $state(false)
 
   const scrollListener = () => {
     for (const { link } of navLinks) {
-      const element = document.getElementById(link);
-      if (!element) continue;
+      const element = document.getElementById(link)
+      if (!element) continue
 
-      const { y, height } = element.getBoundingClientRect();
+      const { y, height } = element.getBoundingClientRect()
 
       // console.log(`${link} y: ${y}, height: ${height}`);
       if (y <= 1 && y + height > 0) {
-        activePage = link;
+        activePage = link
       }
     }
-  };
+  }
 
   const handleNavClick = (link: string) => () => {
-    const element = document.getElementById(link);
-    element?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+    const element = document.getElementById(link)
+    element?.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
 
-  let { hue, newHue }: Props = $props();
+  let { hue, newHue }: Props = $props()
 
   const handlePalmytreeClick = () => {
-    rotateTree = true;
+    rotateTree = true
     setTimeout(() => {
-      rotateTree = false;
-    }, 500);
-    newHue();
-  };
+      rotateTree = false
+    }, 500)
+    newHue()
+  }
 
-  onMount(scrollListener);
+  onMount(scrollListener)
 </script>
 
 <svelte:window on:scroll={scrollListener} />
 
-<nav
-  class="nav-root"
-  aria-label="main navigation"
-  out:fade
->
-  <div class="nav-toolbar">
-    {#each navLinks as { buttonText, link }, index}
-      <NavButton
-        --delay={index}
-        {buttonText}
-        onClick={handleNavClick(link)}
-        isActive={activePage === link}
+<nav class="nav-root" aria-label="main navigation" out:fade>
+  <MediaQuery query="(max-width:620px)" let:matches>
+    {#if matches}
+      <Mobile
+        {navLinks}
+        {activePage}
+        {handleNavClick}
       />
-    {/each}
-  </div>
+    {:else}
+      <Desktop
+        {navLinks}
+        {activePage}
+        {handleNavClick}
+      />
+    {/if}
+  </MediaQuery>
   <button
     type="button"
     class={`nav-logo${rotateTree ? " palmy-rotate" : ""}`}
@@ -116,8 +115,8 @@
     left: 0;
     z-index: 100;
     width: 100%;
-    height: 64px;
-    padding: 1rem;
+    min-height: 64px;
+    padding: 0 1rem;
     background-color: var(--bg-color, #ffffff50);
     border: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
@@ -125,10 +124,6 @@
     justify-content: space-between;
     transform-origin: left;
     animation: 0.5s 1 slide-in;
-  }
-
-  .nav-toolbar {
-    display: flex;
   }
 
   .nav-logo {

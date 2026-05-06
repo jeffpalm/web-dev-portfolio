@@ -5,21 +5,14 @@
 
   interface Props {
     id: string
-    children: Snippet
+    children?: Snippet
     altBg?: boolean
     centered?: boolean
-    noMargin?: boolean
   }
 
   let isVisible = $state(false)
 
-  let {
-    id,
-    altBg = false,
-    centered = false,
-    noMargin = false,
-    children,
-  }: Props = $props()
+  let { id, altBg = false, centered = false, children }: Props = $props()
 
   const visible = (node: HTMLDivElement) => {
     const observer = new IntersectionObserver(
@@ -50,18 +43,16 @@
   }
 </script>
 
-<div
-  {id}
-  class={`full-page${altBg ? " alt-bg" : ""}${noMargin ? "" : " margin"}`}
-  use:visible
->
+<div {id} class={`full-page${altBg ? " alt-bg" : ""}`} use:visible>
   {#if isVisible}
     <div
-      class="page-container"
+      class="page-container glass"
       style={`${centered ? "justify-content: center;" : ""}`}
       transition:fade
     >
-      {@render children()}
+      {#if children}
+        {@render children()}
+      {/if}
     </div>
   {/if}
 </div>
@@ -71,11 +62,7 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-  }
-
-  .margin {
-    padding-left: 64px;
-    padding-top: 64px;
+    padding: calc(1rem + 64px) 1rem 1rem calc(1rem + 64px);
   }
 
   .page-container {
@@ -84,10 +71,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+  }
+
+  .glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+      inset -0.75px -0.5px rgba(255, 255, 255, 0.1),
+      inset + 0.75px +0.5px rgba(255, 255, 255, 0.025),
+      3px 2px 10px rgba(0, 0, 0, 0.25),
+      inset 0px 0px 10px 5px rgba(255, 255, 255, 0.025),
+      inset 0px 0px 40px 5px rgba(255, 255, 255, 0.025);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px ridge rgba(50, 50, 50, 0.5);
   }
 
   .alt-bg {
-    background-color: var(--alt-bg);
+    /*background-color: var(--alt-bg);*/
   }
 </style>

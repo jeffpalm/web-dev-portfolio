@@ -1,5 +1,5 @@
 <script lang="ts">
-  import NavBar from "./lib/components/NavBar.svelte";
+  import NavBar from "./lib/components/NavBar/NavBar.svelte";
   import HomePage from "./lib/pages/HomePage.svelte";
   import AboutPage from "./lib/pages/AboutPage.svelte";
   import SkillsPage from "./lib/pages/SkillsPage.svelte";
