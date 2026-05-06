@@ -520,6 +520,15 @@ kbd {
 }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 .term-window {
+  /* Terminal aesthetic stays dark in both themes — pin the fg/line vars
+     locally so var() lookups inside the window resolve to dark-friendly
+     values regardless of the global theme. --accent stays global. */
+  --fg: #e8ecf5;
+  --fg-2: #aeb6cc;
+  --fg-3: #6b7390;
+  --line: rgba(255,255,255,0.08);
+  --line-2: rgba(255,255,255,0.14);
+
   width: min(820px, 100%);
   max-height: 70vh;
   background: #060912;
