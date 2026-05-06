@@ -1,12 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 
-const ACCENT_MAP = {
-  cyan: '#22d3ee',
-  amber: '#fbbf24',
-  magenta: '#f472b6',
-  lime: '#a3e635',
-};
-
 const SECTION_MAP = {
   home: 'home',
   about: 'about',
@@ -31,7 +24,7 @@ export default function Terminal({
   onClose,
   theme,
   setTheme,
-  setAccent,
+  randomizeAccent,
   portfolio: P,
 }) {
   const inputRef = useRef(null);
@@ -77,7 +70,8 @@ export default function Terminal({
           ['resume', 'download resume'],
           ['contact / email', 'ways to reach me'],
           ['theme [dark|light]', 'toggle color mode'],
-          ['accent [cyan|amber|magenta|lime]', 'set accent color'],
+          ['accent', 'reroll the accent hue'],
+          ['vibe', 'feeling stuck? throw the dice'],
           ['goto <section>', 'scroll to section (home, about, work, exp, skills, contact)'],
           ['clear', 'clear the screen'],
           ['sudo make me a sandwich', 'try it'],
@@ -155,14 +149,18 @@ export default function Terminal({
         }
         break;
       }
-      case 'accent': {
-        const a = args[0]?.toLowerCase();
-        if (ACCENT_MAP[a]) {
-          setAccent(ACCENT_MAP[a]);
-          push(`accent → ${a}`);
-        } else {
-          push('usage: accent [cyan|amber|magenta|lime]', 'err');
-        }
+      case 'accent':
+      case 'vibe':
+      case 'roll': {
+        randomizeAccent();
+        const flavor = [
+          '🎲  rolled a fresh hue',
+          '🎨  new vibe acquired',
+          '✨  paint splashed',
+          '🌈  hue.shuffle() → ok',
+          '🃏  dealer hit you with a new color',
+        ];
+        push(flavor[Math.floor(Math.random() * flavor.length)]);
         break;
       }
       case 'goto': {

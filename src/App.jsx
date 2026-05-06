@@ -1,4 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import PORTFOLIO from './data.js';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
@@ -21,8 +28,14 @@ const SECTIONS = [
   { id: 'contact', key: 'c', label: 'contact' },
 ];
 
+// Hues for cyan / amber / magenta / lime — preserved from the original design palette.
+const SEED_HUES = [187, 43, 330, 83];
+const seedHue = () => SEED_HUES[Math.floor(Math.random() * SEED_HUES.length)];
+const randomHue = () => Math.random() * 360;
+
 export default function App() {
-  const [accent, setAccent] = useState('#22d3ee');
+  const [baseHue, setBaseHue] = useState(seedHue);
+  const [scrollPct, setScrollPct] = useState(0);
   const [theme, setTheme] = useState('dark');
   const [termOpen, setTermOpen] = useState(false);
   const [activeSec, setActiveSec] = useState('home');
@@ -31,7 +44,14 @@ export default function App() {
   const gPressed = useRef(false);
   const gTimeout = useRef(null);
 
-  useEffect(() => {
+  const accent = useMemo(() => {
+    const h = (((baseHue + scrollPct * 360) % 360) + 360) % 360;
+    return `hsl(${h.toFixed(2)} 100% 50%)`;
+  }, [baseHue, scrollPct]);
+
+  const randomizeAccent = useCallback(() => setBaseHue(randomHue()), []);
+
+  useLayoutEffect(() => {
     document.documentElement.style.setProperty('--accent', accent);
     document.documentElement.style.setProperty(
       '--accent-soft',
@@ -39,6 +59,27 @@ export default function App() {
     );
     document.documentElement.dataset.theme = theme;
   }, [accent, theme]);
+
+  useEffect(() => {
+    let raf = null;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      setScrollPct(pct);
+      raf = null;
+    };
+    const onScroll = () => {
+      if (raf == null) raf = requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (raf != null) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   useEffect(() => {
     const opts = { rootMargin: '-30% 0px -60% 0px', threshold: 0 };
@@ -174,8 +215,7 @@ export default function App() {
         onClose={() => setTermOpen(false)}
         theme={theme}
         setTheme={setTheme}
-        accent={accent}
-        setAccent={setAccent}
+        randomizeAccent={randomizeAccent}
         portfolio={PORTFOLIO}
       />
       {vimKey && <VimIndicator vimKey={vimKey} />}

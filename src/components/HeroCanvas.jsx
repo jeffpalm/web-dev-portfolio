@@ -2,6 +2,11 @@ import { useEffect, useRef } from 'react';
 
 export default function HeroCanvas({ accent }) {
   const ref = useRef(null);
+  const accentRef = useRef(accent);
+
+  useEffect(() => {
+    accentRef.current = accent;
+  }, [accent]);
 
   useEffect(() => {
     const cvs = ref.current;
@@ -74,7 +79,7 @@ export default function HeroCanvas({ accent }) {
           const d = Math.sqrt(dx * dx + dy * dy);
           if (d < 130) {
             const alpha = (1 - d / 130) * 0.35;
-            ctx.strokeStyle = accent;
+            ctx.strokeStyle = accentRef.current;
             ctx.globalAlpha = alpha;
             ctx.lineWidth = 0.6;
             ctx.beginPath();
@@ -86,7 +91,7 @@ export default function HeroCanvas({ accent }) {
       }
       ctx.globalAlpha = 1;
       for (const n of nodes) {
-        ctx.fillStyle = accent;
+        ctx.fillStyle = accentRef.current;
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
         ctx.fill();
@@ -101,7 +106,7 @@ export default function HeroCanvas({ accent }) {
       cvs.removeEventListener('mousemove', onMove);
       cvs.removeEventListener('mouseleave', onLeave);
     };
-  }, [accent]);
+  }, []);
 
   return <canvas ref={ref} className="hero-canvas" />;
 }
