@@ -16,7 +16,7 @@ export default function StatusBar({ sections, activeSec, onOpenTerm, onToggleHel
         ))}
       </nav>
       <div className="sb-right">
-        <span className="sb-time">v2.0</span>
+        <span className="sb-time">v2.0.1</span>
         <button className="sb-btn" onClick={onOpenTerm}>
           <kbd>~</kbd> term
         </button>
