@@ -267,7 +267,7 @@ kbd {
   color: var(--fg); font-weight: 500;
   display: inline-flex; align-items: center; gap: 6px;
 }
-.ibm-inline { width: 32px; height: auto; color: var(--fg); }
+.wtg-inline { width: 104px; height: auto; color: var(--fg); flex-shrink: 0; }
 
 .about-text { padding-top: 8px; min-width: 0; }
 .about-grid > * { min-width: 0; }

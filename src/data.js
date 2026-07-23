@@ -2,19 +2,19 @@
 const PORTFOLIO = {
   name: 'Jeff Palmer',
   handle: 'jeffpalm',
-  role: 'Full-Stack Software Engineer',
+  role: 'Application Architect',
   location: 'Dallas, TX',
   email: 'hire@jeffpalm.dev',
   github: 'github.com/jeffpalm',
   linkedin: 'linkedin.com/in/jeffpalmdev',
   current: {
-    company: 'IBM',
-    title: 'Senior Software Engineer',
-    since: '2025',
+    company: 'WTG Energy',
+    title: 'Application Architect',
+    since: '2026',
   },
   intro: [
     "I build enterprise systems that don't feel like enterprise systems.",
-    'Currently shipping document & integration platforms inside the energy-trading space at IBM.',
+    'Currently the Application Architect at WTG Energy — owning Tier 1 systems through a company-wide digital transformation.',
     'Framework-agnostic — I pick up whatever the job needs and ship it.',
   ],
   about: {
@@ -22,11 +22,29 @@ const PORTFOLIO = {
       'Engineer who came up through the business side. I spent five years automating away inefficiency in automotive retail before formally training as a developer — which is why I think first about the workflow, then about the code.',
     long: [
       "I lead full-stack work across whatever stack the problem calls for — React, Angular, Blazor on the front; Node, NestJS, .NET, or Python on the back; AWS or Azure underneath. The framework is a tool, not an identity. I'm happiest when the problem is messy, the stakeholders are real, and the system has to keep running while I rewire it.",
+      "Today I'm the technical authority for Product Engineering at WTG Energy, mid company-wide digital transformation. I own the architecture and delivery of our Tier 1 systems — a bespoke ETRM, a custom CRM — and the patterns, standards, and reusable templates the rest of the team builds on. AI-assisted development is my primary delivery method, not a side experiment: I architect for AI leverage in the initial build and the maintenance after, and I design patterns that lower the skill barrier so business contributors can ship higher-quality apps on their own. The thing I care most about is right-sizing — knowing when a small internal tool just needs to ship fast, and when a Tier 1 system needs hardened patterns, security review, and foundations the whole team can reuse.",
       "I'm a Vim-and-tiling-WM person. I daily-drove Manjaro for years. I write small tools to remove friction from my own loop. I think a healthy dev culture is one where people teach each other on Tuesdays.",
       'Outside of work: chess, audio gear, and a long-running argument with myself about whether mechanical keyboards have peaked.',
     ],
   },
   work: [
+    {
+      id: 'wtg',
+      year: '2026–',
+      title: 'ETRM & CRM — Tier 1 Business Systems',
+      org: 'WTG Energy',
+      role: 'Application Architect',
+      blurb:
+        'Technical authority for Product Engineering during a company-wide digital transformation. Primary builder on a bespoke ETRM and custom CRM, and author of the patterns, standards, and reusable templates the whole team builds on — with AI-assisted development as the primary delivery method.',
+      stack: [
+        'AI-assisted development',
+        'Architecture & standards',
+        'Security review',
+        'Tier 1 delivery',
+      ],
+      stackLabel: 'focus',
+      confidential: true,
+    },
     {
       id: 'nova',
       year: '2025–26',
@@ -136,8 +154,15 @@ const PORTFOLIO = {
   ],
   experience: [
     {
-      from: 'Feb 2025',
+      from: 'Jun 2026',
       to: 'Now',
+      company: 'WTG Energy',
+      title: 'Application Architect',
+      note: 'Tier 1 systems · digital transformation',
+    },
+    {
+      from: 'Feb 2025',
+      to: 'Jun 2026',
       company: 'IBM',
       title: 'Senior Software Engineer',
       note: 'ETRM platform engineering',

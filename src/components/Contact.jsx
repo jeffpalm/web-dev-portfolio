@@ -63,7 +63,7 @@ export default function Contact({ portfolio }) {
         <span className="foot-mid">
           handcrafted in vim · 0 frameworks were harmed (many were used)
         </span>
-        <span>v2.0 — built {new Date().toLocaleDateString()}</span>
+        <span>v2.0.1 — built {new Date().toLocaleDateString()}</span>
       </footer>
     </section>
   );

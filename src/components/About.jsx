@@ -1,4 +1,4 @@
-import IBMLogo from './IBMLogo.jsx';
+import WTGLogo from './WTGLogo.jsx';
 import Marquee from './Marquee.jsx';
 
 export default function About({ portfolio }) {
@@ -22,7 +22,7 @@ export default function About({ portfolio }) {
               <div className="kv">
                 <span>NOW</span>
                 <strong>
-                  Senior SWE @ <IBMLogo className="ibm-inline" />
+                  Architect @ <WTGLogo className="wtg-inline" />
                 </strong>
               </div>
               <div className="kv">

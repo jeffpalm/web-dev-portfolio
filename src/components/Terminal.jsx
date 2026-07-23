@@ -112,7 +112,7 @@ export default function Terminal({
         push('');
         push(proj.blurb);
         push('');
-        push(`stack: ${proj.stack.join(', ')}`);
+        push(`${proj.stackLabel || 'stack'}: ${proj.stack.join(', ')}`);
         scrollTo('work');
         break;
       }
@@ -203,7 +203,7 @@ export default function Terminal({
         push(new Date().toString());
         break;
       case 'uname':
-        push('portfolio-os 1.1.0 #jeffpalm SMP x86_64 GNU/Linux');
+        push('portfolio-os 2.0.1 #jeffpalm SMP x86_64 GNU/Linux');
         break;
       default:
         push(`command not found: ${c}. try 'help'.`, 'err');
